@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/_Scenes/room_piece_maker.unity
+  isLoaded: 1
+  isActive: 1

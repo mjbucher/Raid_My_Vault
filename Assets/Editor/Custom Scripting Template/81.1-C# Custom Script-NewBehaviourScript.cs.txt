@@ -1,0 +1,72 @@
+﻿/// <summary>
+/// File Name:		#SCRIPTNAME#
+/// Project Name: 	#PROJECTNAME#
+/// Developer:		#PROJECTDEVELOPERS#
+/// Date Created: 	#DATECREATED#
+/// </summary>
+
+#NAMINGCONVENTIONS#
+
+#ORDEROFEXECUTION#
+
+#region Imports
+using UnityEngine;
+using System.Collections;
+using Rand = UnityEngine.Random;
+
+#endregion
+namespace #NAMESPACEDEVELOPERS##PROJECTNAME#.#SCRIPTNAME#
+{
+	public class #SCRIPTNAME# : MonoBehaviour 
+	{
+		#region Inspector
+		/// <summary>
+		/// *** Public variables for Inspector ***
+		/// </summary>
+		
+			#region Linked Objects
+			/// <summary>
+			/// *** Objects linked in inspector ***
+			/// </summary>
+			
+			#endregion
+			
+			#region Public Variables
+			/// <summary>
+			/// *** Public variables in Inspector ***
+			/// </summary
+			
+			#endregion
+		#endregion
+
+		#region Private Variables
+		/// <summary>
+		/// *** Private variables for Script ***
+		/// </summary>
+		
+		#endregion
+		
+		#region Timing and Logic
+		/// <summary> 
+		/// *** Standard timing functions ***
+		/// See 'Order of execution' at top
+		/// </summary>
+		
+		#endregion
+		
+		#region Public Functions
+		/// <summary>
+		/// *** Functions that can be called from outside ***
+		/// </summary>
+		
+		#endregion
+	
+		#region Private Functions
+		/// <summary>
+		/// *** Functions that are only used locally ***
+		/// </summary>
+		
+		#endregion
+		
+	}
+}

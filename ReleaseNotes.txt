@@ -1,0 +1,21 @@
+0.12 - 10/13/2015
+- Add social support! Configure user domains and activity feeds. Track user activity and create scripts that trigger events based on user activity.
+
+0.11 - 09/25/2015
+- Bug fix for storing variables that are object references
+
+0.10 - 09/17/2015
+- Bug fixes for some adaptive content features
+- Add "annotationMarker" catalog type that allows user push custom annotation images from server
+- Change inventory code to remove inventory item if count goes to zero
+
+0.9 - 08/31/2015
+- Add Location Markers, general-purpose markers for dropping pins on a map
+- Add custom Marker support to Location Task
+- Allow Collectibles to be ordered in the Inventory panel
+
+0.8 - 08/25/2015
+- Add CustomImageAnnotation for tasks, toggle option on MapController that uses Task image as an annotation if it exists.
+- Add Responses to Character Messages and Screen Messages.
+- Make Content Player work more smoothly, screens can't clobber each other.
+- Add "anchor position" to Location Services. This allows users to simulate playing in a different location when running on device, great for testing fixed location apps remotely.
