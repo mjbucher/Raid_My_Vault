@@ -192,6 +192,21 @@
  <Reference Include="UnityEditor.TreeEditor">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
+ <Reference Include="DOTween">
+ <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween43">
+ <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/DOTween43.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween46">
+ <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/DOTween46.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween50">
+ <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/DOTween50.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenEditor">
+ <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ </Reference>
  <Reference Include="Build">
  <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Motive/Build.dll</HintPath>
  </Reference>
@@ -242,21 +257,6 @@
  </Reference>
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="DOTween">
- <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
- </Reference>
- <Reference Include="DOTweenEditor">
- <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
- </Reference>
- <Reference Include="DOTween46">
- <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/DOTween46.dll</HintPath>
- </Reference>
- <Reference Include="DOTween43">
- <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/DOTween43.dll</HintPath>
- </Reference>
- <Reference Include="DOTween50">
- <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/DOTween50.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

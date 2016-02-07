@@ -91,7 +91,9 @@ public class Weapon : MonoBehaviour
 			Debug.Log("damageRadius value of " + damageRadius + ". Value should be >= 0");
 		}
 		// play effects for firing
+		// maybe add in counter code for burst firing and rapid firing
 		// launch projectile in include the ray for calculations 
+
 		projectileManager.FireProjectile(ray);
 	}
 

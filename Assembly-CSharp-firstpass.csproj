@@ -176,6 +176,18 @@
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
+ <Reference Include="DOTween">
+ <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween43">
+ <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/DOTween43.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween46">
+ <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/DOTween46.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween50">
+ <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/DOTween50.dll</HintPath>
+ </Reference>
  <Reference Include="Build">
  <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Motive/Build.dll</HintPath>
  </Reference>
@@ -193,18 +205,6 @@
  </Reference>
  <Reference Include="Motive.Unity.Maps">
  <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Motive/Motive.Unity.Maps.dll</HintPath>
- </Reference>
- <Reference Include="DOTween">
- <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
- </Reference>
- <Reference Include="DOTween46">
- <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/DOTween46.dll</HintPath>
- </Reference>
- <Reference Include="DOTween43">
- <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/DOTween43.dll</HintPath>
- </Reference>
- <Reference Include="DOTween50">
- <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/DOTween50.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
