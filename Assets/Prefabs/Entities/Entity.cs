@@ -5,50 +5,11 @@ public class Entity : MonoBehaviour
 {
 	[HideInInspector] public GameMaster GM;
 
-	public enum LifeState
-	{
-		Alive,
-		Dead,
-		Unconscious
-	};
-
-	public enum Condition
-	{
-		None,
-		Slowed,
-		Blind,
-		Confused
-	}
-
-	public enum MovementState 
-	{
-		Move,
-		LookAround,
-		Stationary
-	};
-
-	public enum Direction 
-	{
-		Left,
-		Right,
-		Forward,
-		Back,
-		None
-	};
-
-	public enum DetectionState
-	{
-		Attack,
-		Alert,
-		InteractEnabled,
-		None
-	};
-
 	public float speed = 1.0f;
 	public int health = 100;
 	public MovementState movementType = MovementState.Stationary;
 	public DetectionState detectionType = DetectionState.None;
-	public Condition condition = Condition.None;
+	public StatusEffect condition = StatusEffect.None;
 
 	[HideInInspector] public LifeState lifeState = LifeState.Alive;
 	[HideInInspector] public Direction direction = Direction.None; 
@@ -109,7 +70,7 @@ public class Entity : MonoBehaviour
 		Check_LifeState();
 	}
 
-	virtual public void Take_Damage (int _damage, Weapon.WeaponType _weaponType)
+	virtual public void Take_Damage (int _damage, WeaponType _weaponType)
 	{
 		health -= _damage;
 		Check_LifeState();

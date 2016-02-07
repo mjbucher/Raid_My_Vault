@@ -9,5 +9,5 @@ using System.Collections;
 /// </summary>
 public interface IDamageable
 {
-	void Take_Damage(int _damage, Weapon.WeaponType _weaponType);
+	void Take_Damage(int _damage, DamageType _damageType);
 }

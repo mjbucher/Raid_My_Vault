@@ -47,7 +47,7 @@ public class LookingForPlayer : MonoBehaviour
 			targetPresent = _other.gameObject;
 		}
 		// may cause wierd things to happen if player and AI enter
-		if (_enemy.condition == Entity.Condition.Confused)
+		if (_enemy.condition == StatusEffect.Confused)
 		{
 			if (_other.tag == "Enemy")
 			{
@@ -66,7 +66,7 @@ public class LookingForPlayer : MonoBehaviour
 			_enemy.Search(target);
 		}
 		// may cause wierd things to happen if player and AI enter
-		if (_enemy.condition == Entity.Condition.Confused)
+		if (_enemy.condition == StatusEffect.Confused)
 		{
 			if (_other.tag == "Enemy")
 			{

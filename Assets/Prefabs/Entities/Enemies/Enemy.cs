@@ -1,11 +1,11 @@
 using UnityEngine;
 using System.Collections;
 
-public class Enemy : Entity , IKillable
+public class Enemy : Entity , IKillable, IDamageable
 {
 	public int cost = 0;
 
-	public Weapon.WeaponType weakness = Weapon.WeaponType.None;
+	public WeaponType weakness = WeaponType.None;
 	public float weaknessMultiplier = 2.0f;
 	public int damage = 10;
 	[Header("Detection Variables")]
@@ -21,9 +21,9 @@ public class Enemy : Entity , IKillable
 	}
 
 
-	override public void Take_Damage (int _damage, Weapon.WeaponType _weaponType)
+	override public void Take_Damage (int _damage, WeaponType _weaponType)
 	{
-		if (_weaponType.ToString() == weakness.ToString())
+		if (_weaponType == weakness)
 		{
 			_damage = Mathf.RoundToInt(_damage * weaknessMultiplier); 
 		}
@@ -52,6 +52,11 @@ public class Enemy : Entity , IKillable
 	public void Kill_Sequence ()
 	{
 		Destroy(gameObject);
+	}
+
+	public void Take_Damage (int _damage, DamageType _damageType)
+	{
+		
 	}
 		
 }

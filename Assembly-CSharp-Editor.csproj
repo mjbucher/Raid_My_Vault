@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{091E3539-C2C2-93F5-466B-183DE89C3177}</ProjectGuid>
+    <ProjectGuid>{8BA669A5-C702-9C54-30F5-BA469C6DA0C9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -85,6 +85,7 @@
      <Compile Include="Assets\PrefabEvolution\Sources\Editor\Tree\PETreeNode.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
+     <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
@@ -92,6 +93,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
+     <None Include="Assets\Plugins\Demigiant\DOTween\DOTween50.xml" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceRaytrace.cginc" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
@@ -147,6 +149,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VortexEffect.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Adaptation.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrain.shader" />
+     <None Include="Assets\Plugins\Demigiant\DOTween\DOTween43.xml" />
      <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VignettingShader.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
@@ -156,6 +159,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\EdgeDetectNormals.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\PrepareSunShaftsBlur.shader" />
+     <None Include="Assets\Plugins\Demigiant\DOTween\DOTween46.xml" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\Blend.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SimpleClear.shader" />
@@ -189,22 +193,22 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
  <Reference Include="Build">
- <HintPath>C:/Users/matth/Desktop/SPROJ-Raid_My_Vault/Assets/Plugins/Motive/Build.dll</HintPath>
+ <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Motive/Build.dll</HintPath>
  </Reference>
  <Reference Include="JsonFx.Json">
- <HintPath>C:/Users/matth/Desktop/SPROJ-Raid_My_Vault/Assets/Plugins/Motive/JsonFx.Json.dll</HintPath>
+ <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Motive/JsonFx.Json.dll</HintPath>
  </Reference>
  <Reference Include="Motive.AR">
- <HintPath>C:/Users/matth/Desktop/SPROJ-Raid_My_Vault/Assets/Plugins/Motive/Motive.AR.dll</HintPath>
+ <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Motive/Motive.AR.dll</HintPath>
  </Reference>
  <Reference Include="Motive.Core">
- <HintPath>C:/Users/matth/Desktop/SPROJ-Raid_My_Vault/Assets/Plugins/Motive/Motive.Core.dll</HintPath>
+ <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Motive/Motive.Core.dll</HintPath>
  </Reference>
  <Reference Include="Motive.Unity">
- <HintPath>C:/Users/matth/Desktop/SPROJ-Raid_My_Vault/Assets/Plugins/Motive/Motive.Unity.dll</HintPath>
+ <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Motive/Motive.Unity.dll</HintPath>
  </Reference>
  <Reference Include="Motive.Unity.Maps">
- <HintPath>C:/Users/matth/Desktop/SPROJ-Raid_My_Vault/Assets/Plugins/Motive/Motive.Unity.Maps.dll</HintPath>
+ <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Motive/Motive.Unity.Maps.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -239,12 +243,27 @@
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="DOTween">
+ <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenEditor">
+ <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween46">
+ <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/DOTween46.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween43">
+ <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/DOTween43.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween50">
+ <HintPath>C:/Users/matth/Desktop/Raid_My_Vault_Git/Assets/Plugins/Demigiant/DOTween/DOTween50.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{F0F1400A-0602-1F01-0090-55D38F84573B}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{169B10D2-C68C-81E6-735F-9E254427177F}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{81B9B1DB-BC39-4B42-7B7A-2E5386FB1B4B}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{ED664D43-D5F8-539F-2B3A-33FFE13B920A}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
