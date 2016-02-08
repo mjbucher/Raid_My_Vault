@@ -27,28 +27,28 @@ namespace AStar
 			
 		public void StartFindPath (Vector3 startPos, Vector3 targetPos)
 		{
-			UnityEngine.Debug.Log("Coroutine StartFindPath called");
+			//UnityEngine.Debug.Log("Coroutine StartFindPath called");
 			StartCoroutine(FindPath(startPos, targetPos));
 		}
 
 
-		IEnumerator FindPath (Vector3 strartPos, Vector3 targetPos)
+		IEnumerator FindPath (Vector3 startPos, Vector3 targetPos)
 		{
-			UnityEngine.Debug.Log("starting stopwatch in FindPath");
+			//UnityEngine.Debug.Log("starting stopwatch in FindPath");
 			Stopwatch sw = new Stopwatch();
 			sw.Start();
 
 			Vector3[] waypoints = new Vector3[0];
 			bool pathSuccess = false;
 
-			PathfindingNode startNode = grid.GetNodeFromWorldPoint(strartPos);
+			PathfindingNode startNode = grid.GetNodeFromWorldPoint(startPos);
 			PathfindingNode targetNode = grid.GetNodeFromWorldPoint(targetPos);			
 
-			UnityEngine.Debug.Log("if statement starting");
+			//UnityEngine.Debug.Log("if statement starting");
 			UD.Log("target.walkable: " + targetNode.walkable + " ::: start.walkable = " + startNode.walkable);
 			if (startNode.walkable && targetNode.walkable)
 			{
-				UD.Log("both start and target are walkable");
+				//UD.Log("both start and target are walkable");
 				PathfindingHeap<PathfindingNode> openSet = new PathfindingHeap<PathfindingNode>(grid.MaxSize);
 				HashSet<PathfindingNode> closedSet = new HashSet<PathfindingNode>(); 
 				openSet.Add(startNode);
@@ -96,7 +96,7 @@ namespace AStar
 				{
 					waypoints = RetracePath(startNode, targetNode);
 				}
-				UnityEngine.Debug.Log("calling to request manager");
+				//UnityEngine.Debug.Log("calling to request manager");
 				requestManager.FinishedProcessingPath(waypoints, pathSuccess);
 			}
 		}
@@ -111,7 +111,9 @@ namespace AStar
 				path.Add(currentNode);
 				currentNode = currentNode.parent;
 			}
+
 			Vector3[] waypoints = SimplifyPath(path);
+			
 			Array.Reverse(waypoints);
 			return waypoints;
 		}

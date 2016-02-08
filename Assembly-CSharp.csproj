@@ -166,9 +166,12 @@
      <Compile Include="Assets\Prefabs\GameMaster\NetworkManager\Seed.cs" />
      <Compile Include="Assets\Prefabs\Inventory\Enums\DamageType.cs" />
      <Compile Include="Assets\Prefabs\Inventory\Enums\StatusEffect.cs" />
+     <Compile Include="Assets\Prefabs\Inventory\Enums\TriggerType.cs" />
      <Compile Include="Assets\Prefabs\Inventory\Enums\WeaponType.cs" />
+     <Compile Include="Assets\Prefabs\Inventory\InventoryManager.cs" />
      <Compile Include="Assets\Prefabs\Inventory\Projectile.cs" />
      <Compile Include="Assets\Prefabs\Inventory\ProjectileManager.cs" />
+     <Compile Include="Assets\Prefabs\Inventory\Trap.cs" />
      <Compile Include="Assets\Prefabs\Inventory\Weapon.cs" />
      <Compile Include="Assets\Prefabs\UI\UI_Events.cs" />
      <Compile Include="Assets\Prefabs\UI\UI_Manager.cs" />
@@ -215,6 +218,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ContrastComposite.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\FisheyeShader.shader" />
+     <None Include="Assets\Editor\Todo\README.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
      <None Include="Assets\Editor\Custom Scripting Template\81.1-C# Custom Script-NewBehaviourScript.cs.txt" />

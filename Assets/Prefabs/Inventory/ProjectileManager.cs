@@ -12,7 +12,10 @@ public class ProjectileManager : MonoBehaviour
 
 	void Awake ()
 	{
-		weapon = GetComponent<Weapon>();
+		if (weaponType == WeaponType.Projectile)
+		{
+			weapon = GetComponent<Weapon>();
+		}
 		DOTween.Init();
 	}
 

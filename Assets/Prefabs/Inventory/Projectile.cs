@@ -1,10 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof(BoxCollider))]
 public class Projectile : MonoBehaviour 
 {
-	[RequireComponent (typeof(BoxCollider))]
-
 	ProjectileManager manager;
 	void Awake ()
 	{

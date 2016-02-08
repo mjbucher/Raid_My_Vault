@@ -12,17 +12,19 @@ namespace AStar
 
 		void Start()
 		{
-			Debug.Log("ResourceRequest");
+			//Debug.Log("ResourceRequest");
 
 		}
 
 		public void Update_Path(Transform _target)
 		{
-			Debug.Log("update path called");
-			Debug.Log("Stopping current path");
+			//Debug.Log("update path called");
+			//Debug.Log("Stopping current path");
 			StopCoroutine("FindPath");
 			target = _target;
-			Debug.Log("requesting new path");
+			//Debug.Log("requesting new path");
+			Debug.Log("current position: " + transform.position);
+			Debug.Log("target position: " + target.position);
 			PathfindingRequestManager.RequestPath(transform.position, target.position, OnPathFound);
 		}
 
@@ -37,9 +39,9 @@ namespace AStar
 			if (pathSuccessful)
 			{
 				path = newPath;
-				StopCoroutine("FollowPath");
+				//StopCoroutine("FollowPath");
 				Debug.Log("Follow path stopped");
-				StartCoroutine("FollowPath");
+				//StartCoroutine("FollowPath");
 			}
 			else
 			{
@@ -50,7 +52,7 @@ namespace AStar
 
 		IEnumerator FollowPath ()
 		{
-			Debug.Log("Follow Path started");
+			//Debug.Log("Follow Path started");
 			Vector3 currentWaypoint = path[0];
 
 			while (true)

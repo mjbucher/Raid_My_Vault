@@ -16,6 +16,7 @@ namespace AStar
 		public float nodeRadius = 0.5f;
 		public bool gridOnNodeCenter = true;
 		PathfindingNode[,] grid;
+		public bool showGizmos = false;
 
 		float nodeDiameter;
 		int gridSizeX, gridSizeY;
@@ -91,15 +92,18 @@ namespace AStar
 
 		public PathfindingNode GetNodeFromWorldPoint (Vector3 worldPosition)
 		{	
+			// world plane and gird plain do not match up! that is the issue!!!
+			float percentX = ((worldPosition.x + (gridWorldSize.x / 2)) / gridWorldSize.x); // + 0.5f;
 
-			float percentX = (worldPosition.x / gridWorldSize.x); // + 0.5f;
-			float percentY = (worldPosition.z / gridWorldSize.y); // + 0.5f;
+			float percentY = ((worldPosition.z + (gridWorldSize.y / 2)) / gridWorldSize.y); // + 0.5f;
 			percentX = Mathf.Clamp01(percentX);
 			percentY = Mathf.Clamp01(percentY);
-
+			Debug.Log("percentX :" + percentX + " percentY: " + percentY);
 			int x = Mathf.RoundToInt((gridSizeX - 1 ) * percentX);
 			int y = Mathf.RoundToInt((gridSizeY - 1 ) * percentY);
-
+			//x += (Mathf.RoundToInt(gridWorldSize.x) / 2);
+			//y += (Mathf.RoundToInt(gridWorldSize.y) / 2);
+			Debug.Log("x: " + x + " y: " + y);
 			// make sure x isnt negative
 			//x = x < 0 ? x + gridSizeX : x;
 			//y = y < 0 ? y + gridSizeY : x;
@@ -111,13 +115,16 @@ namespace AStar
 
 		void OnDrawGizmos()
 		{
-			Gizmos.DrawWireCube(transform.position, new Vector3(gridWorldSize.x, 1, gridWorldSize.y));
-			if (grid != null && displayGridGizmos)
+			if (showGizmos)
 			{
-				foreach (PathfindingNode node in grid)
+				Gizmos.DrawWireCube(transform.position, new Vector3(gridWorldSize.x, 1, gridWorldSize.y));
+				if (grid != null && displayGridGizmos)
 				{
-					Gizmos.color = node.walkable ? Color.white : Color.black ;
-					Gizmos.DrawCube(node.worldPosition, Vector3.one * (nodeDiameter - 0.25f));
+					foreach (PathfindingNode node in grid)
+					{
+						Gizmos.color = node.walkable ? Color.white : Color.black ;
+						Gizmos.DrawCube(node.worldPosition, Vector3.one * (nodeDiameter - 0.25f));
+					}
 				}
 			}
 		}

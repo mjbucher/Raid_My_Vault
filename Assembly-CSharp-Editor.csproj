@@ -63,6 +63,8 @@
      <Compile Include="Assets\Editor\ImageEffects\TonemappingEditor.cs" />
      <Compile Include="Assets\Editor\ImageEffects\VignetteAndChromaticAberrationEditor.cs" />
      <Compile Include="Assets\Editor\SpawnerManagerEditor.cs" />
+     <Compile Include="Assets\Editor\Todo\ListData.cs" />
+     <Compile Include="Assets\Editor\Todo\TodoList.cs" />
      <Compile Include="Assets\PrefabEvolution\Sources\Editor\Migration\FileUtility.cs" />
      <Compile Include="Assets\PrefabEvolution\Sources\Editor\Migration\MigrationUtility.cs" />
      <Compile Include="Assets\PrefabEvolution\Sources\Editor\PEAutoDict.cs" />
@@ -111,6 +113,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ContrastComposite.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\FisheyeShader.shader" />
+     <None Include="Assets\Editor\Todo\README.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
      <None Include="Assets\Editor\Custom Scripting Template\81.1-C# Custom Script-NewBehaviourScript.cs.txt" />

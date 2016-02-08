@@ -36,20 +36,20 @@ namespace AStar
 
 		void TryProcessNext()
 		{
-			Debug.Log("TryProcessNext called");
+			//Debug.Log("TryProcessNext called");
 			if(!isProcessingPath && pathRequestQueue.Count > 0)
 			{
 				
 				currentPathRequest = pathRequestQueue.Dequeue();
 				isProcessingPath = true;
-				Debug.Log("calling start find path");
+				//Debug.Log("calling start find path");
 				pathfinding.StartFindPath(currentPathRequest.pathStart, currentPathRequest.pathEnd);
 			}
 		}
 
 		public void FinishedProcessingPath(Vector3[] path, bool success)
 		{
-			UnityEngine.Debug.Log("FinishedProcessingPath called success");
+			//UnityEngine.Debug.Log("FinishedProcessingPath called success");
 			UnityEngine.Debug.Log("FinishedProcessingPath: path = " + path + ":: success = " + success);
 			currentPathRequest.callback(path, success);
 			isProcessingPath = false;
