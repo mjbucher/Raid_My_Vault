@@ -15,8 +15,8 @@ public class TodoList : EditorWindow
 {
 	private static TodoList _window;
 	private ListData _listData;
-    private string _listDataDirectory = "/Resources/Todo/";
-	private string _listDataAssetPath = "Assets/Resources/Todo/TodoList.asset";
+    private string _listDataDirectory = "/Editor/Todo/Resources/Todo/";
+	private string _listDataAssetPath = "Assets/Editor/Todo/Resources/Todo/TodoList.asset";
 	private int _currentOwnerIndex = 0;
 	private int _newTaskOwnerIndex = 0;
 	private string _newTask;

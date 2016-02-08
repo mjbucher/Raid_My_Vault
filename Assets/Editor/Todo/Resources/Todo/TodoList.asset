@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owners:
   - name: Normal
-    color: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 0, g: 0, b: 0, a: 1}
     index: 0
   - name: Urgent
     color: {r: 1, g: 0, b: 0, a: 1}
@@ -27,25 +27,25 @@ MonoBehaviour:
   items:
   - owner:
       name: Normal
-      color: {r: 1, g: 1, b: 1, a: 1}
+      color: {r: 0, g: 0, b: 0, a: 1}
       index: 0
     task: Fix rounding error in raycasting for user input
     isComplete: 0
   - owner:
       name: Normal
-      color: {r: 1, g: 1, b: 1, a: 1}
+      color: {r: 0, g: 0, b: 0, a: 1}
       index: 0
     task: follow inventory tutorial
     isComplete: 0
   - owner:
       name: Normal
-      color: {r: 1, g: 1, b: 1, a: 1}
+      color: {r: 0, g: 0, b: 0, a: 1}
       index: 0
     task: GUI made for level editing and choosing loadout
     isComplete: 0
   - owner:
       name: Normal
-      color: {r: 1, g: 1, b: 1, a: 1}
+      color: {r: 0, g: 0, b: 0, a: 1}
       index: 0
     task: testing
     isComplete: 0
