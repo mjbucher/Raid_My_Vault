@@ -47,5 +47,6 @@ MonoBehaviour:
       name: Normal
       color: {r: 0, g: 0, b: 0, a: 1}
       index: 0
-    task: testing
+    task: 'Inpathfinding grid, fix the rounding clamp on getting node from world position.
+      Makes it so that the target is nnever actually selected '
     isComplete: 0

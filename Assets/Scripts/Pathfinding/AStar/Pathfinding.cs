@@ -15,7 +15,7 @@ namespace AStar
 	{
 		PathfindingRequestManager requestManager;
 		PathfindingGrid grid;
-
+		public int diagonalWeight = 1;
 		public bool useSimplifyPath = true;
 
 		void Awake ()
@@ -61,6 +61,7 @@ namespace AStar
 					{
 						sw.Stop();
 						print ("Path Found: " + sw.ElapsedMilliseconds + " ms");
+
 						pathSuccess = true;
 						break;
 					}
@@ -134,8 +135,7 @@ namespace AStar
 			}
 			return waypoints.ToArray();
 		}
-
-
+			
 		public int GetDistance (PathfindingNode nodeA, PathfindingNode nodeB) 
 		{
 			int distX = Mathf.Abs(nodeA.gridX - nodeB.gridX);
@@ -143,15 +143,15 @@ namespace AStar
 
 			int diagonal  = 14; // make this more than double strait if you want to eliminate diagonals
 			int strait = 10;
-			int weighting = 1;
+			int diagonalWeighting  = diagonalWeight;
 
 			if (distX > distY)
 			{
-				return ((diagonal * distY * weighting) + (strait * (distX - distY)));
+				return ((diagonal * distY * diagonalWeighting) + (strait * (distX - distY)));
 			}
 			else
 			{
-				return ((diagonal * distX * weighting) + (strait * (distY - distX)));
+				return ((diagonal * distX * diagonalWeighting) + (strait * (distY - distX)));
 			}
 		}
 

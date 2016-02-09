@@ -94,8 +94,8 @@ namespace AStar
 		{	
 			// world plane and gird plain do not match up! that is the issue!!!
 			float percentX = ((worldPosition.x + (gridWorldSize.x / 2)) / gridWorldSize.x); // + 0.5f;
-
 			float percentY = ((worldPosition.z + (gridWorldSize.y / 2)) / gridWorldSize.y); // + 0.5f;
+			/// *** Rounding does not take into account the maximum (fine for start, but not good for final) In fact will never pick the final properly
 			percentX = Mathf.Clamp01(percentX);
 			percentY = Mathf.Clamp01(percentY);
 			Debug.Log("percentX :" + percentX + " percentY: " + percentY);
