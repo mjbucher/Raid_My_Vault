@@ -18,12 +18,15 @@ MonoBehaviour:
   - name: Urgent
     color: {r: 1, g: 0, b: 0, a: 1}
     index: 1
-  - name: In Progress
-    color: {r: 0, g: 1, b: 1, a: 1}
+  - name: Low Priority
+    color: {r: 0.034482475, g: 0, b: 1, a: 1}
     index: 2
-  - name: Note
-    color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  - name: In Progress
+    color: {r: 0.015686274, g: 1, b: 0.95926964, a: 1}
     index: 3
+  - name: Note
+    color: {r: 0, g: 0.5294118, b: 0.17890474, a: 1}
+    index: 4
   items:
   - owner:
       name: Normal
@@ -32,9 +35,9 @@ MonoBehaviour:
     task: Fix rounding error in raycasting for user input
     isComplete: 0
   - owner:
-      name: Normal
-      color: {r: 0, g: 0, b: 0, a: 1}
-      index: 0
+      name: Urgent
+      color: {r: 1, g: 0, b: 0, a: 1}
+      index: 1
     task: follow inventory tutorial
     isComplete: 0
   - owner:
@@ -44,9 +47,15 @@ MonoBehaviour:
     task: GUI made for level editing and choosing loadout
     isComplete: 0
   - owner:
-      name: Normal
-      color: {r: 0, g: 0, b: 0, a: 1}
-      index: 0
+      name: Low Priority
+      color: {r: 0.034482475, g: 0, b: 1, a: 1}
+      index: 2
     task: 'Inpathfinding grid, fix the rounding clamp on getting node from world position.
       Makes it so that the target is nnever actually selected '
+    isComplete: 0
+  - owner:
+      name: Low Priority
+      color: {r: 0.034482475, g: 0, b: 1, a: 1}
+      index: 2
+    task: Testing the weighting for the pathfinging along diagonals
     isComplete: 0

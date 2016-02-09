@@ -20,8 +20,9 @@ public class ListData : ScriptableObject
 		// create over list owners, can be an editor window later		
 		owners.Add( new ListItemOwner("Normal", Color.black,0) );		
 		owners.Add( new ListItemOwner("Urgent", Color.red,1) );
-		owners.Add( new ListItemOwner("In Progress", Color.cyan,2) );
-		owners.Add( new ListItemOwner("Note", Color.yellow, 3) );								
+		owners.Add ( new ListItemOwner("Low Priority", Color.blue, 2) );
+		owners.Add( new ListItemOwner("In Progress", Color.cyan,3) );
+		owners.Add( new ListItemOwner("Note", Color.yellow, 4) );
 	}
 	
 	public void AddTask( ListItemOwner owner, string task)

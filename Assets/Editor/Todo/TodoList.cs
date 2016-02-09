@@ -22,7 +22,8 @@ public class TodoList : EditorWindow
 	private string _newTask;
 	private bool showCompletedTasks = true;
 	private Vector2 _scrollPosition = Vector2.zero;
-	
+	public bool saveable;
+
 	[MenuItem ("Window/Todo List %l")]
     public static void Init ()
     {
@@ -171,13 +172,23 @@ public class TodoList : EditorWindow
 			GUI.FocusControl(null);				
 		}
 		
-		if(GUI.changed)
+//		if(GUI.changed)
+//		{
+//			//Debug.Log("Save Data: " + _listData.items.Count);
+//			EditorUtility.SetDirty(_listData);
+//			EditorApplication.SaveAssets();
+//			AssetDatabase.SaveAssets();		
+//		}	
+
+		if (GUIUtility.hotControl != 0) saveable = true;
+		if (GUIUtility.hotControl == 0 && saveable)
 		{
-			//Debug.Log("Save Data: " + _listData.items.Count);
+			saveable = false;
+			// debug.log("Dave Data: " + _listData.items.Count);
 			EditorUtility.SetDirty(_listData);
 			EditorApplication.SaveAssets();
-			AssetDatabase.SaveAssets();		
-		}	
+			AssetDatabase.SaveAssets();
+		}
 	}
 	
 	void OnDestroy()

@@ -188,6 +188,7 @@
      <Compile Include="Assets\Scripts\Pathfinding\AStar\PathfindingUnit.cs" />
      <Compile Include="Assets\Scripts\Utility\DisableColliders.cs" />
      <Compile Include="Assets\Scripts\Utility\DoNotDestroy.cs" />
+     <Compile Include="Assets\Scripts\Utility\DrawArrow.cs" />
      <Compile Include="Assets\Scripts\Utility\DrawWireframe.cs" />
      <Compile Include="Assets\Scripts\Utility\KeepOnLoad.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
