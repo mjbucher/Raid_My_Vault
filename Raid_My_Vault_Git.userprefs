@@ -1,9 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Editor\Todo\TodoList.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Prefabs\Entities\Enemies\Enemy.cs">
     <Files>
-      <File FileName="Assets\Editor\Todo\TodoList.cs" Line="19" Column="27" />
-      <File FileName="Assets\Editor\Todo\ListData.cs" Line="23" Column="39" />
+      <File FileName="Assets\Prefabs\Entities\Enemies\Enemy.cs" Line="25" Column="2" />
+      <File FileName="Assets\Prefabs\Entities\Enums\DetectionMode.cs" Line="11" Column="1" />
+      <File FileName="Assets\Prefabs\Entities\Enemies\DetectionMethod.cs" Line="36" Column="8" />
+      <File FileName="Assets\Prefabs\Entities\Enemies\StatusEffectMethod.cs" Line="9" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

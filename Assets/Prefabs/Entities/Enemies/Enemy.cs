@@ -13,6 +13,8 @@ public class Enemy : Entity , IKillable, IDamageable
 	public float discoverRate = 1.0f;
 	public float forgetRate = 1.0f;
 
+	public DetectionMethod detectionMethod;
+
 	private Collider detectCol;
 
 	public void Awake ()

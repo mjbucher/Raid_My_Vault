@@ -143,9 +143,12 @@
      <Compile Include="Assets\Prefabs\Building\Spawning\SpawnerManager.cs" />
      <Compile Include="Assets\Prefabs\Building\instantiateObject.cs" />
      <Compile Include="Assets\Prefabs\Camera\FollowTarget.cs" />
+     <Compile Include="Assets\Prefabs\Entities\Enemies\DetectionMethod.cs" />
      <Compile Include="Assets\Prefabs\Entities\Enemies\Enemy.cs" />
      <Compile Include="Assets\Prefabs\Entities\Enemies\LookingForPlayer.cs" />
+     <Compile Include="Assets\Prefabs\Entities\Enemies\StatusEffectMethod.cs" />
      <Compile Include="Assets\Prefabs\Entities\Entity.cs" />
+     <Compile Include="Assets\Prefabs\Entities\Enums\DetectionMode.cs" />
      <Compile Include="Assets\Prefabs\Entities\Enums\DetectionState.cs" />
      <Compile Include="Assets\Prefabs\Entities\Enums\Direction.cs" />
      <Compile Include="Assets\Prefabs\Entities\Enums\LifeState.cs" />
