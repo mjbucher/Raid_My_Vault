@@ -149,6 +149,7 @@
      <Compile Include="Assets\Prefabs\Entities\Enemies\StatusEffectMethod.cs" />
      <Compile Include="Assets\Prefabs\Entities\Entity.cs" />
      <Compile Include="Assets\Prefabs\Entities\Enums\DetectionMode.cs" />
+     <Compile Include="Assets\Prefabs\Entities\Enums\DetectionShape.cs" />
      <Compile Include="Assets\Prefabs\Entities\Enums\DetectionState.cs" />
      <Compile Include="Assets\Prefabs\Entities\Enums\Direction.cs" />
      <Compile Include="Assets\Prefabs\Entities\Enums\LifeState.cs" />

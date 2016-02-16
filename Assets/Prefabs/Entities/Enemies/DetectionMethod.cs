@@ -1,16 +1,27 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class DetectionMethod : MonoBehaviour 
 {
 	public DetectionMode mode;
+	public DetectionShape shape;
+	public Weapon weapon;
 	public float range;
 	//public float radius;
 	public float angle;
 	//float sphereRadius = 0.5;
+	GameObject player;
 	Vector3 playerPos; 
 	bool foundPlayer = false;
+	bool lockOnPlayer = false;
 
+	[Header("Detection Lengths")]
+	public float discoverTime = 2.0f;
+	public float forgetTime = 5.0f;
+
+
+	Enemy me;
 
 	// constructor that takes a DetectionMode
 	public DetectionMethod (DetectionMode _mode, float _range, float _angle)
@@ -19,74 +30,101 @@ public class DetectionMethod : MonoBehaviour
 		range = _range;
 		//radius = _radius;
 		angle = _angle;
-		CheckMode();
+		CheckShape();
 	}
 		
 	void Awake ()
-	{
-		playerPos = GameObject.FindGameObjectWithTag("Player").transform.position; // player position
+	{ 
+		// get references
+		me = GetComponent<Enemy>();
+		player = GameObject.FindGameObjectWithTag("Player"); 
+		playerPos = player.transform.position; // player position
 	}
 
+	void Start ()
+	{
+		// start coroutines
+		StartCoroutine ("CheckForPlayer"); 
+	}
 
 	/// <summary>
 	/// Checks for player, first by the distance between them, then by the angle between us, then by a raycast to see if something is blocking line of sight.
 	/// </summary>
-	void CheckForPlayer ()
+	IEnumerable CheckForPlayer ()
 	{
-		float distanceBetween = Vector3.Distance(transform.position, playerPos); // get distance between 
-		// check if not in range
-		if (distanceBetween > range)
+		yield return null;
+		if (me.detectionState != DetectionState.None)
 		{
-			return;
-		}
-		Vector3 targetDirection = playerPos - transform.position;
-		Vector3 forward = transform.forward;
-		float angleBetween = Vector3.Angle(targetDirection, forward); // get angle between
-		// check if angle is outside the range of my forward direction
-		if (angleBetween > angle)
-		{
-			return;
-		}
-		// check if there is a wall inbetween player and me
-		RaycastHit hit;
-		if (Physics.Raycast(transform.position, targetDirection, out hit, range))
-		{
-			if (hit.collider.tag != "Player")
+			float distanceBetween = Vector3.Distance(transform.position, playerPos); // get distance between 
+			// check if not in range
+			if (distanceBetween > range)
 			{
-				foundPlayer = false;
-				return;
+				yield return null;
 			}
-			else
+			Vector3 targetDirection = playerPos - transform.position;
+			Vector3 forward = transform.forward;
+			float angleBetween = Vector3.Angle(targetDirection, forward); // get angle between
+			// check if angle is outside the range of my forward direction
+			if (angleBetween > angle / 2.0f)
 			{
-				foundPlayer = true;	
+				yield return null;
 			}
-		}
-		// what occurs when the AI finds the player
-		if (foundPlayer)
-		{
-			
+			// check if there is a wall inbetween player and me
+			RaycastHit hit;
+			if (Physics.Raycast(transform.position, targetDirection, out hit, range))
+			{
+				if (hit.collider.tag != "Player")
+				{
+					foundPlayer = false;
+					yield return null;
+				}
+				else
+				{
+					foundPlayer = true;	
+				}
+			}
+			// what occurs when the AI finds the player
+			if (foundPlayer)
+			{
+				yield return StartCoroutine("Discovering");
+			}
 		}
 	}
 
 
-
+	IEnumerator Discovering ()
+	{
+		// wait for designated time
+		yield return new WaitForSeconds(discoverTime);
+		// check if player was found again
+		lockOnPlayer = (foundPlayer) ? true : false;
+		// if true make found player
+		me.detectionState = lockOnPlayer ? DetectionState.FoundPlayer : me.detectionState;
+		if (lockOnPlayer)
+		{
+			yield return me.StartCoroutine("FoundPlayer", player);
+		}
+		StopCoroutine("Discovering");
+	}
 
 
 	// checks the Detection mode of an AI
-	void CheckMode ()
+	void CheckShape ()
 	{
-		switch (mode)
+		switch (shape)
 		{
-		case DetectionMode.Line:
+		case DetectionShape.Line:
 			CheckAsLine();
 			break;
-		case DetectionMode.Radial:
+		case DetectionShape.Radial:
 			CheckAsRadial();
 			break;
-		case DetectionMode.Spherical:
+		case DetectionShape.Sphere:
 			CheckAsSphere();
 			break;
-		case DetectionMode.None:
+		case DetectionShape.Omni:
+			break;
+		case DetectionShape.None:
 			break;
 		default:
 			break;

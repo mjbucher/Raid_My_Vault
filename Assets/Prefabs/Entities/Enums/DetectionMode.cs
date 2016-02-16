@@ -4,7 +4,7 @@ using System.Collections;
 public enum DetectionMode
 {
 	None,
-	Radial,
-	Spherical,
-	Line
+	Attack,
+	Alert,
+	Both
 }

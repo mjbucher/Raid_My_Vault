@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/Development/Main_Menu_Dev.unity
+- path: Assets/_Scenes/Development/Inventory_UI_Dev.unity
   isLoaded: 1
   isActive: 1

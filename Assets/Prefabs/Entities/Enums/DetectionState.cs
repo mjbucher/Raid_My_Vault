@@ -4,7 +4,9 @@ using System.Collections;
 public enum DetectionState 
 {
 	None,
-	Attack,
-	Alert,
-	Proximity
+	Patrolling,
+	Searching,
+	FoundPlayer,
+	FoundTarget,
+	Forgetting
 }
