@@ -77,3 +77,22 @@ MonoBehaviour:
       index: 2
     task: Weapon.cs --> fix to work with <Enemy> and <Player> indescriminately
     isComplete: 0
+  - owner:
+      name: Normal
+      color: {r: 0, g: 0, b: 0, a: 1}
+      index: 0
+    task: GameMaster.cs --> Refactor according to new standards. Enum out as separate,
+      and make coroutines
+    isComplete: 0
+  - owner:
+      name: Urgent
+      color: {r: 1, g: 0, b: 0, a: 1}
+      index: 1
+    task: RaidingUI.cs --> create, and map weapons to it that function (for play testing)
+    isComplete: 0
+  - owner:
+      name: Urgent
+      color: {r: 1, g: 0, b: 0, a: 1}
+      index: 1
+    task: Make sure Touch Controls work!
+    isComplete: 0
