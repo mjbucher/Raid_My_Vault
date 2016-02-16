@@ -1,27 +1,44 @@
 using UnityEngine;
 using System.Collections;
 using System;
+using System.Collections.Generic;
+
 
 public class DetectionMethod : MonoBehaviour 
 {
+	[Header("Detection Options")] 
+	[Tooltip("Action that should occur when I spot and enemy")]
 	public DetectionMode mode;
-	public DetectionShape shape;
-	public Weapon weapon;
-	public float range;
+	//[Header("Not Implemented")]
+	[HideInInspector] public DetectionShape shape;
+	//[Space(20.0f)]
+	//public Weapon weapon;
+	[Range(1,7)] [Tooltip("The range of AI's vision")]
+	public float range = 5.0f;
 	//public float radius;
+	[Range(0,360)] [Tooltip("Field of view for the AI, works best in increments of 10 degrees")]
 	public float angle;
 	//float sphereRadius = 0.5;
+	// grabbing player and responsible locks
 	GameObject player;
 	Vector3 playerPos; 
 	bool foundPlayer = false;
 	bool lockOnPlayer = false;
 
-	[Header("Detection Lengths")]
+	[Header("Detection Time Lengths")]
+
+	[Range(0.0f,10.0f)] [Tooltip("Time (in seconds) is takes for player to be spotted before action")]
 	public float discoverTime = 2.0f;
+
+	[Range(0.0f,10.0f)] [Tooltip("Time (in seconds) is takes to forget the player after being spotted and lost")]
 	public float forgetTime = 5.0f;
 
+	[Header("Experimental")] [Tooltip("For multi targeting")]
+	public Player primaryTarget;
+	public List<Enemy> secondaryTargets;
 
-	Enemy me;
+
+	Enemy enemy;
 
 	// constructor that takes a DetectionMode
 	public DetectionMethod (DetectionMode _mode, float _range, float _angle)
@@ -36,8 +53,9 @@ public class DetectionMethod : MonoBehaviour
 	void Awake ()
 	{ 
 		// get references
-		me = GetComponent<Enemy>();
+		enemy = GetComponent<Enemy>();
 		player = GameObject.FindGameObjectWithTag("Player"); 
+		primaryTarget = player.GetComponent<Player>();
 		playerPos = player.transform.position; // player position
 	}
 
@@ -50,10 +68,10 @@ public class DetectionMethod : MonoBehaviour
 	/// <summary>
 	/// Checks for player, first by the distance between them, then by the angle between us, then by a raycast to see if something is blocking line of sight.
 	/// </summary>
-	IEnumerable CheckForPlayer ()
+	public IEnumerable CheckForPlayer ()
 	{
 		yield return null;
-		if (me.detectionState != DetectionState.None)
+		if (enemy.detectionState != DetectionState.None)
 		{
 			float distanceBetween = Vector3.Distance(transform.position, playerPos); // get distance between 
 			// check if not in range
@@ -99,10 +117,10 @@ public class DetectionMethod : MonoBehaviour
 		// check if player was found again
 		lockOnPlayer = (foundPlayer) ? true : false;
 		// if true make found player
-		me.detectionState = lockOnPlayer ? DetectionState.FoundPlayer : me.detectionState;
+		enemy.detectionState = lockOnPlayer ? DetectionState.FoundPlayer : enemy.detectionState;
 		if (lockOnPlayer)
 		{
-			yield return me.StartCoroutine("FoundPlayer", player);
+			yield return StartCoroutine(enemy.FoundPlayer(player));
 		}
 		StopCoroutine("Discovering");
 	}

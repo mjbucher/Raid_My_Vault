@@ -40,7 +40,7 @@ public class Weapon : MonoBehaviour
 
 	}
 
-	void Attack ()
+	public void Attack ()
 	{
 		Ray ray = new Ray();
 		RaycastHit hit;
@@ -98,14 +98,22 @@ public class Weapon : MonoBehaviour
 	}
 
 
-	void DamageEnemies()
+	IEnumerator DamageEnemies()
 	{
+		yield return null;
 		// make enemies take damage
 		foreach (Enemy _enemy in enemiesEffected)
 		{
-			_enemy.Take_Damage(weaponDamage, weaponType);
+			// change weapon damage if nessary
+			if (damageType == _enemy.weakness)
+			{
+				yield return StartCoroutine(_enemy.healthManager.DealDamage( Mathf.RoundToInt(weaponDamage * _enemy.weaknessMultiplier)));
+			}
+			yield return StartCoroutine(_enemy.healthManager.DealDamage(weaponDamage));
 		}
 		// clear the list
 		enemiesEffected.Clear();
+		// stop coroutine
+		StopCoroutine("DamageAllEnemies");
 	}
 }

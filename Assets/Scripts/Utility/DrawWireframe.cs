@@ -24,7 +24,7 @@ namespace Utility
 				_size = _col.bounds.size;
 
 			}
-			// else mind what ever child has a mesh and copy from there
+			// else find what ever child has a mesh and copy from there
 			else
 			{
 				_childTransform = GetComponentInChildren<MeshFilter>().gameObject.GetComponent<Transform>();

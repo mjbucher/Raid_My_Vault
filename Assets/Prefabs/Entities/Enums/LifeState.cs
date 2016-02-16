@@ -6,5 +6,5 @@ public enum LifeState
 	None,
 	Alive,
 	Dead,
-	Disabled
+	FullDeath
 }

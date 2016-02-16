@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11486390}
   - 114: {fileID: 11494204}
   - 54: {fileID: 5409882}
+  - 114: {fileID: 11460002}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -80,7 +81,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 8}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 460012}
@@ -265,6 +266,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!114 &11460002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e1b89df30486245ab8716f4f049d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GM: {fileID: 0}
+  health: 100
+  speed: 1
+  cost: 0
+  weakness: 0
+  weaknessMultiplier: 2
+  lifeState: 1
+  movementState: 3
+  detectionState: 0
+  condition: 0
+  direction: 0
+  gridSnapVector: {x: 0.5, y: 0.5, z: 0.5}
+  interactionRadius: 3
 --- !u!114 &11486390
 MonoBehaviour:
   m_ObjectHideFlags: 1

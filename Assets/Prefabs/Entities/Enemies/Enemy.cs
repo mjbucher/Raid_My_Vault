@@ -1,42 +1,68 @@
 using UnityEngine;
 using System.Collections;
 
-public class Enemy : Entity , IKillable, IDamageable
+[RequireComponent(typeof(DetectionMethod))]
+//[AddComponentMenu("Entities/Enemy")]
+public class Enemy : Entity 
 {
-	public int cost = 0;
-
-	public WeaponType weakness = WeaponType.None;
-	public float weaknessMultiplier = 2.0f;
-	public int damage = 10;
-	[Header("Detection Variables")]
-	public float detectionTime = 3.0f;
-	public float discoverRate = 1.0f;
-	public float forgetRate = 1.0f;
-
+//	[Header("Cost of Unit")]
+//	//[HideInInspector] 
+//	[Tooltip("The cost for this unit, as int")]
+//	public int cost = 0;
+//	[Header("Weakness of Unit")]
+//	[Tooltip("The weapon weakness of this unit")]
+//	public WeaponType weakness = WeaponType.None;
+//	[Tooltip("Weakness Multiplier")] [Range(0.0f, 5.0f)]
+//	public float weaknessMultiplier = 2.0f;
+	//public int damage = 10;
+	//[Header("Detection Variables")]
+	//public float detectionTime = 3.0f;
+	//public float discoverRate = 1.0f;
+	//public float forgetRate = 1.0f;
+	//[Header("Current State")]
+	//[HideInInspector][Tooltip("The current state of the player")]
+	//public DetectionState detectionState = DetectionState.Patrolling;
 	//public DetectionMode detectionAction =DetectionMode.None;
-	public DetectionMode detectionMode = DetectionMode.None;
-	public DetectionMethod detectionMethod;
-	public DetectionState detectionState = DetectionState.None;
+	// public DetectionMode detectionMode = DetectionMode.None;
+
+
+	[HideInInspector] public DetectionMethod detectionMethod;
+	//public DetectionState detectionState = DetectionState.None;
+	//[HideInInspector] public DeathSequence deathSequence;
+	//[HideInInspector] public HealthManager healthManager;
 
 	private Collider detectCol;
 
-	public void Awake ()
+	void Awake ()
 	{
 		detectCol = GetComponentInChildren<Collider>();
-		detectionMethod = (detectionMethod == null) ? GetComponent<DetectionMethod>():  detectionMethod;
+		detectionMethod = GetComponent<DetectionMethod>();
+		//deathSequence = GetComponent<DeathSequence>();
+		//healthManager = GetComponent<HealthManager>();
 
+	}
+		
+	void Update ()
+	{
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
+			StartCoroutine(healthManager.DealDamage(1));
+			Debug.Log(health);
+		}
 	}
 
 
 	public IEnumerator FoundPlayer (GameObject target)
 	{
 		// if enemmy should alert
-		if (detectionMode == DetectionMode.Alert)
+		if (detectionMethod.mode == DetectionMode.Alert)
 		{
-			
+			// play alert effects
+			// add alert count
+			yield return StartCoroutine(GM.AddDetection(1));
 		}
 		// if enemy should attack
-		if (detectionMode == DetectionMode.Attack)
+		else if (detectionMethod.mode == DetectionMode.Attack)
 		{
 			// if not confused
 			if (condition != StatusEffect.Confused)
@@ -46,38 +72,4 @@ public class Enemy : Entity , IKillable, IDamageable
 			}
 		}
 	}
-
-
-	IEnumerator AttackTarget (GameObject _target)
-	{
-		 	
-	}
-
-
-
-	override public void Take_Damage (int _damage, WeaponType _weaponType)
-	{
-		if (_weaponType == weakness)
-		{
-			_damage = Mathf.RoundToInt(_damage * weaknessMultiplier); 
-		}
-		base.Take_Damage(_damage);
-	}
-
-	public void Found (GameObject _target)
-	{
-
-	}
-		
-
-	public void Kill_Sequence ()
-	{
-		Destroy(gameObject);
-	}
-
-	public void Take_Damage (int _damage, DamageType _damageType)
-	{
-		
-	}
-		
 }

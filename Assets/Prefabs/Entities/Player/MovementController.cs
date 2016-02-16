@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
+using AStar; // for Pathfinding Unit and other target directing
 
+[RequireComponent(typeof(PathfindingUnit))]
 public class MovementController : MonoBehaviour 
 {
 	[HideInInspector] public Entity thisEntity;
@@ -17,7 +19,6 @@ public class MovementController : MonoBehaviour
 	IEnumerator Start ()
 	{
 		yield return StartCoroutine("Pathing"); 
-
 	}
 	public void Update ()
 	{

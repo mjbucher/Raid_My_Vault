@@ -29,6 +29,8 @@ public class GameMaster : MonoBehaviour
 	public GameState currentState = GameState.Active;
 	public SubState currentSubState = SubState.None;
 
+	int detectionAmount = 0;
+
 	public void Awake()
 	{
 		if ( GM == null) 
@@ -77,9 +79,17 @@ public class GameMaster : MonoBehaviour
 	/// <summary>
 	/// Adds the detected stat, and deals with reprocussions
 	/// </summary>
-	public void Add_Detected ()
+	public IEnumerator  AddDetection (int _amount)
 	{
-		
+		// return
+		yield return null;
+		// add detection
+		detectionAmount += _amount;
+		// check if exposed
+			// if so played visual effect and start things
+		// else nothing
+		//stop coroutine
+		StopCoroutine("AddDetection");
 	}
 
 

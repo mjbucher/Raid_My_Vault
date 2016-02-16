@@ -1,26 +1,64 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Entity. This Script handles universal stats for entities as well as health and death mechanisms for each
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(DeathSequence))]
+[RequireComponent(typeof(HealthManager))]
 public class Entity : MonoBehaviour 
 {
 	[HideInInspector] public GameMaster GM;
 
-	public float speed = 1.0f;
+	[Header("Unit Stats")]
+	[Tooltip("The amount of health this unit has at a maximun, int")] [Range(0, 400)]
 	public int health = 100;
-	public MovementState movementType = MovementState.Stationary;
-	public DetectionState detectionType = DetectionState.None;
+	[Tooltip("The speed at which a unit moves, float")] [Range(0.0f, 4.0f)]
+	public float speed = 1.0f;
+	[Tooltip("Shield health is deducted first before base")] [Range(0, 100)]
+	public int shield = 0;
+
+	[Header("Cost of Unit")]
+	//[HideInInspector] 
+	[Tooltip("The cost for this unit, as int")]
+	public int cost = 0;
+	[Header("Weakness of Unit")]
+	[Tooltip("The weapon weakness of this unit")]
+	public DamageType weakness = DamageType.None;
+	[Tooltip("Weakness Multiplier")] [Range(0.0f, 5.0f)]
+	public float weaknessMultiplier = 2.0f;
+
+	// Current State variables
+	[Header("Current State")]
+	public LifeState lifeState = LifeState.Alive;
+	public MovementState movementState = MovementState.Stationary;
+	public DetectionState detectionState = DetectionState.None;
 	public StatusEffect condition = StatusEffect.None;
 
-	[HideInInspector] public LifeState lifeState = LifeState.Alive;
-	[HideInInspector] public Direction direction = Direction.None; 
 
+	// Proporties for subclasses
+	[HideInInspector] public HealthManager healthManager;
+	[HideInInspector] public DeathSequence deathSequence; // needs a check for death couroutine
+
+	[HideInInspector] public Direction direction = Direction.None; 
 	[HideInInspector] public Vector3 gridSnapVector = new Vector3(0.5f, 0.5f, 0.5f);
 
-	public void Awake()
+	void Awake()
 	{
 		GM = GameMaster.GM;
+		deathSequence = GetComponent<DeathSequence>();
+		healthManager = GetComponent<HealthManager>();
+
+
 	}
 
+	void Start ()
+	{
+		//Init coroutines
+		StartCoroutine(Check_LifeState());
+	}
+		
 
 	/// <summary>
 	/// Converts passed Direction into a Vector 3
@@ -63,36 +101,18 @@ public class Entity : MonoBehaviour
 		// Allows for future slow mo
 		gameObject.transform.Rotate(_lookDirection * Time.deltaTime * (1 / Time.timeScale));
 	}
-
-	virtual public void Take_Damage (int _damage)
+		
+	public IEnumerator Check_LifeState ()
 	{
-		health -= _damage;
-		Check_LifeState();
-	}
-
-	virtual public void Take_Damage (int _damage, WeaponType _weaponType)
-	{
-		health -= _damage;
-		Check_LifeState();
-	}
-
-	virtual public void Attack(GameObject _target)
-	{
-		//_target.Take_Damage();
-	}
-
-	virtual public void Alert ()
-	{
-		GM.Add_Detected();
-	}
-
-
-	virtual public void Check_LifeState ()
-	{
-		if (health <= 0)
+		yield return null;
+		// check if dead
+		if (lifeState == LifeState.Dead || lifeState == LifeState.FullDeath)
 		{
-			lifeState = LifeState.Dead;
+			// start death sequence
+			StartCoroutine(deathSequence.DeathInit());
 		}
+		// stop checking life
+		StopCoroutine(Check_LifeState());
 	}
 
 
