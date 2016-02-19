@@ -45,7 +45,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FloorProceedural.cs" />
      <Compile Include="Assets\Motive.io\Motive\DebugPlayerLocation.cs" />
      <Compile Include="Assets\Motive.io\Motive\LocationCacheDriver.cs" />
      <Compile Include="Assets\Motive.io\Motive\Models\AR\AnnotationMarker.cs" />
@@ -184,6 +183,7 @@
      <Compile Include="Assets\Prefabs\Inventory\Weapon.cs" />
      <Compile Include="Assets\Prefabs\UI\UI_Events.cs" />
      <Compile Include="Assets\Prefabs\UI\UI_Manager.cs" />
+     <Compile Include="Assets\RoomProceedural.cs" />
      <Compile Include="Assets\Scripts\Interfaces\ICanAttack.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IConfusable.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IDamageable.cs" />
@@ -202,6 +202,8 @@
      <Compile Include="Assets\Scripts\Utility\DrawWireframe.cs" />
      <Compile Include="Assets\Scripts\Utility\KeepOnLoad.cs" />
      <Compile Include="Assets\TileColoringLogic.cs" />
+     <Compile Include="Assets\WallDirection.cs" />
+     <Compile Include="Assets\WallManager.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />

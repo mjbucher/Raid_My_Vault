@@ -113,10 +113,17 @@ MonoBehaviour:
       color: {r: 1, g: 0, b: 0, a: 1}
       index: 1
     task: AI Shooting based off of weapon
-    isComplete: 0
+    isComplete: 1
   - owner:
       name: Urgent
       color: {r: 1, g: 0, b: 0, a: 1}
       index: 1
     task: base Weapons created
+    isComplete: 0
+  - owner:
+      name: Normal
+      color: {r: 0, g: 0, b: 0, a: 1}
+      index: 0
+    task: Generalize the Proccedural floor tool, make a manage sub class that handels
+      its own stuff, can be used to instantiate / reset managers fully then
     isComplete: 0
