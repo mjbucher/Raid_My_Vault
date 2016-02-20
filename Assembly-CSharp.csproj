@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CameraController.cs" />
      <Compile Include="Assets\Motive.io\Motive\DebugPlayerLocation.cs" />
      <Compile Include="Assets\Motive.io\Motive\LocationCacheDriver.cs" />
      <Compile Include="Assets\Motive.io\Motive\Models\AR\AnnotationMarker.cs" />

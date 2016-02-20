@@ -28,11 +28,12 @@ public class RoomProceedural : MonoBehaviour
 	#endregion
 
 	#region Wall Variables
-	[Header("North -------------------")]
+
 	[Header("***** Walls and Entrances *****")]
+	[Header("North -------------------")]
 	// North Wall Controls
-	[SerializeField]
-	public WallManager northWallManager;
+
+	public WallManager northWallManager = new WallManager();
 	public bool enableNorthWall = true;
 	GameObject[] northWalls;
 	// placement, for enterances and size for each
@@ -74,8 +75,11 @@ public class RoomProceedural : MonoBehaviour
 	#region Controls
 	[Space(20)]
 	[Header("Quick Controls")]
+	[HideInInspector]
 	public bool setToOne = false;
+	[HideInInspector]
 	public bool reset = false;
+	[HideInInspector]
 	public bool PerpetualGeneration = false;
 
 	#endregion
@@ -91,10 +95,10 @@ public class RoomProceedural : MonoBehaviour
 		{
 			PerpetualGeneration = false;
 		}
-		allWallManagers.Add(northWallManager);
-		allWallManagers.Add(eastWallManager);
-		allWallManagers.Add(southWallManger);
-		allWallManagers.Add(westWallManager);
+		//allWallManagers.Add(northWallManager);
+		//allWallManagers.Add(eastWallManager);
+		//allWallManagers.Add(southWallManger);
+		//allWallManagers.Add(westWallManager);
 	}
 
 	void Update ()
@@ -126,7 +130,7 @@ public class RoomProceedural : MonoBehaviour
 //		northWallManager.enteranceEnabled = enableNorthEnterance;
 	}
 
-	void GenerateRoom ()
+	public void GenerateRoom ()
 	{
 		// delete old instances
 		DeleteFloors();
@@ -279,7 +283,7 @@ public class RoomProceedural : MonoBehaviour
 	#endregion
 
 	#region Control Functions
-	void ClearAllManagers ()
+	public void ClearAllManagers ()
 	{
 		// disable generation
 		PerpetualGeneration = false;

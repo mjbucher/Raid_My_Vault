@@ -17,6 +17,9 @@ public class Weapon : MonoBehaviour
 
 	ProjectileManager projectileManager;
 	public Transform projectileSpawnLocation;
+	public GameObject pSrojectile;
+
+	public bool firing = false;
 
 	List<Enemy> enemiesEffected = new List<Enemy>();
 
@@ -39,6 +42,15 @@ public class Weapon : MonoBehaviour
 		// use Status effect to dtermine what special effect should be applied to the target of the weapon
 
 	}
+
+	void Update ()
+	{
+		if (firing)
+		{
+			Instantiate()
+		}
+	}
+
 
 	public void Attack ()
 	{

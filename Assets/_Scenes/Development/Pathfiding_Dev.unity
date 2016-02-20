@@ -4402,9 +4402,57 @@ Prefab:
       propertyPath: m_Radius
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11492364, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11497208, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452974, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466682, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466682, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: intensity
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466682, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: blurSpread
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028288, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: orthographic size
+      value: 5.09
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &126927027 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 119756, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+  m_PrefabInternal: {fileID: 126927026}
+--- !u!114 &126927028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 126927027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c694ec1f4c769c4186f300bd16230e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceFromPlayer: 5
+  nearPlane: 0.3
+  farPlane: 1000
+  downwardAngle: 0
+  backGroundColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &177442662
 GameObject:
   m_ObjectHideFlags: 0
@@ -5203,6 +5251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9700220da9b04f149af95c9530019f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diagonalWeight: 1
   useSimplifyPath: 1
 --- !u!114 &1871599303
 MonoBehaviour:
