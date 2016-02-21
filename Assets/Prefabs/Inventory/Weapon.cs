@@ -19,6 +19,9 @@ public class Weapon : MonoBehaviour
 	public Transform projectileSpawnLocation;
 	public GameObject pSrojectile;
 
+	public ParticleSystem particles;
+
+
 	public bool firing = false;
 
 	List<Enemy> enemiesEffected = new List<Enemy>();
@@ -26,7 +29,7 @@ public class Weapon : MonoBehaviour
 
 	void Awake ()
 	{
-		projectileManager = GetComponent<ProjectileManager>(); 
+		projectileManager = GetComponent<ProjectileManager>();
 	}
 
 	// assembles the delegate based on choices
@@ -47,7 +50,7 @@ public class Weapon : MonoBehaviour
 	{
 		if (firing)
 		{
-			Instantiate()
+			//Instantiate();
 		}
 	}
 

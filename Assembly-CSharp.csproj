@@ -45,7 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CameraController.cs" />
+     <Compile Include="Assets\LaserScript.cs" />
      <Compile Include="Assets\Motive.io\Motive\DebugPlayerLocation.cs" />
      <Compile Include="Assets\Motive.io\Motive\LocationCacheDriver.cs" />
      <Compile Include="Assets\Motive.io\Motive\Models\AR\AnnotationMarker.cs" />
@@ -184,7 +184,11 @@
      <Compile Include="Assets\Prefabs\Inventory\Weapon.cs" />
      <Compile Include="Assets\Prefabs\UI\UI_Events.cs" />
      <Compile Include="Assets\Prefabs\UI\UI_Manager.cs" />
-     <Compile Include="Assets\RoomProceedural.cs" />
+     <Compile Include="Assets\Room Generation Unorganized\CameraController.cs" />
+     <Compile Include="Assets\Room Generation Unorganized\RoomProceedural.cs" />
+     <Compile Include="Assets\Room Generation Unorganized\TileColoringLogic.cs" />
+     <Compile Include="Assets\Room Generation Unorganized\WallDirection.cs" />
+     <Compile Include="Assets\Room Generation Unorganized\WallManager.cs" />
      <Compile Include="Assets\Scripts\Interfaces\ICanAttack.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IConfusable.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IDamageable.cs" />
@@ -202,9 +206,6 @@
      <Compile Include="Assets\Scripts\Utility\DrawCube.cs" />
      <Compile Include="Assets\Scripts\Utility\DrawWireframe.cs" />
      <Compile Include="Assets\Scripts\Utility\KeepOnLoad.cs" />
-     <Compile Include="Assets\TileColoringLogic.cs" />
-     <Compile Include="Assets\WallDirection.cs" />
-     <Compile Include="Assets\WallManager.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />
@@ -247,6 +248,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CreaseApply.shader" />
      <None Include="Assets\Plugins\Motive\JsonFx.Json.xml" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
+     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Luminance.shader" />
@@ -283,6 +285,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\EdgeDetectNormals.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\PrepareSunShaftsBlur.shader" />
      <None Include="Assets\Plugins\Demigiant\DOTween\DOTween46.xml" />
+     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\Blend.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SimpleClear.shader" />
