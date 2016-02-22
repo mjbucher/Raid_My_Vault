@@ -5223,11 +5223,11 @@ MonoBehaviour:
   displayGridGizmos: 1
   unwalkableMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1536
   gridWorldSize: {x: 30, y: 30}
   nodeRadius: 0.5
-  gridOnNodeCenter: 0
-  showGizmos: 0
+  gridOnNodeCenter: 1
+  showGizmos: 1
 --- !u!4 &1871599301
 Transform:
   m_ObjectHideFlags: 0

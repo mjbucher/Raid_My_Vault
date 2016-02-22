@@ -127,3 +127,39 @@ MonoBehaviour:
     task: Generalize the Proccedural floor tool, make a manage sub class that handels
       its own stuff, can be used to instantiate / reset managers fully then
     isComplete: 0
+  - owner:
+      name: Normal
+      color: {r: 0, g: 0, b: 0, a: 1}
+      index: 0
+    task: Make Rifle
+    isComplete: 0
+  - owner:
+      name: Normal
+      color: {r: 0, g: 0, b: 0, a: 1}
+      index: 0
+    task: Make rocket launcher
+    isComplete: 0
+  - owner:
+      name: Normal
+      color: {r: 0, g: 0, b: 0, a: 1}
+      index: 0
+    task: make grenade
+    isComplete: 0
+  - owner:
+      name: Normal
+      color: {r: 0, g: 0, b: 0, a: 1}
+      index: 0
+    task: add to inventory
+    isComplete: 0
+  - owner:
+      name: Normal
+      color: {r: 0, g: 0, b: 0, a: 1}
+      index: 0
+    task: make used in gui
+    isComplete: 0
+  - owner:
+      name: Normal
+      color: {r: 0, g: 0, b: 0, a: 1}
+      index: 0
+    task: add cooldowns
+    isComplete: 0

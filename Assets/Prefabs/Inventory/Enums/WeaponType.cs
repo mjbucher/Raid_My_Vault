@@ -6,5 +6,7 @@ public enum WeaponType
 	None,
 	Melee,
 	Projectile,
-	StatEffect
+	Grenade,
+	StatEffect,
+	Trap
 }

@@ -3,7 +3,7 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 
-
+//[ExecuteInEditMode]
 public class DetectionMethod : MonoBehaviour 
 {
 	[Header("Detection Options")] 
@@ -11,6 +11,7 @@ public class DetectionMethod : MonoBehaviour
 	public DetectionMode mode;
 	//[Header("Not Implemented")]
 	[HideInInspector] public DetectionShape shape;
+	public Transform detectionRayStart;
 	//[Space(20.0f)]
 	//public Weapon weapon;
 	[Range(1,7)] [Tooltip("The range of AI's vision")]
@@ -36,7 +37,7 @@ public class DetectionMethod : MonoBehaviour
 	[Header("Experimental")] [Tooltip("For multi targeting")]
 	public Player primaryTarget;
 	public List<Enemy> secondaryTargets;
-
+	public SphereCollider sphereTrigger;
 
 	Enemy enemy;
 
@@ -65,23 +66,29 @@ public class DetectionMethod : MonoBehaviour
 		StartCoroutine ("CheckForPlayer"); 
 	}
 
+	void Update ()
+	{
+	}
 	/// <summary>
 	/// Checks for player, first by the distance between them, then by the angle between us, then by a raycast to see if something is blocking line of sight.
 	/// </summary>
-	public IEnumerable CheckForPlayer ()
+	public IEnumerator CheckForPlayer ()
 	{
-		yield return null;
-		if (enemy.detectionState != DetectionState.None)
+		while (enemy.detectionState != DetectionState.None)
 		{
+			playerPos = player.transform.position;
 			float distanceBetween = Vector3.Distance(transform.position, playerPos); // get distance between 
 			// check if not in range
 			if (distanceBetween > range)
 			{
-				yield return null;
+				Debug.Log("Too far away: " + gameObject.name);
+				//yield return null;
 			}
 			Vector3 targetDirection = playerPos - transform.position;
-			Vector3 forward = transform.forward;
-			float angleBetween = Vector3.Angle(targetDirection, forward); // get angle between
+			//Debug.DrawLine(playerPos, detectionRayStart.position);
+			//Vector3 forward = transform.forward;
+			//Debug.DrawLine(detectionRayStart.position, transform.forward);
+			float angleBetween = Vector3.Angle(targetDirection, transform.forward);  // get angle between
 			// check if angle is outside the range of my forward direction
 			if (angleBetween > angle / 2.0f)
 			{
@@ -89,7 +96,9 @@ public class DetectionMethod : MonoBehaviour
 			}
 			// check if there is a wall inbetween player and me
 			RaycastHit hit;
-			if (Physics.Raycast(transform.position, targetDirection, out hit, range))
+			Ray ray = new Ray (detectionRayStart.position, targetDirection);
+			//Debug.DrawRay(ray.origin,ray.direction,Color.red);
+			if (Physics.Raycast(ray.origin, ray.direction, out hit, range))
 			{
 				if (hit.collider.tag != "Player")
 				{
@@ -107,6 +116,7 @@ public class DetectionMethod : MonoBehaviour
 				yield return StartCoroutine("Discovering");
 			}
 		}
+		Debug.Log("detection state changed");
 	}
 
 
@@ -120,7 +130,7 @@ public class DetectionMethod : MonoBehaviour
 		enemy.detectionState = lockOnPlayer ? DetectionState.FoundPlayer : enemy.detectionState;
 		if (lockOnPlayer)
 		{
-			yield return StartCoroutine(enemy.FoundPlayer(player));
+			yield return StartCoroutine(enemy.FoundTarget(player));
 		}
 		StopCoroutine("Discovering");
 	}
@@ -187,6 +197,21 @@ public class DetectionMethod : MonoBehaviour
 	void CheckAsRadial ()
 	{
 		
+	}
+
+	void OnTriggerEnter (Collider _other)
+	{
+		// if the player entered range sphere
+		if (_other.gameObject.tag == "Enemy" || _other.gameObject.tag == "Player")
+		{
+			//playerPos = _other.gameObject.transform.position;
+		}
+		// if enemy is confused
+		if (enemy.condition == StatusEffect.Confused &&  _other.gameObject.tag == "Enemy")
+		{
+			
+		}
+
 	}
 
 }

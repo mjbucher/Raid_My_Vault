@@ -22,7 +22,7 @@ public class RoomProceedural : MonoBehaviour
 	public int roomWidth;// = 1;
 	[Range(1, 20)]
 	public int roomDepth;// = 1;
-
+	GameObject[,] grid;
 	public GameObject floorManager;
 
 	#endregion
@@ -30,6 +30,7 @@ public class RoomProceedural : MonoBehaviour
 	#region Wall Variables
 
 	[Header("***** Walls and Entrances *****")]
+	[Space(10)]
 	[Header("North -------------------")]
 	// North Wall Controls
 
@@ -70,7 +71,28 @@ public class RoomProceedural : MonoBehaviour
 
 	#endregion
 
-	public GameObject[,] grid;
+	#region Restore Variables
+	// floor
+	int oldWidth;
+	int oldDepth;
+	// wall enables
+	bool oldEnabledNorthWall;
+	bool oldEnabledSouthWall;
+	bool oldEnabledEastWall;
+	bool oldEnabledWestWall;
+	// enterance enabled
+	bool oldEnteranceNorthWall;
+	bool oldEnteranceSouthWall;
+	bool oldEnteranceWestWall;
+	bool oldEnteranceEastWall;
+	// enterance offsets 
+	int oldEnteranceNorthOffset;
+	int oldEnteranceSouthOffset;
+	int oldEnteranceEastOffset;
+	int oldEnteranceWestOffset;
+
+	#endregion
+
 	public List<WallManager> allWallManagers = new List<WallManager>();
 	#region Controls
 	[Space(20)]
@@ -95,6 +117,7 @@ public class RoomProceedural : MonoBehaviour
 		{
 			PerpetualGeneration = false;
 		}
+		Reload();
 		//allWallManagers.Add(northWallManager);
 		//allWallManagers.Add(eastWallManager);
 		//allWallManagers.Add(southWallManger);
@@ -366,6 +389,54 @@ public class RoomProceedural : MonoBehaviour
 		enteranceEastOffset = 0;
 		enteranceSouth = _state;
 		enteranceSouthOffset = 0;
+	}
+
+	public void Reload ()
+	{
+		// grab restore values
+		#region Grab Values
+		// floor values
+		oldWidth = roomWidth;
+		oldDepth = roomDepth;
+		// wall enables
+		oldEnabledNorthWall = enableNorthWall;
+		oldEnabledSouthWall = enableSouthWall;
+		oldEnabledEastWall = enableEastWall;
+		oldEnabledWestWall = enableWestWall;
+		// enterance enabled
+		oldEnteranceNorthWall = enableNorthEnterance;
+		oldEnteranceSouthWall = enteranceSouth;
+		oldEnteranceWestWall = enteranceWest;
+		oldEnteranceEastWall = enteranceEast;
+		// enterance offsets 
+		oldEnteranceNorthOffset = enteranceNorthOffset;
+		oldEnteranceSouthOffset = enteranceSouthOffset;
+		oldEnteranceEastOffset = enteranceEastOffset;
+		oldEnteranceWestOffset = enteranceWestOffset;
+		#endregion
+		// reset
+		ClearAllManagers();
+		// assign new values
+		#region Assin Values
+		// floor values
+		roomWidth = oldWidth;
+		roomDepth = oldDepth;
+		// wall enables
+		enableNorthWall = oldEnabledNorthWall;
+		enableSouthWall = oldEnabledSouthWall;
+		enableEastWall = oldEnabledEastWall;
+		enableWestWall = oldEnabledWestWall;
+		// enterance enabled
+		enableNorthEnterance = oldEnteranceNorthWall;
+		enteranceSouth = oldEnteranceSouthWall;
+		enteranceWest = oldEnteranceWestWall;
+		enteranceEast = oldEnteranceEastWall;
+		// enterance offsets 
+		enteranceNorthOffset = oldEnteranceNorthOffset;
+		enteranceSouthOffset = oldEnteranceSouthOffset;
+		enteranceEastOffset = oldEnteranceEastOffset;
+		enteranceWestOffset = oldEnteranceWestOffset;
+		#endregion
 	}
 
 	#endregion

@@ -10,8 +10,6 @@ public class HealthManager : MonoBehaviour
 	int maxHealth;
 	int maxShield;
 
-
-
 	void Awake ()
 	{
 		entity = GetComponent<Entity>();

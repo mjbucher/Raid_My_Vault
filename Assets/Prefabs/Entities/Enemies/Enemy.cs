@@ -27,6 +27,7 @@ public class Enemy : Entity
 
 
 	[HideInInspector] public DetectionMethod detectionMethod;
+	[HideInInspector] public AttackManager attackManager;
 	//public DetectionState detectionState = DetectionState.None;
 	//[HideInInspector] public DeathSequence deathSequence;
 	//[HideInInspector] public HealthManager healthManager;
@@ -37,6 +38,7 @@ public class Enemy : Entity
 	{
 		detectCol = GetComponentInChildren<Collider>();
 		detectionMethod = GetComponent<DetectionMethod>();
+		attackManager = GetComponent<AttackManager>();
 		//deathSequence = GetComponent<DeathSequence>();
 		//healthManager = GetComponent<HealthManager>();
 
@@ -52,7 +54,7 @@ public class Enemy : Entity
 	}
 
 
-	public IEnumerator FoundPlayer (GameObject target)
+	public IEnumerator FoundTarget(GameObject target)
 	{
 		// if enemmy should alert
 		if (detectionMethod.mode == DetectionMode.Alert)
@@ -64,12 +66,8 @@ public class Enemy : Entity
 		// if enemy should attack
 		else if (detectionMethod.mode == DetectionMode.Attack)
 		{
-			// if not confused
-			if (condition != StatusEffect.Confused)
-			{
-				//GameObject target = GameObject.FindGameObjectWithTag("Player");
-				yield return StartCoroutine("AttackTarget",target);
-			}
+			transform.LookAt(target.transform);
+			attackManager.Attack();
 		}
 	}
 }

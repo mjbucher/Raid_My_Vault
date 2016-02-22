@@ -16,6 +16,12 @@ public class ProceeduralRoomEditor : Editor
 		//GUILayout.Toolbar()
 		GUILayout.Box("Quick Controls");
 
+		if (GUILayout.Button("Reload"))
+		{
+			myRoom.Reload();
+			Debug.Log("Room Resotred!");
+	
+		}
 		if (GUILayout.Button("Reset"))
 		{
 			myRoom.ClearAllManagers();
@@ -25,7 +31,6 @@ public class ProceeduralRoomEditor : Editor
 		if (GUILayout.Button(name))
 		{
 			myRoom.PerpetualGeneration = !myRoom.PerpetualGeneration;
-
 			name = name == "Turn OFF Perpetual Generation: [Currently ON]" ? "Turn ON Perpetual Generation: [Currently OFF]" : "Turn OFF Perpetual Generation: [Currently ON]";
 		}
 

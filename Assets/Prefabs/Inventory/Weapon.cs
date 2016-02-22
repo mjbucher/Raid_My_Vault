@@ -12,38 +12,27 @@ public class Weapon : MonoBehaviour
 	public int weaponDamage = 0;
 	public float damageRadius = 0;
 
-	public delegate void CoreAction ();
-	public CoreAction coreAction;
+	// maybe use a delegate that assembles the core actions on start so that if doesn't have to check every time it is fired?
+
+	//public delegate void CoreAction ();
+	//public CoreAction coreAction;
 
 	ProjectileManager projectileManager;
 	public Transform projectileSpawnLocation;
-	public GameObject pSrojectile;
+	public GameObject projectile;
+	public float projectileSpeed;
 
 	public ParticleSystem particles;
 
 
 	public bool firing = false;
 
-	List<Enemy> enemiesEffected = new List<Enemy>();
+	List<Entity> targetsEffected = new List<Entity>();
 
 
 	void Awake ()
 	{
 		projectileManager = GetComponent<ProjectileManager>();
-	}
-
-	// assembles the delegate based on choices
-	void BuildWeapon ()
-	{
-		
-		// use weapon type to determine what type of attack function should be used
-		
-
-		// use damage type to determine what type of effets should be disable on AttackComplete()
-
-
-		// use Status effect to dtermine what special effect should be applied to the target of the weapon
-
 	}
 
 	void Update ()
@@ -54,81 +43,149 @@ public class Weapon : MonoBehaviour
 		}
 	}
 
-
+	// User must be facing the target in their positive local Z axis
 	public void Attack ()
 	{
-		Ray ray = new Ray();
-		RaycastHit hit;
-		// make new range 
-		float _range = 1.0f * range;
-		// if only effects 1 enemy
-		if (damageRadius == 0)
+		if (weaponType == WeaponType.Projectile)
 		{
+			Ray ray = new Ray();
+			RaycastHit hit;
 			// set ray
 			ray =  new Ray(transform.position, Vector3.forward);
-			if (Physics.Raycast(ray.origin, ray.direction, out hit, 1.0f * range)) 
+			// Find center of attack if it is projectile
+			if (weaponType == WeaponType.Projectile)
 			{
-				GameObject _target = hit.collider.gameObject;
-				Enemy _targetEnemy = _target.GetComponent<Enemy>();
-				// change this check if I want it to effect other things than enemies
-				if (_targetEnemy)
+				// assuming using normal projectile
+				if (Physics.Raycast(ray.origin, ray.direction,  out hit, range)) 
 				{
-					// add enemy to list
-					enemiesEffected.Add(_targetEnemy);
-				}
-			}
-		}
-		// if it should be an AOE
-		else if (damageRadius > 0)
-		{
-			// set ray
-			Vector3 _origin = transform.position + (Vector3.forward * range);
-			ray = new Ray(_origin, Vector3.zero);
-			RaycastHit[] allHit = Physics.SphereCastAll(ray.origin, damageRadius, Vector3.zero);
-			if (allHit.Length > 0) 
-			{
-				foreach(RaycastHit _hit in allHit)
-				{
-					Enemy _target = _hit.collider.gameObject.GetComponent<Enemy>();
-					if (_target)
+					GameObject _target = hit.collider.gameObject;
+					Entity _targetEntity = _target.GetComponent<Entity>();
+					// change this check if I want it to effect other things than Enitities
+					if (_targetEntity)
 					{
-						enemiesEffected.Add(_target);
+						// add Entitiy to list
+						targetsEffected.Add(_targetEntity);
+						StartCoroutine(FireWeapon(hit));
 					}
-					else
-					{
-						Debug.Log("not an enemy");	
-					} 
 				}
 			}
+			else if (weaponType == WeaponType.Grenade)
+			{
+				//Raycast that ignores cover (direct line of sight, not needed)
+				if (Physics.Raycast(ray, out hit, range, LayerMask.NameToLayer("Cover")))
+				{
+					GameObject _target = hit.collider.gameObject;
+					Entity _targetEntity = _target.GetComponent<Entity>();
+					// change this check if I want it to effect other things than Enitities
+					if (_targetEntity)
+					{
+						// add Entitiy to list
+						targetsEffected.Add(_targetEntity);
+						StartCoroutine(ThrowGrenade(hit));
+					}
+				}
+			}
+			else if (weaponType == WeaponType.Trap)
+			{
+				// place trap at player location
+				// make it so that it only attacks enemies
+				// on tigger enter
+			}
+			// if it should be an AOE raycast and add to target list
+			// separate this out as antoher coroutine or function to be asdded to  delegate.
+			if (damageRadius > 0)
+			{
+				// set ray
+				Vector3 _origin = transform.position + (Vector3.forward * range);
+				ray = new Ray(_origin, Vector3.zero);
+				RaycastHit[] allHit = Physics.SphereCastAll(ray.origin, damageRadius, Vector3.zero);
+				if (allHit.Length > 0) 
+				{
+					foreach(RaycastHit _hit in allHit)
+					{
+						Entity _target = _hit.collider.gameObject.GetComponent<Entity>();
+						if (_target)
+						{
+							targetsEffected.Add(_target);
+						}
+						else
+						{
+							Debug.Log("not an enemy");	
+						} 
+					}
+				}
+			}
+			else if (damageRadius < 0)
+			{
+				Debug.Log("damageRadius value of " + damageRadius + ". Value should be >= 0");
+			}
 		}
-		else
-		{
-			Debug.Log("damageRadius value of " + damageRadius + ". Value should be >= 0");
-		}
-		// play effects for firing
-		// maybe add in counter code for burst firing and rapid firing
-		// launch projectile in include the ray for calculations 
+			// play effects for firing
+			// maybe add in counter code for burst firing and rapid firing
+			// launch projectile in include the ray for calculations 
 
-		projectileManager.FireProjectile(ray);
+			//projectileManager.FireProjectile(ray);
+	}
+
+	IEnumerator FireWeapon (RaycastHit _hit) 
+	{
+		// play effects
+		// spawn projectile and fire then call damage;
+		GameObject _projectile = Instantiate(projectile, projectileSpawnLocation.position, Quaternion.identity) as GameObject;
+		// move it forward
+		float _speed = projectileSpeed * Time.deltaTime;
+		_projectile.transform.position = Vector3.MoveTowards(transform.position, _hit.point, _speed);
+		DestroyObject(_projectile);
+		// deal damage
+		yield return StartCoroutine(DamageTargets(targetsEffected));
+		//StopCoroutine("FireWeapon");
+	}
+	 
+	IEnumerator MeleeAttack ()  
+	{ 
+		// play effects
+
+		// deal damage
+		yield return StartCoroutine(DamageTargets(targetsEffected));
+		//StopCoroutine("MeleeAttack");
+	}
+
+	IEnumerator ThrowGrenade (RaycastHit _hit) 
+	{
+		// play effects
+		// spawn projectile and fire then call damage;
+		GameObject _projectile = Instantiate(projectile, projectileSpawnLocation.position, Quaternion.identity) as GameObject;
+		// move it forward
+		float _speed = projectileSpeed * Time.deltaTime;
+		// ** add arch into target vector
+		_projectile.transform.position = Vector3.MoveTowards(transform.position, _hit.point, _speed);
+		// deal damage
+		yield return StartCoroutine(DamageTargets(targetsEffected));
+		//StopCoroutine("ThrowGrenade");
+	}
+
+	IEnumerator PlaceTrap ()
+	{
+		// play effects
+
+		// Danage Enemies
+		yield return StartCoroutine(DamageTargets(targetsEffected));
+		// terminate couroutine
+		//StopCoroutine("PlaceTrap");
 	}
 
 
-	IEnumerator DamageEnemies()
+	IEnumerator DamageTargets(List<Entity> _targets)
 	{
-		yield return null;
 		// make enemies take damage
-		foreach (Enemy _enemy in enemiesEffected)
+		foreach (Entity _target in _targets)
 		{
-			// change weapon damage if nessary
-			if (damageType == _enemy.weakness)
-			{
-				yield return StartCoroutine(_enemy.healthManager.DealDamage( Mathf.RoundToInt(weaponDamage * _enemy.weaknessMultiplier)));
-			}
-			yield return StartCoroutine(_enemy.healthManager.DealDamage(weaponDamage));
+			int _damage = damageType == _target.weakness ? Mathf.RoundToInt(weaponDamage * _target.weaknessMultiplier) : weaponDamage;
+			yield return StartCoroutine(_target.healthManager.DealDamage(_damage));
 		}
 		// clear the list
-		enemiesEffected.Clear();
+		_targets.Clear();
 		// stop coroutine
-		StopCoroutine("DamageAllEnemies");
+		//StopCoroutine("DamageEnemies");
 	}
 }

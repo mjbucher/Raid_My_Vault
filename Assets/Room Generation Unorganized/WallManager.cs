@@ -44,6 +44,11 @@ public class WallManager : MonoBehaviour
 	Vector3 newColSize;
 	Vector3 newColCenter;
 	 
+	public WallManager()
+	{
+		
+	}
+
 
 	void Awake ()
 	{
@@ -107,7 +112,7 @@ public class WallManager : MonoBehaviour
 
 	public void SpawnWall (int x, int z, int c)
 	{
-		Vector3 spawnPos = new Vector3 (x, 0, z) + transform.localPosition; // + wallPrefab.transform.position;
+		Vector3 spawnPos = new Vector3 (x, 0, z) + transform.localPosition + room.transform.position; // + wallPrefab.transform.position;
 		walls[c] = Instantiate(wallPrefab, spawnPos, Quaternion.identity) as GameObject;
 		walls[c].transform.SetParent(geometrySpawner.transform);
 		// position offset
