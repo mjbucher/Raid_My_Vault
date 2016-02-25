@@ -1350,6 +1350,98 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: da48c8ca2d6a7b0459b410ef5e858a32, type: 2}
+    - target: {fileID: 11492364, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11492364, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: intensity
+      value: 0.036
+      objectReference: {fileID: 0}
+    - target: {fileID: 11492364, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: blur
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11492364, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: vignetteShader
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11492364, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: separableBlurShader
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11492364, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: chromAberrationShader
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11497208, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11497208, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: saturation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11497208, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: colorCorrectionCurvesShader
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11497208, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: simpleColorCorrectionCurvesShader
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11497208, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: colorCorrectionSelectiveShader
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452974, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452974, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: bloomIntensity
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452974, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: lensFlareVignetteMask
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452974, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: lensFlareShader
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452974, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: screenBlendShader
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452974, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: blurAndFlaresShader
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452974, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: brightPassFilterShader
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466682, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466682, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: intensity
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466682, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: threshold
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466682, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: separableBlurShader
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466682, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
+      propertyPath: contrastCompositeShader
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 709137d767bd9b949b3098968fb2f62c, type: 2}
   m_IsPrefabParent: 0
@@ -1989,7 +2081,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1031856985}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fceaeb339b971b429c4cc600acabd13, type: 3}
   m_Name: 
@@ -2027,7 +2119,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1031856985}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3309686a9fbbe6e42a182d5e0257704c, type: 3}
   m_Name: 
@@ -2044,7 +2136,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1031856985}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd6d4281e5d7cd44d8c6e38bc2c1b8d8, type: 3}
   m_Name: 
@@ -2930,6 +3022,14 @@ Prefab:
     - target: {fileID: 469298, guid: 55378aefa07c90740ac89baf7edb59c9, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438950, guid: 55378aefa07c90740ac89baf7edb59c9, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438950, guid: 55378aefa07c90740ac89baf7edb59c9, type: 2}
+      propertyPath: weaponSpawnLocation
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55378aefa07c90740ac89baf7edb59c9, type: 2}

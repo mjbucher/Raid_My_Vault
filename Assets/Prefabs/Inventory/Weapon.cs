@@ -7,6 +7,7 @@ public class Weapon : MonoBehaviour
 	
 	public WeaponType weaponType;
 	public DamageType damageType; 
+	public StatusEffect statusEffect;
 
 	public float range = 1 * 1.0f;
 	public int weaponDamage = 0;

@@ -1,0 +1,236 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &126200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 459324}
+  - 114: {fileID: 11467860}
+  - 114: {fileID: 11421642}
+  - 114: {fileID: 11427796}
+  m_Layer: 0
+  m_Name: PlasmaRifle(Confused)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &132026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 451004}
+  - 33: {fileID: 3374668}
+  - 23: {fileID: 2382132}
+  m_Layer: 0
+  m_Name: WeaponGeometry
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &192514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 443070}
+  - 114: {fileID: 11478610}
+  m_Layer: 0
+  m_Name: Muzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &443070
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192514}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.050000053, z: 0.878}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 459324}
+  m_RootOrder: 1
+--- !u!4 &451004
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.031, z: 0.547}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 459324}
+  m_RootOrder: 0
+--- !u!4 &459324
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126200}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 451004}
+  - {fileID: 443070}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!23 &2382132
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132026}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: c8a854ebeeb1b8445814d1aa44e11955, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &3374668
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132026}
+  m_Mesh: {fileID: 4300000, guid: 62db9e77f20e38d49af49f5f1b92ec45, type: 3}
+--- !u!114 &11421642
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f511d493d010b4e8545aa6429ed197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _color: {r: 1, g: 0, b: 1, a: 1}
+  cubeSize: 0.02
+--- !u!114 &11427796
+MonoBehaviour:
+  m_ObjectHideFlags: 33
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46a02d0f612a241b293c0da4f82b712c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Properties:
+    Properties: []
+    Groups: []
+    Hidden: 
+  Links:
+    Links:
+    - LIIF: -1378833343
+      InstanceTarget: {fileID: 11427796}
+    - LIIF: -1201825177
+      InstanceTarget: {fileID: 11478610}
+    - LIIF: 1660052533
+      InstanceTarget: {fileID: 2382132}
+    - LIIF: 543241166
+      InstanceTarget: {fileID: 3374668}
+    - LIIF: -1508044617
+      InstanceTarget: {fileID: 443070}
+    - LIIF: 1465651790
+      InstanceTarget: {fileID: 451004}
+    - LIIF: 1603470979
+      InstanceTarget: {fileID: 11421642}
+    - LIIF: 1821308791
+      InstanceTarget: {fileID: 11467860}
+    - LIIF: 203055297
+      InstanceTarget: {fileID: 459324}
+    - LIIF: 1079783970
+      InstanceTarget: {fileID: 192514}
+    - LIIF: 1845432425
+      InstanceTarget: {fileID: 132026}
+    - LIIF: 376885124
+      InstanceTarget: {fileID: 126200}
+  Modifications:
+    Modificated:
+    - Object: {fileID: 126200}
+      ObjeckLink: 376885124
+      PropertyPath: m_Name
+      Mode: 0
+    NonPrefabObjects: []
+    NonPrefabComponents: []
+    RemovedObjects: 
+    TransformParentChanges: []
+  ParentPrefabGUID: 946cf9774d5ea35439773722dbb7eeef
+  PrefabGUID: 382324d1e30ab2c489f351a42ac18f87
+--- !u!114 &11467860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9fac719812a0414eb6cd96dd0039649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponType: 2
+  damageType: 0
+  statusEffect: 3
+  range: 5
+  weaponDamage: 10
+  damageRadius: 0
+  projectileSpawnLocation: {fileID: 443070}
+  projectile: {fileID: 136832, guid: 6c80728a184ab814e807de5bd99d4c19, type: 2}
+  projectileSpeed: 2
+  particles: {fileID: 0}
+  firing: 0
+--- !u!114 &11478610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f511d493d010b4e8545aa6429ed197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _color: {r: 0.2827587, g: 0, b: 1, a: 1}
+  cubeSize: 0.03
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 126200}
+  m_IsPrefabParent: 1

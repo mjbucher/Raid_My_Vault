@@ -1,0 +1,236 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 476912}
+  - 114: {fileID: 11400198}
+  - 114: {fileID: 11427490}
+  - 114: {fileID: 11482894}
+  m_Layer: 0
+  m_Name: PlasmaRifle(Slowed)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &129160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 446830}
+  - 33: {fileID: 3316196}
+  - 23: {fileID: 2359730}
+  m_Layer: 0
+  m_Name: WeaponGeometry
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &185816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 444726}
+  - 114: {fileID: 11464728}
+  m_Layer: 0
+  m_Name: Muzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &444726
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185816}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.050000053, z: 0.878}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 476912}
+  m_RootOrder: 1
+--- !u!4 &446830
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129160}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.031, z: 0.547}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 476912}
+  m_RootOrder: 0
+--- !u!4 &476912
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100952}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 446830}
+  - {fileID: 444726}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!23 &2359730
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129160}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: c8a854ebeeb1b8445814d1aa44e11955, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &3316196
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129160}
+  m_Mesh: {fileID: 4300000, guid: 62db9e77f20e38d49af49f5f1b92ec45, type: 3}
+--- !u!114 &11400198
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9fac719812a0414eb6cd96dd0039649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponType: 2
+  damageType: 0
+  statusEffect: 6
+  range: 5
+  weaponDamage: 10
+  damageRadius: 0
+  projectileSpawnLocation: {fileID: 444726}
+  projectile: {fileID: 136832, guid: 6c80728a184ab814e807de5bd99d4c19, type: 2}
+  projectileSpeed: 2
+  particles: {fileID: 0}
+  firing: 0
+--- !u!114 &11427490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f511d493d010b4e8545aa6429ed197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _color: {r: 1, g: 0, b: 1, a: 1}
+  cubeSize: 0.02
+--- !u!114 &11464728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f511d493d010b4e8545aa6429ed197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _color: {r: 0.2827587, g: 0, b: 1, a: 1}
+  cubeSize: 0.03
+--- !u!114 &11482894
+MonoBehaviour:
+  m_ObjectHideFlags: 33
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46a02d0f612a241b293c0da4f82b712c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Properties:
+    Properties: []
+    Groups: []
+    Hidden: 
+  Links:
+    Links:
+    - LIIF: -1378833343
+      InstanceTarget: {fileID: 11482894}
+    - LIIF: -1201825177
+      InstanceTarget: {fileID: 11464728}
+    - LIIF: 1660052533
+      InstanceTarget: {fileID: 2359730}
+    - LIIF: 543241166
+      InstanceTarget: {fileID: 3316196}
+    - LIIF: -1508044617
+      InstanceTarget: {fileID: 444726}
+    - LIIF: 1465651790
+      InstanceTarget: {fileID: 446830}
+    - LIIF: 1603470979
+      InstanceTarget: {fileID: 11427490}
+    - LIIF: 1821308791
+      InstanceTarget: {fileID: 11400198}
+    - LIIF: 203055297
+      InstanceTarget: {fileID: 476912}
+    - LIIF: 1079783970
+      InstanceTarget: {fileID: 185816}
+    - LIIF: 1845432425
+      InstanceTarget: {fileID: 129160}
+    - LIIF: 376885124
+      InstanceTarget: {fileID: 100952}
+  Modifications:
+    Modificated:
+    - Object: {fileID: 100952}
+      ObjeckLink: 376885124
+      PropertyPath: m_Name
+      Mode: 0
+    NonPrefabObjects: []
+    NonPrefabComponents: []
+    RemovedObjects: 
+    TransformParentChanges: []
+  ParentPrefabGUID: 946cf9774d5ea35439773722dbb7eeef
+  PrefabGUID: 48b1e73bdb40098489630b4bdf66bb17
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100952}
+  m_IsPrefabParent: 1
