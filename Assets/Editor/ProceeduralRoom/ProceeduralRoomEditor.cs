@@ -5,11 +5,11 @@ using UnityEditor;
 [CustomEditor(typeof(RoomProceedural))]
 public class ProceeduralRoomEditor : Editor 
 {
-	string name = "Turn ON Perpetual Generation: [Currently OFF]";
+	string buttonName = "Turn [ON] Perpetual Generation: [Mode: OFF]";
 
 	public override void OnInspectorGUI ()
 	{
-	
+
 		DrawDefaultInspector();
 		RoomProceedural myRoom = (RoomProceedural) target;
 
@@ -18,23 +18,24 @@ public class ProceeduralRoomEditor : Editor
 
 		if (GUILayout.Button("Reload"))
 		{
+			Debug.Log("Room Resotred!");
 			myRoom.Reload();
 			Debug.Log("Room Resotred!");
 	
 		}
+
 		if (GUILayout.Button("Reset"))
 		{
 			myRoom.ClearAllManagers();
-			name = "Turn OFF Perpetual Generation: [Currently ON]";
+			Debug.Log("Room Reset");
 		}
-
-		if (GUILayout.Button(name))
+			
+		if (GUILayout.Button(buttonName))
 		{
 			myRoom.PerpetualGeneration = !myRoom.PerpetualGeneration;
-			name = name == "Turn OFF Perpetual Generation: [Currently ON]" ? "Turn ON Perpetual Generation: [Currently OFF]" : "Turn OFF Perpetual Generation: [Currently ON]";
 		}
 
-
+		buttonName = myRoom.PerpetualGeneration ? "Turn [OFF] Perpetual Generation: [Mode: ON]" : "Turn [ON] Perpetual Generation: [Mode: OFF]";
 
 	}
 

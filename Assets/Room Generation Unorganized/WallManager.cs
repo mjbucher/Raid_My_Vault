@@ -1,287 +1,333 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 [ExecuteInEditMode]
-[System.Serializable]
 public class WallManager : MonoBehaviour 
 {
-	public bool drawGizmos;
-	[SerializeField]
-	public bool wallEnabled = true;
-	public WallDirection wallDirection;
-	public bool enteranceEnabled = false;
-	//public GameObject managerObject;
-
-
+	#region Variables
+	// Control Booleans
 	[HideInInspector]
-	public GameObject[] walls;
+	public bool drawGizmos;
+	[HideInInspector]
+	public bool generate;
+	[HideInInspector]
+	public bool perpetualGeneration;
+	[HideInInspector]
+	public bool wallEnabled = true;
+	[HideInInspector]
+	public bool enteranceEnabled = false;
 
+	// Wall Variables
+	[Header("Wall Variables")]
+	public WallDirection wallDirection;
 	[Range(-7,8)]
-
 	public int enteranceOffset = 0;
-	[HideInInspector][Range(3,9)]
+	[HideInInspector][Range(3,9)] // not current used. Would be used if enterance size was set to proceedurally generate
 	public int enteranceWidth = 3;
 
-	[Header("References")]
-	public RoomProceedural room; 
-	GameObject wallPrefab;
+	GameObject[] walls;
+	GameObject enterance;
 
+	// public object references
 	[Header("Guides")]
-	public Transform leftSpawnerStart;
+	public GameObject leftSpawnerStart;
 	public Transform leftSpawnerEnd;
 
-	//[Range(0,15)]
-	//public int leftSpawnerOffset;
-
-	public Transform rightSpawnerStart;
+	public GameObject rightSpawnerStart;
 	public Transform rightSpawnerEnd;
 
-	//[Range(0,15)]
-	//public int rightSpawnerOffset;
-
+	public Transform enteranceSpawnPoint;
 	public GameObject geometrySpawner;
+
 	public BoxCollider col;
-	Vector3 newColSize;
-	Vector3 newColCenter;
-	 
-	public WallManager()
-	{
+	public BoxCollider leftCol;
+	public BoxCollider rightCol;
+
+	// Object references
+	RoomProceedural room; 
+	GameObject wallPrefab;
+	GameObject enterancePrefab;
+
+	// set by Wall Direction Type 
+	int wallLength;
+	int otherWallLength;
+	#endregion
 		
+	void Update ()
+	{
+		CheckControls();
 	}
 
+	#region Main Logic
+	public void CheckControls()
+	{
+		if (perpetualGeneration && wallEnabled)
+		{
+			GenerateEverything();
+		}
+		else if (generate && wallEnabled)
+		{
+			GenerateEverything();
+			//reset to false
+			generate = false;
+		}
+		else if (!wallEnabled)
+		{
+			DestroyAllChildren(geometrySpawner);
+			DestroyAllChildren(enteranceSpawnPoint.gameObject);
+		}
+	}
 
-	void Awake ()
+	void GenerateEverything()
+	{
+		// Delete old
+		DestroyAllChildren(geometrySpawner);
+		DestroyAllChildren(enteranceSpawnPoint.gameObject);
+		// grab and set variables from input
+		GrabReferences();
+		SetWallVariables();
+		// update spawners
+		PlaceSpawners(wallLength);
+		//spawn objects
+		SpawnAllWalls(wallLength, otherWallLength);
+		if (enteranceEnabled)
+		{
+			SpawnEnterance();
+		}
+		// update colliders
+		UpdateActiveColliders();
+		ResizeColliders();
+	}
+	#endregion
+
+	void GrabReferences ()
 	{
 		room = GetComponentInParent<RoomProceedural>();
-		col = GetComponent<BoxCollider>();
-
-	}
-
-	void Start ()
-	{
 		wallPrefab = room.wallPrefab;
-	}
-
-	public void ResizeWall (int _roomWidth, int _roomDepth)
-	{
-		
-	}
-
-	public void ModifyWalls ()
-	{
-		if (wallDirection == WallDirection.North)
-		{
-			walls = new GameObject[room.roomWidth];
-			int z = room.roomDepth - 1 ;
-			for (int x = 0; x < room.roomWidth; x++)
-			{
-				SpawnWall(x, z, x);
-			}
-		}
-		else if (wallDirection == WallDirection.East)
-		{
-			walls = new GameObject[room.roomDepth];
-			int x = room.roomWidth - 1 ;
-			for (int z = 0; z < room.roomDepth; z++)
-			{
-				SpawnWall(x, z, z);
-			}
-		}
-		else if (wallDirection == WallDirection.West)
-		{
-			walls = new GameObject[room.roomDepth];
-			int x = 0 ;
-			for (int z = 0; z < room.roomDepth; z++)
-			{
-				SpawnWall(x, z, z);
-			}
-		}
-		else if (wallDirection == WallDirection.South)
-		{
-			walls = new GameObject[room.roomWidth];
-			int z = 0;
-			for (int x = 0; x < room.roomWidth; x++)
-			{
-				SpawnWall(x, z, x);
-			}
-		}
-
-
+		enterancePrefab = room.enterancePrefab;
 	}
 
 
-	public void SpawnWall (int x, int z, int c)
-	{
-		Vector3 spawnPos = new Vector3 (x, 0, z) + transform.localPosition + room.transform.position; // + wallPrefab.transform.position;
-		walls[c] = Instantiate(wallPrefab, spawnPos, Quaternion.identity) as GameObject;
-		walls[c].transform.SetParent(geometrySpawner.transform);
-		// position offset
-		Vector3 posOffset = walls[c].transform.localPosition + wallPrefab.transform.position;
-		walls[c].transform.localPosition = posOffset;
-		//rotation offset
-		walls[c].transform.localRotation = wallPrefab.transform.rotation;
-	}
-
-
-	public void ResizeCollider ()
-	{
-		newColCenter = col.center;
-		newColSize = col.size;
-		if (wallDirection == WallDirection.North)
-		{
-			newColCenter.x = (room.roomWidth / 2.0f) - 0.5f; 
-			newColCenter.z = room.roomDepth - 1; 
-			newColSize.x = room.roomWidth;
-		}
-		else if (wallDirection == WallDirection.East)
-		{
-			newColCenter.x = (1 - room.roomDepth) / 2.0f;
-			newColCenter.z = room.roomWidth - 1;
-			newColSize.x = room.roomDepth; 
-		}
-		else if (wallDirection == WallDirection.South)
-		{
-			newColCenter.x = (1 - room.roomWidth) / 2.0f;
-			newColSize.x = room.roomWidth;
-		}
-		else if (wallDirection == WallDirection.West)
-		{
-			newColCenter.x = (room.roomDepth / 2.0f) - 0.5f;
-			newColSize.x = room.roomDepth; 
-		}
-		else
-		{
-			Debug.Log("No direction found on: " + gameObject.name);
-		}
-		col.center = newColCenter;
-		col.size = newColSize;
-
-		UpdateSideSpawners();
-	}
-
-
-	void UpdateSideSpawners ()
+	void SetWallVariables ()
 	{
 		switch (wallDirection)
 		{
-		case WallDirection.North:
-			// set start points
-			leftSpawnerStart.position = new Vector3(0, 0, col.center.z) + transform.position;
-			rightSpawnerStart.position =  new Vector3(room.roomWidth - transform.position.x, 0, col.center.z) + transform.position; 
-			// determine how to use end points
-			if (enteranceEnabled)
-			{
-				// enable end points
-				leftSpawnerEnd.gameObject.SetActive(true);
-				rightSpawnerEnd.gameObject.SetActive(true);
-				// set position end points
-				float colX = col.center.x + enteranceOffset;
-				float spacerX = (enteranceWidth / 2.0f) + 0.5f;
-				rightSpawnerEnd.position = new Vector3(colX + spacerX , 0, col.center.z) + transform.position;
-				leftSpawnerEnd.position = new Vector3(colX - spacerX , 0, col.center.z ) + transform.position; 
-			}
-			else 
-			{
-				// disable end points
-				leftSpawnerEnd.gameObject.SetActive(false);
-				rightSpawnerEnd.gameObject.SetActive(false);
-			}
-			break;
-		case WallDirection.East:
-			// set start points
-			leftSpawnerStart.position = new Vector3(room.roomWidth - 1, 0, room.roomDepth - 1) + transform.position;
-			rightSpawnerStart.position =  new Vector3(room.roomWidth - 1, 0, 0) + transform.position; 
-			// determine how to use end points
-			if (enteranceEnabled)
-			{
-				// enable end points
-				leftSpawnerEnd.gameObject.SetActive(true);
-				rightSpawnerEnd.gameObject.SetActive(true);
-				// set position end points
-				float colZ = 0 - col.center.x + enteranceOffset;
-				float spacerZ = (enteranceWidth / 2.0f) + 0.5f; 
-				rightSpawnerEnd.position = new Vector3(col.center.z , 0, colZ - spacerZ)  + transform.position ;
-				leftSpawnerEnd.position = new Vector3(col.center.z , 0, colZ  + spacerZ) + transform.position ;
-			}
-			else  
-			{
-				// disable end points
-				leftSpawnerEnd.gameObject.SetActive(false);
-				rightSpawnerEnd.gameObject.SetActive(false);
-			}
-			break;
-		case WallDirection.South:
-			// set start points
-			rightSpawnerStart.position = new Vector3(0, 0, 0) + transform.position;
-			leftSpawnerStart.position =  new Vector3(room.roomWidth - transform.position.x, 0, 0) + transform.position; 
-			// determine how to use end points
-			if (enteranceEnabled)
-			{
-				// enable end points
-				rightSpawnerEnd.gameObject.SetActive(true);
-				leftSpawnerEnd.gameObject.SetActive(true);
-				// set position end points
-				float colX = -col.center.x + enteranceOffset;
-				float spacerX = (enteranceWidth / 2.0f) + 0.5f;
-				leftSpawnerEnd.position = new Vector3(colX + spacerX , 0, col.center.z) + transform.position;
-				rightSpawnerEnd.position = new Vector3(colX - spacerX , 0, col.center.z ) + transform.position; 
-			}
-			else 
-			{
-				// disable end points
-				leftSpawnerEnd.gameObject.SetActive(false);
-				rightSpawnerEnd.gameObject.SetActive(false);
-			}
-			break;
-		case WallDirection.West:
-			rightSpawnerStart.position = new Vector3(0, 0, room.roomDepth - 1) + transform.position;
-			leftSpawnerStart.position =  new Vector3(0, 0, 0) + transform.position; 
-			// determine how to use end points
-			if (enteranceEnabled)
-			{
-				// enable end points
-				rightSpawnerEnd.gameObject.SetActive(true);
-				leftSpawnerEnd.gameObject.SetActive(true);
-				// set position end points
-				float colZ = col.center.x + enteranceOffset;
-				float spacerZ = (enteranceWidth / 2.0f) + 0.5f; 
-				leftSpawnerEnd.position = new Vector3(0, 0, colZ - spacerZ)  + transform.position ;
-				rightSpawnerEnd.position = new Vector3(0, 0, colZ  + spacerZ) + transform.position ;
-			}
-			else  
-			{
-				// disable end points
-				rightSpawnerEnd.gameObject.SetActive(false);
-				leftSpawnerEnd.gameObject.SetActive(false);
-			}
-			break;
-		case WallDirection.None:
-			Debug.Log("No wall direction set on: " + gameObject.name);
-			break;
-		default:
-			break;
+			case WallDirection.North:
+			wallLength =  room.roomWidth;
+			otherWallLength = room.roomDepth;
+				break;
+			case WallDirection.East:
+				wallLength = room.roomDepth;
+				otherWallLength = room.roomWidth;
+				break;
+			case WallDirection.South:
+				wallLength = room.roomWidth;
+				otherWallLength = room.roomDepth;
+				break;
+			case WallDirection.West:
+				wallLength = room.roomDepth;
+				otherWallLength = room.roomWidth;
+				break;
+			case WallDirection.None:
+				Debug.Log("No wall direction assigned on: " + gameObject.name);
+				break;
+			default:
+			Debug.Log("Exited as 'Default' wall on: " + gameObject.name);
+				break;
 		}
 	}
+
+	#region Spawning
+	/// <summary>
+	/// Places the spawners. For North and South walls use the room depth. For East and West wall use room width
+	/// </summary>
+	/// <param name="_length">Length.</param>
+	void PlaceSpawners (int _length)
+	{
+		leftSpawnerStart.transform.localPosition = Vector3.zero ;
+		rightSpawnerStart.transform.localPosition = new Vector3(_length - 1 , 0, 0 ) + leftSpawnerStart.transform.localPosition;
+		enteranceSpawnPoint.localPosition = ((rightSpawnerStart.transform.localPosition - leftSpawnerStart.transform.localPosition) / 2.0f) + new Vector3(enteranceOffset, 0, 0);
+		// determine how to use end points
+		if (enteranceEnabled)
+		{
+			// set position end points
+			Vector3 midpoint = enteranceSpawnPoint.localPosition;
+			Vector3 offset = new Vector3(2 + (enteranceWidth - 3), 0, 0 );
+			rightSpawnerEnd.localPosition =  midpoint + offset;
+			leftSpawnerEnd.localPosition = midpoint -  offset;
+		}
+	}
+	void SpawnAllWalls (int _wallLength, int _otherWallLength)
+	{
+		//Debug.Log("SpawnAllWalls called");
+		walls = new GameObject[_wallLength];
+		int a = _otherWallLength - 1;
+		for (int b = 0; b < _wallLength; b++)
+		{
+			SpawnWall(b, a, b);
+		}
+	}
+
+	public void SpawnWall (int x, int z, int c)
+	{
+		Vector3 spawnPos = new Vector3 (x, 0, -0.5f);
+		// check if wall should not exist there
+		if (enteranceEnabled)
+		{
+			if (c == enteranceSpawnPoint.localPosition.x || c == enteranceSpawnPoint.localPosition.x - 1  || c == enteranceSpawnPoint.localPosition.x + 1)
+			{
+				return;
+			}
+		}
+		walls[c] = Instantiate(wallPrefab);
+		// parent and move
+		walls[c].transform.SetParent(geometrySpawner.transform);
+		walls[c].transform.localPosition = spawnPos;
+		// set rotation
+		walls[c].transform.localRotation = wallPrefab.transform.rotation;
+	}
+
+	void SpawnEnterance ()
+	{
+		// spawn enterance
+		enterance = Instantiate(enterancePrefab, enteranceSpawnPoint.position, Quaternion.identity) as GameObject;
+		enterance.transform.SetParent(enteranceSpawnPoint);
+		enterance.transform.rotation = transform.rotation;
+	}
+	#endregion
+
+	#region Collider Functions
+	void UpdateActiveColliders ()
+	{
+		if (enteranceEnabled)
+		{
+			// switch enabled colliders
+			col.enabled = false;
+			leftCol.enabled = true;
+			rightCol.enabled = true;
+			// enable end points
+			leftSpawnerEnd.gameObject.SetActive(true);
+			rightSpawnerEnd.gameObject.SetActive(true);
+		}
+		else
+		{
+			// switch enabled colliders
+			col.enabled = true;
+			leftCol.enabled = false;
+			rightCol.enabled = false;
+			// disable end points
+			leftSpawnerEnd.gameObject.SetActive(false);
+			rightSpawnerEnd.gameObject.SetActive(false);
+		}
+	}
+
+	public void ResizeColliders ()
+	{
+		if (enteranceEnabled)
+		{
+			ResizeOneCollider(leftCol, leftSpawnerStart.transform.localPosition, leftSpawnerEnd.localPosition, 1.0f);
+			ResizeOneCollider(rightCol, rightSpawnerStart.transform.localPosition, rightSpawnerEnd.localPosition, -1.0f);
+		}
+		else
+		{
+			ResizeOneCollider(col, leftSpawnerStart.transform.localPosition, rightSpawnerStart.transform.localPosition, 1.0f);
+		}
+	}
+
+	/// <summary>
+	/// Resizes the collider.  Multiplier: Use -1 for the right side or 1 for the left side and no side
+	/// </summary>
+	/// <param name="_col">Col.</param>
+	/// <param name="_startPos">Start position.</param>
+	/// <param name="_endPos">End position.</param>
+	/// <param name="_multiplier">Multiplier. Multiplier: Use -1 for the right side or 1 for the left side and no side</param>
+	void ResizeOneCollider (BoxCollider _col, Vector3 _startPos, Vector3 _endPos, float _multiplier)
+	{
+		float totalDistance = Vector3.Distance(_startPos, _endPos);
+
+		_col.center = new Vector3((totalDistance * _multiplier) / 2.0f, 1.1f, 0);
+		_col.size = new Vector3(totalDistance + 1, 2, 1);
+	}
+	#endregion
+
+	#region Utility
+	void DestroyAllChildren (GameObject _parent)
+	{
+		//GameObject _parent = _manager.geometrySpawner;
+		Transform[] childrenT = _parent.GetComponentsInChildren<Transform>();
+		List<GameObject> childrenG = new List<GameObject>();
+		foreach (Transform child in childrenT)
+		{
+			childrenG.Add(child.gameObject);
+		}
+		// remove parent of list (manager)
+		childrenG.Remove(_parent);
+		foreach (GameObject child in childrenG)
+		{
+			DestroyImmediate(child);
+		}
+	}
+
+	public void Reset ()
+	{
+		drawGizmos = true;
+		generate =  false;
+		perpetualGeneration = true;
+		wallEnabled = true;
+		enteranceEnabled = false;
+		enteranceOffset = 0;
+		GenerateEverything();
+	}
+
+	#endregion	
 
 	void OnDrawGizmos ()
 	{
 		if (drawGizmos)
 		{
-			if (enteranceEnabled)
+			Vector3 cubeSize = Vector3.one * 0.25f;
+			if (wallEnabled)
 			{
-				Gizmos.color = Color.green;
-				Gizmos.DrawLine(leftSpawnerStart.position, leftSpawnerEnd.position);
-				Gizmos.color = Color.green;
-				Gizmos.DrawLine(leftSpawnerEnd.position, leftSpawnerEnd.position + leftSpawnerEnd.up);
-				Gizmos.color = Color.red;
-				Gizmos.DrawLine(rightSpawnerStart.position, rightSpawnerEnd.position);
-				Gizmos.color = Color.red;
-				Gizmos.DrawLine(rightSpawnerEnd.position, rightSpawnerEnd.position + rightSpawnerEnd.up);	
-			}
-			else
-			{
-				Gizmos.color = Color.blue;
-				Gizmos.DrawLine(leftSpawnerStart.position, rightSpawnerStart.position);
+				if (enteranceEnabled)
+				{
+					// draw colliders
+					Gizmos.color = Color.green;
+					Gizmos.DrawWireCube(leftCol.bounds.center, leftCol.bounds.size); // left collider
+					Gizmos.color = Color.red;
+					Gizmos.DrawWireCube(rightCol.bounds.center, rightCol.bounds.size); // right collider
+					// drawing left collider arrow
+					Gizmos.color = Color.green;
+					Gizmos.DrawLine(leftSpawnerStart.transform.position + leftSpawnerStart.transform.up, leftSpawnerEnd.position + leftSpawnerEnd.up); // left line
+					Gizmos.DrawLine(leftSpawnerEnd.position + leftSpawnerEnd.up, leftSpawnerEnd.position + leftSpawnerEnd.up * 1.5f - leftSpawnerEnd.right * 0.25f); // left top arrow
+					Gizmos.DrawLine(leftSpawnerEnd.position + leftSpawnerEnd.up, leftSpawnerEnd.position + leftSpawnerEnd.up * 0.5f - leftSpawnerEnd.right * 0.25f); // left bottom arrow
+					// drawing right collider arrow
+					Gizmos.color = Color.red;
+					Gizmos.DrawLine(rightSpawnerStart.transform.position + rightSpawnerStart.transform.up, rightSpawnerEnd.position + rightSpawnerEnd.up); // right line
+					Gizmos.DrawLine(rightSpawnerEnd.position + rightSpawnerEnd.up, rightSpawnerEnd.position + rightSpawnerEnd.up * 1.5f + rightSpawnerEnd.right * 0.25f); // right top arrow
+					Gizmos.DrawLine(rightSpawnerEnd.position + rightSpawnerEnd.up, rightSpawnerEnd.position + rightSpawnerEnd.up * 0.5f + rightSpawnerEnd.right * 0.25f); // right bottom arrow
+					// enterance opening frame
+					Gizmos.color = Color.blue;
+					Gizmos.DrawLine(leftSpawnerEnd.position, rightSpawnerEnd.position); // enterance bottom line				
+					Gizmos.DrawLine(rightSpawnerEnd.position + rightSpawnerEnd.up * 2.0f, leftSpawnerEnd.position + leftSpawnerEnd.up * 2.0f); // enterance top line
+					Gizmos.DrawLine(leftSpawnerEnd.position + leftSpawnerEnd.up * 2.0f, leftSpawnerEnd.position); // enterance left up line
+					Gizmos.DrawLine(rightSpawnerEnd.position + rightSpawnerEnd.up * 2.0f, rightSpawnerEnd.position); // enterance right up line					
+					// enterance direction arrow
+					Gizmos.color = Color.yellow;
+					Gizmos.DrawRay(enteranceSpawnPoint.position, enteranceSpawnPoint.forward); // enterance forward line
+					Gizmos.DrawRay(enteranceSpawnPoint.position + enteranceSpawnPoint.forward, (enteranceSpawnPoint.right + enteranceSpawnPoint.forward ) * -0.25f); // left arrow line				
+					Gizmos.DrawRay(enteranceSpawnPoint.position + enteranceSpawnPoint.forward, (enteranceSpawnPoint.right - enteranceSpawnPoint.forward ) * 0.25f); // right arrow line
+				}
+				else
+				{
+					// draw collider
+					Gizmos.color = Color.cyan;
+					Gizmos.DrawWireCube(col.bounds.center, col.bounds.size); // main collider
+					// draw progression arrow
+					Gizmos.DrawLine(leftSpawnerStart.transform.position + leftSpawnerStart.transform.up, rightSpawnerStart.transform.position + rightSpawnerEnd.transform.up); // main line
+					Gizmos.DrawLine(rightSpawnerStart.transform.position + rightSpawnerEnd.transform.up, rightSpawnerStart.transform.position + rightSpawnerEnd.transform.up * 1.5f - rightSpawnerEnd.right * 0.25f); // main top arrow
+					Gizmos.DrawLine(rightSpawnerStart.transform.position + rightSpawnerEnd.transform.up, rightSpawnerStart.transform.position + rightSpawnerEnd.transform.up * 0.5f - rightSpawnerEnd.right * 0.25f); // main bottom arrow
+				}
 			}
 		}
 	}

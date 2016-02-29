@@ -31,6 +31,9 @@ public class TodoList : EditorWindow
         _window = ( TodoList )EditorWindow.GetWindow (typeof ( TodoList ));
 		_window.title = "Todo List";
 		_window.autoRepaintOnSceneChange = false;
+		//EditorStyles.textField.wordWrap = true;
+		//EditorStyles.textArea.wordWrap = true;
+		//EditorStyles.label.wordWrap = true;
     }
     
 	public void OnGUI ()
@@ -62,13 +65,15 @@ public class TodoList : EditorWindow
 		}
 
 		EditorGUILayout.BeginHorizontal();
-            EditorGUILayout.LabelField("Show tasks:", EditorStyles.boldLabel);
+		EditorGUILayout.LabelField("Show tasks:", EditorStyles.boldLabel);
             _currentOwnerIndex = EditorGUILayout.Popup(_currentOwnerIndex, owners);
 		EditorGUILayout.EndHorizontal();
         
 		// display the list
 		GUIStyle itemStyle = new GUIStyle(EditorStyles.wordWrappedMiniLabel);
 		itemStyle.alignment = TextAnchor.UpperLeft;
+		itemStyle.wordWrap = true;
+		EditorStyles.wordWrappedMiniLabel.wordWrap = true;
 		_scrollPosition = EditorGUILayout.BeginScrollView(_scrollPosition);
 		int displayCount = 0;
 		
@@ -79,14 +84,18 @@ public class TodoList : EditorWindow
 			if(_currentOwnerIndex == 0)
 			{	
 				itemStyle.normal.textColor = owner.color;
+
 				if(item.isComplete == false)
 				{
 					displayCount++;
 					EditorGUILayout.BeginHorizontal();
+					itemStyle.wordWrap = true;
+					EditorStyles.wordWrappedLabel.wordWrap = true;
 					if(EditorGUILayout.Toggle(item.isComplete, GUILayout.Width(20)) == true)
 					{
 						_listData.items[i].isComplete = true;
 					}
+					itemStyle.wordWrap = true;
 					_listData.items[i].task = EditorGUILayout.TextField(item.task, itemStyle);
 					int newOwnerIndex = EditorGUILayout.Popup(owner.index, ownersToSelect,GUILayout.Width(60));
 					if(newOwnerIndex != owner.index)

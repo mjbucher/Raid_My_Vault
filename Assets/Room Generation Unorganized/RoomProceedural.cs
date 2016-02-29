@@ -30,7 +30,7 @@ public class RoomProceedural : MonoBehaviour
 	#region Wall Variables
 
 	[Header("***** Walls and Entrances *****")]
-	[Space(10)]
+	[Space(0)]
 	[Header("North -------------------")]
 	// North Wall Controls
 
@@ -99,69 +99,41 @@ public class RoomProceedural : MonoBehaviour
 	[Header("Quick Controls")]
 	[HideInInspector]
 	public bool setToOne = false;
+	//[HideInInspector]
+	//public bool reset = false;
 	[HideInInspector]
-	public bool reset = false;
-	[HideInInspector]
-	public bool PerpetualGeneration = false;
+	public bool PerpetualGeneration;// = false;
 
 	#endregion
 
 	#endregion
 
 	#region Main Logic
-	void Awake ()
-	{
-		// set option to false on initial attachment
-		reset = false;
-		if (PerpetualGeneration == true)
-		{
-			PerpetualGeneration = false;
-		}
-		Reload();
-		//allWallManagers.Add(northWallManager);
-		//allWallManagers.Add(eastWallManager);
-		//allWallManagers.Add(southWallManger);
-		//allWallManagers.Add(westWallManager);
-	}
-
 	void Update ()
 	{
+		
 		CheckControls();
 	}
 
+
+
 	void CheckControls ()
 	{
-		if (reset)
-		{
-			ClearAllManagers();
-		}
-		else if (setToOne)
-		{
-			ResetTo(1);
-			setToOne = false;
-		}
-		else if (PerpetualGeneration)
+	 	if (PerpetualGeneration)
 		{
 			GenerateRoom();
 		}
-		// wall enable
-//		northWallManager.wallEnabled = enableNorthWall;
-//		eastWallManager.wallEnabled = enableEastWall;
-//		southWallManger.wallEnabled = enableSouthWall;
-//		westWallManager.wallEnabled = enableWestWall;
-//		// enterance enabled
-//		northWallManager.enteranceEnabled = enableNorthEnterance;
 	}
 
 	public void GenerateRoom ()
 	{
 		// delete old instances
 		DeleteFloors();
-		DeleteWalls();
+		//DeleteWalls();
 		// update floor
 		CheckFloorForUpdates();
 		// update all walls
-		CheckAllWallsForUpdates();
+		//CheckAllWallsForUpdates();
 		// generics not working
 		//UpdateAllWalls();
 	} 
@@ -182,6 +154,12 @@ public class RoomProceedural : MonoBehaviour
 				grid[x,z].transform.SetParent(floorManager.transform);
 			}
 		}
+		//set wall manager positons
+		northWallManager.transform.position = new Vector3(1, 0, roomDepth + 1) + transform.position;
+		eastWallManager.transform.position = new Vector3(roomWidth + 1, 0, roomDepth) + transform.position;
+		southWallManger.transform.position = new Vector3(roomWidth, 0, 0) + transform.transform.position;
+		westWallManager.transform.position = new Vector3(0, 0, 1) + transform.position;
+
 		ResizeFloorCollider();
 	}
 
@@ -199,116 +177,12 @@ public class RoomProceedural : MonoBehaviour
 
 	#endregion
 
-	#region Wall Functions
-	void CheckAllWallsForUpdates()
-	{
-//		foreach (WallManager _manager in allWallManagers)
-//		{
-//			if (_manager.wallEnabled == true )
-//			{
-//				_manager.ModifyWalls();
-//				_manager.col.enabled = true;
-//				_manager.ResizeCollider();
-//			}
-//			else
-//			{
-//				_manager.col.enabled = false;
-//			}
-//		}
-
-		if (enableNorthWall)
-		{
-			northWallManager.ModifyWalls();
-			northWallManager.GetComponent<BoxCollider>().enabled = true;
-			northWallManager.ResizeCollider();
-		}
-		else 
-		{
-			northWallManager.GetComponent<BoxCollider>().enabled = false;
-		}
-
-		// check east wall
-		if (enableEastWall)
-		{
-			eastWallManager.ModifyWalls();
-			eastWallManager.GetComponent<BoxCollider>().enabled = true;
-			eastWallManager.ResizeCollider();
-		}
-		else
-		{
-			eastWallManager.GetComponent<BoxCollider>().enabled = false;
-		}
-
-		// check soouth wall
-		if (enableSouthWall)
-		{
-			southWallManger.ModifyWalls();
-			southWallManger.GetComponent<BoxCollider>().enabled = true;
-			southWallManger.ResizeCollider();
-		}
-		else
-		{
-			southWallManger.GetComponent<BoxCollider>().enabled = false;
-		}
-
-		// check west wall
-		if (enableWestWall)
-		{
-			westWallManager.ModifyWalls();
-			westWallManager.GetComponent<BoxCollider>().enabled = true;
-			westWallManager.ResizeCollider();
-		}
-		else
-		{
-			westWallManager.GetComponent<BoxCollider>().enabled = false;
-		}
-	}
-
-	#region Generic Walls
-
-	#endregion
-
-	#region Modify Walls
-//	void ModifyNorthWalls ()
-//	{
-//		northWallManager.ModifyWalls();
-//	}
-//
-//	void ModifySouthWalls ()
-//	{
-//		southWallManger.ModifyWalls();
-//	}
-//
-//	void ModifyEastWalls ()
-//	{
-//		eastWallManager.ModifyWalls();
-//	}
-//
-//	void ModifyWestWalls ()
-//	{
-//		westWallManager.ModifyWalls();
-//	}
-//
-//	void SmartResizeWallCollider (WallManager _manager)
-//	{
-//		_manager.ResizeCollider();
-//	}
-
-	void DeleteWalls ()
-	{
-		DestroyAllChildren(northWallManager);
-		DestroyAllChildren(eastWallManager);
-		DestroyAllChildren(southWallManger);
-		DestroyAllChildren(westWallManager);
-	}
-	#endregion
-
-	#endregion
 
 	#region Control Functions
 	public void ClearAllManagers ()
 	{
 		// disable generation
+		bool tempGen = PerpetualGeneration;
 		PerpetualGeneration = false;
 		// check for leftovers
 		DestroyAllChildren(floorManager);
@@ -316,14 +190,14 @@ public class RoomProceedural : MonoBehaviour
 		DestroyAllChildren(eastWallManager);
 		DestroyAllChildren(southWallManger);
 		DestroyAllChildren(westWallManager);
+		//Debug.Log("destoryed all children");
 		// Reset Doors
 		ResetAllDoors(false);
-		// reset wall Colliders
-		ResetAllColliderState(true);
-		// reset to basic
+		//Debug.Log("reset all doors");
 		ResetTo(3);
-		// re-enable generation
-		PerpetualGeneration = true;
+		GenerateRoom();
+		PerpetualGeneration = tempGen;
+		//Debug.Log(PerpetualGeneration);
 		// reset bool
 		//clearAll = false;
 	}
@@ -343,6 +217,21 @@ public class RoomProceedural : MonoBehaviour
 		{
 			DestroyImmediate(child);
 		}
+		// deestroy any enterances
+		_parent = _manager.enteranceSpawnPoint.gameObject;
+		childrenT = _parent.GetComponentsInChildren<Transform>();
+		childrenG = new List<GameObject>();
+		foreach (Transform child in childrenT)
+		{
+			childrenG.Add(child.gameObject);
+		}
+		// remove parent of list (manager)
+		childrenG.Remove(_parent);
+		foreach (GameObject child in childrenG)
+		{
+			DestroyImmediate(child);
+		}
+
 	}
 
 	void DestroyAllChildren (GameObject _parent)
@@ -366,9 +255,9 @@ public class RoomProceedural : MonoBehaviour
 	{
 		roomWidth = _num;
 		roomDepth = _num;
-		GenerateRoom();
-		reset = false;
-		Debug.Log("Proceedural Room Reset!");
+		//GenerateRoom();
+		//reset = false;
+		//Debug.Log("Proceedural Room Reset!");
 	}
 
 	void ResetAllColliderState (bool _state)

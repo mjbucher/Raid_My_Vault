@@ -65,6 +65,7 @@
      <Compile Include="Assets\Editor\ImageEffects\TonemappingEditor.cs" />
      <Compile Include="Assets\Editor\ImageEffects\VignetteAndChromaticAberrationEditor.cs" />
      <Compile Include="Assets\Editor\ProceeduralRoom\ProceeduralRoomEditor.cs" />
+     <Compile Include="Assets\Editor\ProceeduralRoom\WallManagerEditor.cs" />
      <Compile Include="Assets\Editor\SpawnerManagerEditor.cs" />
      <Compile Include="Assets\Editor\Todo\ListData.cs" />
      <Compile Include="Assets\Editor\Todo\TodoList.cs" />

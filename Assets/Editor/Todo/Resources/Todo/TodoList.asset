@@ -163,3 +163,19 @@ MonoBehaviour:
       index: 0
     task: add cooldowns
     isComplete: 0
+  - owner:
+      name: Note
+      color: {r: 0, g: 0.5294118, b: 0.17890474, a: 1}
+      index: 4
+    task: For snapping rooms together build locig that looks for the entrances look
+      for each other and figure out thier opposite directions and how the have to
+      move, auto snap on rotate as well.
+    isComplete: 0
+  - owner:
+      name: Normal
+      color: {r: 0, g: 0, b: 0, a: 1}
+      index: 0
+    task: Update collider logic based on offset and current room widht/depth values.
+      Also Limit the offset to < roomSize. Update floor spawning as well as another
+      script
+    isComplete: 0
