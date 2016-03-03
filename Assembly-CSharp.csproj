@@ -189,7 +189,9 @@
      <Compile Include="Assets\Room Generation Unorganized\TileColoringLogic.cs" />
      <Compile Include="Assets\Room Generation Unorganized\WallDirection.cs" />
      <Compile Include="Assets\Room Generation Unorganized\WallManager.cs" />
+     <Compile Include="Assets\Scripts\Extensions\GizmosExtensions.cs" />
      <Compile Include="Assets\Scripts\Extensions\TransformExtension.cs" />
+     <Compile Include="Assets\Scripts\Extensions\Vector3Extensions.cs" />
      <Compile Include="Assets\Scripts\Interfaces\ICanAttack.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IConfusable.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IDamageable.cs" />

@@ -298,6 +298,7 @@ public class WallManager : MonoBehaviour
 					Gizmos.DrawWireCube(rightCol.bounds.center, rightCol.bounds.size); // right collider
 					// drawing left collider arrow
 					Gizmos.color = Color.green;
+					//Gizmos().DrawArrow(leftSpawnerStart.transform, rightSpawnerStart, 0.5f, GizmosExtensions.AxisDirection.NegativeX);
 					Gizmos.DrawLine(leftSpawnerStart.transform.position + leftSpawnerStart.transform.up, leftSpawnerEnd.position + leftSpawnerEnd.up); // left line
 					Gizmos.DrawLine(leftSpawnerEnd.position + leftSpawnerEnd.up, leftSpawnerEnd.position + leftSpawnerEnd.up * 1.5f - leftSpawnerEnd.right * 0.25f); // left top arrow
 					Gizmos.DrawLine(leftSpawnerEnd.position + leftSpawnerEnd.up, leftSpawnerEnd.position + leftSpawnerEnd.up * 0.5f - leftSpawnerEnd.right * 0.25f); // left bottom arrow
