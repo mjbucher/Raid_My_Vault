@@ -1,0 +1,140 @@
+fileFormatVersion: 2
+guid: af90f295d00ae374bb82c0b06123506d
+timeCreated: 1457312586
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Default1
+    100002: guard_chest_001:Default
+    100004: guard_ears_001:Default
+    100006: guard_eye_001:Default
+    100008: guard_forehead_001:Default
+    100010: guard_Head_backShell2_001:Default
+    100012: guard_Head_backShell_001:Default
+    100014: guard_headTop_001:Default
+    100016: guard_mouth_001:Default
+    100018: guard_neck_001:Default
+    100020: //RootNode
+    100022: guard_waist_001:Default
+    100024: guard_wheels_001:Default
+    100026: guard_wheelShell_001:Default
+    400000: Default1
+    400002: guard_chest_001:Default
+    400004: guard_ears_001:Default
+    400006: guard_eye_001:Default
+    400008: guard_forehead_001:Default
+    400010: guard_Head_backShell2_001:Default
+    400012: guard_Head_backShell_001:Default
+    400014: guard_headTop_001:Default
+    400016: guard_mouth_001:Default
+    400018: guard_neck_001:Default
+    400020: //RootNode
+    400022: guard_waist_001:Default
+    400024: guard_wheels_001:Default
+    400026: guard_wheelShell_001:Default
+    2300000: Default1
+    2300002: guard_chest_001:Default
+    2300004: guard_ears_001:Default
+    2300006: guard_eye_001:Default
+    2300008: guard_forehead_001:Default
+    2300010: guard_Head_backShell2_001:Default
+    2300012: guard_Head_backShell_001:Default
+    2300014: guard_headTop_001:Default
+    2300016: guard_mouth_001:Default
+    2300018: guard_neck_001:Default
+    2300020: guard_waist_001:Default
+    2300022: guard_wheels_001:Default
+    2300024: guard_wheelShell_001:Default
+    3300000: Default1
+    3300002: guard_chest_001:Default
+    3300004: guard_ears_001:Default
+    3300006: guard_eye_001:Default
+    3300008: guard_forehead_001:Default
+    3300010: guard_Head_backShell2_001:Default
+    3300012: guard_Head_backShell_001:Default
+    3300014: guard_headTop_001:Default
+    3300016: guard_mouth_001:Default
+    3300018: guard_neck_001:Default
+    3300020: guard_waist_001:Default
+    3300022: guard_wheels_001:Default
+    3300024: guard_wheelShell_001:Default
+    4300000: guard_chest_001:Default
+    4300002: guard_ears_001:Default
+    4300004: guard_eye_001:Default
+    4300006: guard_forehead_001:Default
+    4300008: guard_Head_backShell_001:Default
+    4300010: guard_Head_backShell2_001:Default
+    4300012: guard_headTop_001:Default
+    4300014: guard_mouth_001:Default
+    4300016: guard_neck_001:Default
+    4300018: guard_waist_001:Default
+    4300020: guard_wheels_001:Default
+    4300022: guard_wheelShell_001:Default
+    4300024: Default1
+    9500000: //RootNode
+    11400000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
