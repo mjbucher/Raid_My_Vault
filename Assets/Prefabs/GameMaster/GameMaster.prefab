@@ -58,6 +58,7 @@ GameObject:
   - 4: {fileID: 428958}
   - 114: {fileID: 11458758}
   - 114: {fileID: 11463298}
+  - 114: {fileID: 11493176}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: GameMaster
@@ -352,6 +353,27 @@ MonoBehaviour:
   _attackHistory: []
   _defenseHistory: []
   _friendList: []
+--- !u!114 &11493176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6be08eca45c3f174790a84dd60f9415a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInfo:
+    file: {fileID: 0}
+    currency: 0
+  dungeonInfo:
+    file: {fileID: 0}
+    roomCountSmall: 0
+    roomCountMedium: 0
+    roomCountLarge: 0
+  profileRedirect: 
+  testNumber: 65
 --- !u!114 &11494804
 MonoBehaviour:
   m_ObjectHideFlags: 1

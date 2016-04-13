@@ -52,5 +52,12 @@ public class AttackManager : MonoBehaviour
 		weaponObject = _weapon;
 	}
 
+    public void SpaceOverride ()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            weapon.Attack();
+        }
+    }
 
 }

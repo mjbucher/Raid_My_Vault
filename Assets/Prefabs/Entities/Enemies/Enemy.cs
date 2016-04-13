@@ -46,11 +46,11 @@ public class Enemy : Entity
 		
 	void Update ()
 	{
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			StartCoroutine(healthManager.DealDamage(1));
-			Debug.Log(health);
-		}
+		//if (Input.GetKeyDown(KeyCode.Space))
+		//{
+		//	StartCoroutine(healthManager.DealDamage(1));
+		//	Debug.Log(health);
+		//}
 	}
 
 

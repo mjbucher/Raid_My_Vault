@@ -14,7 +14,7 @@ public class Entity : MonoBehaviour
 	[Header("Unit Stats")]
 	[Tooltip("The amount of health this unit has at a maximun, int")] [Range(0, 400)]
 	public int health = 100;
-	[Tooltip("The speed at which a unit moves, float")] [Range(0.0f, 4.0f)]
+	[Tooltip("The speed at which a unit moves, float")] [Range(0.0f, 10.0f)]
 	public float speed = 1.0f;
 	[Tooltip("Shield health is deducted first before base")] [Range(0, 100)]
 	public int shield = 0;

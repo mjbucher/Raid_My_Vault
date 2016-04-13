@@ -7,28 +7,20 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class GameMaster : MonoBehaviour 
 {
-	public enum GameState
-	{
-		Active,
-		Paused,
-		Map,
-		Hub,
-		Raiding,
-		Building,
-	}
-
 	public enum SubState
 	{
 		None,
+        Player,
 		Debug,
-		Developer
+		Developer,
+        God
 	}
 
 	[HideInInspector] public static GameMaster GM;
 	[HideInInspector] public MasterManager MM;
-	public GameState currentState = GameState.Active;
+	public GameStateEnum currentState = GameStateEnum.Active;
 	public SubState currentSubState = SubState.None;
-
+    //public TestingStateEnum currentTestingState;
 	int detectionAmount = 0;
 
 	public void Awake()
@@ -47,7 +39,7 @@ public class GameMaster : MonoBehaviour
 	}
 
 	// update this later ***
-	public void Switch_GameState (GameState _targetState)
+	public void Switch_GameState (GameStateEnum _targetState)
 	{
 		// get current state --> _temp
 		// enable targeted states Manager
@@ -56,24 +48,25 @@ public class GameMaster : MonoBehaviour
 		// update GM state to the new one
 	}
 
-	public void Get_Manager (GameState _targetManager)
+	public void Get_Manager (GameStateEnum _targetManager)
 	{
 		// update this later ***
 		switch (_targetManager)
 		{
-			case GameState.Building:
+			case GameStateEnum.Building:
 				break;
-			case GameState.Hub:
+			case GameStateEnum.Hub:
 				break;
-			case GameState.Map:
+			case GameStateEnum.Map:
 				break;
-			case GameState.Paused:
+			case GameStateEnum.Paused:
 				break;
-			case GameState.Raiding:
+			case GameStateEnum.Raiding:
 				break;
 			default:
 				break;
 		}
+        Debug.Log("wHY SO SERIOUS???");
 	}
 
 	/// <summary>

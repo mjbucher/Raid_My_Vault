@@ -3,41 +3,34 @@ using System.Collections;
 using UnityEditor;
 
 [CustomEditor(typeof(RoomProceedural))]
-public class ProceeduralRoomEditor : Editor 
+public class ProceeduralRoomEditor : Editor
 {
-	string buttonName = "Turn [ON] Perpetual Generation: [Mode: OFF]";
+    Editor _editor;
 
-	public override void OnInspectorGUI ()
-	{
+    public override void OnInspectorGUI()
+    {
+        // defaults
+        DrawDefaultInspector();
+        RoomProceedural myRoom = (RoomProceedural)target;
 
-		DrawDefaultInspector();
-		RoomProceedural myRoom = (RoomProceedural) target;
+        // serialize editors for walls
+        GUILayout.Space(10.0f);
+        CreateCachedEditor(myRoom.northWallManager, null, ref _editor);
+        _editor.OnInspectorGUI();
 
-		//GUILayout.Toolbar()
-		GUILayout.Box("Quick Controls");
+        GUILayout.Space(10.0f);
+        CreateCachedEditor(myRoom.eastWallManager, null, ref _editor);
+        _editor.OnInspectorGUI();
 
-		if (GUILayout.Button("Reload"))
-		{
-			Debug.Log("Room Resotred!");
-			myRoom.Reload();
-			Debug.Log("Room Resotred!");
-	
-		}
+        GUILayout.Space(10.0f);
+        CreateCachedEditor(myRoom.southWallManger, null, ref _editor);
+        _editor.OnInspectorGUI();
 
-		if (GUILayout.Button("Reset"))
-		{
-			myRoom.ClearAllManagers();
-			Debug.Log("Room Reset");
-		}
-			
-		if (GUILayout.Button(buttonName))
-		{
-			myRoom.PerpetualGeneration = !myRoom.PerpetualGeneration;
-		}
+        GUILayout.Space(10.0f);
+        CreateCachedEditor(myRoom.westWallManager, null, ref _editor);
+        _editor.OnInspectorGUI();
 
-		buttonName = myRoom.PerpetualGeneration ? "Turn [OFF] Perpetual Generation: [Mode: ON]" : "Turn [ON] Perpetual Generation: [Mode: OFF]";
 
-	}
-
+    }
 
 }

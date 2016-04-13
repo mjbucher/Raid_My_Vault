@@ -22,9 +22,21 @@ public class DetectionMethod : MonoBehaviour
 	//float sphereRadius = 0.5;
 	// grabbing player and responsible locks
 	GameObject player;
-	Vector3 playerPos; 
-	bool foundPlayer = false;
+	Vector3 playerPos;
+    bool foundPlayer = false;
 	bool lockOnPlayer = false;
+
+    public bool targetIsPlayer = true;
+    public bool targetIsEntity = false;
+    GameObject mainTarget;
+    string targetTag;
+    float distanceBetween;
+    Vector3 targetDirection;
+    float angleBetween;
+    bool foundMainTarget = false;
+    bool lostMainTarget = false;
+    bool searchingMainTarget = false;
+    Vector3 mainTargetPos;
 
 	[Header("Detection Time Lengths")]
 
@@ -48,7 +60,7 @@ public class DetectionMethod : MonoBehaviour
 		range = _range;
 		//radius = _radius;
 		angle = _angle;
-		CheckShape();
+		//CheckShape();
 	}
 		
 	void Awake ()
@@ -56,14 +68,14 @@ public class DetectionMethod : MonoBehaviour
 		// get references
 		enemy = GetComponent<Enemy>();
 		player = GameObject.FindGameObjectWithTag("Player"); 
-		primaryTarget = player.GetComponent<Player>();
+		primaryTarget = player.GetComponent<Player>() != null ? player.GetComponent<Player>(): null;
 		playerPos = player.transform.position; // player position
 	}
 
 	void Start ()
 	{
 		// start coroutines
-		StartCoroutine ("CheckForPlayer"); 
+		StartCoroutine ("CheckForTarget"); 
 	}
 
 	void Update ()
@@ -72,51 +84,55 @@ public class DetectionMethod : MonoBehaviour
 	/// <summary>
 	/// Checks for player, first by the distance between them, then by the angle between us, then by a raycast to see if something is blocking line of sight.
 	/// </summary>
-	public IEnumerator CheckForPlayer ()
+	public IEnumerator CheckForTarget ()
 	{
+        // while the enemy has not detected anything
 		while (enemy.detectionState != DetectionState.None)
 		{
-			playerPos = player.transform.position;
-			float distanceBetween = Vector3.Distance(transform.position, playerPos); // get distance between 
-			// check if not in range
+            // get target
+            if (targetIsPlayer)
+                targetTag = "Player";
+            mainTarget = GameObject.FindGameObjectWithTag(targetTag);
+            // find other enemies here
+            if (targetIsEntity)
+                targetTag = "Enemy";
+            // get relative data from target
+            mainTargetPos = mainTarget.transform.position; // get the target's position
+			distanceBetween = Vector3.Distance(transform.position, mainTargetPos); // get distance between target and self
+			// check if not in range & break
 			if (distanceBetween > range)
 			{
 				Debug.Log("Too far away: " + gameObject.name);
-				//yield return null;
+				yield return null;
 			}
-			Vector3 targetDirection = playerPos - transform.position;
+            // get direction
+			targetDirection = playerPos - transform.position;
 			//Debug.DrawLine(playerPos, detectionRayStart.position);
 			//Vector3 forward = transform.forward;
 			//Debug.DrawLine(detectionRayStart.position, transform.forward);
-			float angleBetween = Vector3.Angle(targetDirection, transform.forward);  // get angle between
+			angleBetween = Vector3.Angle(targetDirection, transform.forward);  // get angle between
 			// check if angle is outside the range of my forward direction
-			if (angleBetween > angle / 2.0f)
+			if (Mathf.Abs(angleBetween) > angle / 2.0f)
 			{
 				yield return null;
 			}
-			// check if there is a wall inbetween player and me
+			// check if there is a wall or cover inbetween player and me
 			RaycastHit hit;
-			Ray ray = new Ray (detectionRayStart.position, targetDirection);
+            //Ray ray = new Ray (detectionRayStart.position, targetDirection);
+            Ray ray = new Ray(transform.position, targetDirection);
 			//Debug.DrawRay(ray.origin,ray.direction,Color.red);
-			if (Physics.Raycast(ray.origin, ray.direction, out hit, range))
+			if (Physics.Raycast(ray.origin, ray.direction, out hit)) // no range needed because already proved true
 			{
-				if (hit.collider.tag != "Player")
-				{
-					foundPlayer = false;
-					yield return null;
-				}
-				else
-				{
-					foundPlayer = true;	
-				}
+                foundMainTarget = hit.collider.tag != targetTag ? false : true; // check if it hit the target
 			}
 			// what occurs when the AI finds the player
-			if (foundPlayer)
+			if (foundMainTarget)
 			{
 				yield return StartCoroutine("Discovering");
 			}
 		}
 		Debug.Log("detection state changed");
+        yield return null;
 	}
 
 
@@ -125,7 +141,7 @@ public class DetectionMethod : MonoBehaviour
 		// wait for designated time
 		yield return new WaitForSeconds(discoverTime);
 		// check if player was found again
-		lockOnPlayer = (foundPlayer) ? true : false;
+		lockOnPlayer = foundPlayer ? true : false;
 		// if true make found player
 		enemy.detectionState = lockOnPlayer ? DetectionState.FoundPlayer : enemy.detectionState;
 		if (lockOnPlayer)
@@ -133,70 +149,6 @@ public class DetectionMethod : MonoBehaviour
 			yield return StartCoroutine(enemy.FoundTarget(player));
 		}
 		StopCoroutine("Discovering");
-	}
-
-
-	// checks the Detection mode of an AI
-	void CheckShape ()
-	{
-		switch (shape)
-		{
-		case DetectionShape.Line:
-			CheckAsLine();
-			break;
-		case DetectionShape.Radial:
-			CheckAsRadial();
-			break;
-		case DetectionShape.Sphere:
-			CheckAsSphere();
-			break;
-		case DetectionShape.Omni:
-			break;
-		case DetectionShape.None:
-			break;
-		default:
-			break;
-		}
-	}
-		
-	// line detection
-	void CheckAsLine ()
-	{
-//		bool foundPlayer = false;
-//		Ray ray = new Ray(transform.position, Vector3.forward); // ray going forward
-//		RaycastHit[] hits; // hit output
-//		hits = Physics.SphereCastAll(ray.origin, sphereRadius, ray.direction, range);
-//		foreach (RaycastHit _hit in hits)
-//		{
-//			// check if it was the player
-//			if (_hit.collider.tag == "Player")
-//			{
-//				foundPlayer = true;
-//				RaycastHit playerHit = _hit;
-//				break;
-//			}
-//		}
-//		// only if player was found 
-//		if (foundPlayer)
-//		{
-//			// check that there isn't a wall in the way
-//
-//		}
-
-
-
-	}
-
-	// spherical detection
-	void CheckAsSphere ()
-	{
-		
-	}
-		
-	// radial detection
-	void CheckAsRadial ()
-	{
-		
 	}
 
 	void OnTriggerEnter (Collider _other)
@@ -214,4 +166,15 @@ public class DetectionMethod : MonoBehaviour
 
 	}
 
+    public void OnTriggerEnter(Collision _other)
+    {
+ 
+    }
+
 }
+
+
+// AI is pathing along its route --> trying to find player while looking
+
+
+
