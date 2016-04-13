@@ -1,0 +1,498 @@
+fileFormatVersion: 2
+guid: 586469d211005924fbe71c105d7a10dd
+timeCreated: 1457312489
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: camera1
+    100002: cybDrgn_Arms_lower_001:Default
+    100004: cybDrgn_Arms_lower_piece1_001:Default
+    100006: cybDrgn_Arms_lower_piece2_001:Default
+    100008: cybDrgn_Arms_upper_001:Default
+    100010: cybDrgn_ballJoint_001:Default
+    100012: cybDrgn_Body_chest_001:Default
+    100014: cybDrgn_Body_waist_001:Default
+    100016: cybDrgn_Feet_001:Default
+    100018: cybDrgn_Feet_back_001:Default
+    100020: cybDrgn_Feet_tose_001:Default
+    100022: cybDrgn_Hand_001:Default
+    100024: cybDrgn_Hand_fingers_001:Default
+    100026: cybDrgn_Hand_thumb_001:Default
+    100028: cybDrgn_Head_backPiece_001:Default
+    100030: cybDrgn_Head_backSheel2_001:Default
+    100032: cybDrgn_Head_backSheel_001:Default
+    100034: cybDrgn_Head_foreHeadPiece_001:Default
+    100036: cybDrgn_Head_jawPiece_001:Default
+    100038: cybDrgn_Head_topEyeSheel_001:Default
+    100040: cybDrgn_Legs_calf_001:Default
+    100042: cybDrgn_Legs_knee_001:Default
+    100044: cybDrgn_Legs_thigh_001:Default
+    100046: cybDrgn_neck_001:Default
+    100048: //RootNode
+    100050: Default
+    100052: Default 1
+    100054: Default1
+    100056: Default1 1
+    100058: Default10
+    100060: Default10 1
+    100062: Default11
+    100064: Default12
+    100066: Default13
+    100068: Default2
+    100070: Default2 1
+    100072: Default3
+    100074: Default3 1
+    100076: Default4
+    100078: Default4 1
+    100080: Default5
+    100082: Default5 1
+    100084: Default6
+    100086: Default6 1
+    100088: Default7
+    100090: Default7 1
+    100092: Default8
+    100094: Default8 1
+    100096: Default9
+    100098: Default9 1
+    100100: group1
+    100102: group2
+    100104: polySurface1
+    100106: polySurface10
+    100108: polySurface11
+    100110: polySurface12
+    100112: polySurface13
+    100114: polySurface14
+    100116: polySurface15
+    100118: polySurface16
+    100120: polySurface17
+    100122: polySurface18
+    100124: polySurface19
+    100126: polySurface2
+    100128: polySurface20
+    100130: polySurface21
+    100132: polySurface22
+    100134: polySurface23
+    100136: polySurface24
+    100138: polySurface25
+    100140: polySurface26
+    100142: polySurface27
+    100144: polySurface28
+    100146: polySurface29
+    100148: polySurface3
+    100150: polySurface30
+    100152: polySurface31
+    100154: polySurface32
+    100156: polySurface33
+    100158: polySurface34
+    100160: polySurface35
+    100162: polySurface36
+    100164: polySurface4
+    100166: polySurface5
+    100168: polySurface6
+    100170: polySurface7
+    100172: polySurface8
+    100174: polySurface9
+    100176: pPlane1
+    100178: transform1
+    100180: transform10
+    100182: transform11
+    100184: transform12
+    100186: transform13
+    100188: transform14
+    100190: transform2
+    100192: transform3
+    100194: transform4
+    100196: transform5
+    100198: transform6
+    100200: transform7
+    100202: transform8
+    100204: transform9
+    100206: VRayLightRect1
+    100208: VRayLightRect2
+    100210: VRayLightRect3
+    400000: camera1
+    400002: cybDrgn_Arms_lower_001:Default
+    400004: cybDrgn_Arms_lower_piece1_001:Default
+    400006: cybDrgn_Arms_lower_piece2_001:Default
+    400008: cybDrgn_Arms_upper_001:Default
+    400010: cybDrgn_ballJoint_001:Default
+    400012: cybDrgn_Body_chest_001:Default
+    400014: cybDrgn_Body_waist_001:Default
+    400016: cybDrgn_Feet_001:Default
+    400018: cybDrgn_Feet_back_001:Default
+    400020: cybDrgn_Feet_tose_001:Default
+    400022: cybDrgn_Hand_001:Default
+    400024: cybDrgn_Hand_fingers_001:Default
+    400026: cybDrgn_Hand_thumb_001:Default
+    400028: cybDrgn_Head_backPiece_001:Default
+    400030: cybDrgn_Head_backSheel2_001:Default
+    400032: cybDrgn_Head_backSheel_001:Default
+    400034: cybDrgn_Head_foreHeadPiece_001:Default
+    400036: cybDrgn_Head_jawPiece_001:Default
+    400038: cybDrgn_Head_topEyeSheel_001:Default
+    400040: cybDrgn_Legs_calf_001:Default
+    400042: cybDrgn_Legs_knee_001:Default
+    400044: cybDrgn_Legs_thigh_001:Default
+    400046: cybDrgn_neck_001:Default
+    400048: //RootNode
+    400050: Default
+    400052: Default 1
+    400054: Default1
+    400056: Default1 1
+    400058: Default10
+    400060: Default10 1
+    400062: Default11
+    400064: Default12
+    400066: Default13
+    400068: Default2
+    400070: Default2 1
+    400072: Default3
+    400074: Default3 1
+    400076: Default4
+    400078: Default4 1
+    400080: Default5
+    400082: Default5 1
+    400084: Default6
+    400086: Default6 1
+    400088: Default7
+    400090: Default7 1
+    400092: Default8
+    400094: Default8 1
+    400096: Default9
+    400098: Default9 1
+    400100: group1
+    400102: group2
+    400104: polySurface1
+    400106: polySurface10
+    400108: polySurface11
+    400110: polySurface12
+    400112: polySurface13
+    400114: polySurface14
+    400116: polySurface15
+    400118: polySurface16
+    400120: polySurface17
+    400122: polySurface18
+    400124: polySurface19
+    400126: polySurface2
+    400128: polySurface20
+    400130: polySurface21
+    400132: polySurface22
+    400134: polySurface23
+    400136: polySurface24
+    400138: polySurface25
+    400140: polySurface26
+    400142: polySurface27
+    400144: polySurface28
+    400146: polySurface29
+    400148: polySurface3
+    400150: polySurface30
+    400152: polySurface31
+    400154: polySurface32
+    400156: polySurface33
+    400158: polySurface34
+    400160: polySurface35
+    400162: polySurface36
+    400164: polySurface4
+    400166: polySurface5
+    400168: polySurface6
+    400170: polySurface7
+    400172: polySurface8
+    400174: polySurface9
+    400176: pPlane1
+    400178: transform1
+    400180: transform10
+    400182: transform11
+    400184: transform12
+    400186: transform13
+    400188: transform14
+    400190: transform2
+    400192: transform3
+    400194: transform4
+    400196: transform5
+    400198: transform6
+    400200: transform7
+    400202: transform8
+    400204: transform9
+    400206: VRayLightRect1
+    400208: VRayLightRect2
+    400210: VRayLightRect3
+    2300000: cybDrgn_ballJoint_001:Default
+    2300002: cybDrgn_Body_chest_001:Default
+    2300004: cybDrgn_Body_waist_001:Default
+    2300006: cybDrgn_Head_backSheel2_001:Default
+    2300008: cybDrgn_Head_backSheel_001:Default
+    2300010: cybDrgn_Head_foreHeadPiece_001:Default
+    2300012: cybDrgn_Head_jawPiece_001:Default
+    2300014: cybDrgn_Head_topEyeSheel_001:Default
+    2300016: cybDrgn_neck_001:Default
+    2300018: Default
+    2300020: Default 1
+    2300022: Default1
+    2300024: Default1 1
+    2300026: Default10
+    2300028: Default10 1
+    2300030: Default11
+    2300032: Default12
+    2300034: Default13
+    2300036: Default2
+    2300038: Default2 1
+    2300040: Default3
+    2300042: Default3 1
+    2300044: Default4
+    2300046: Default4 1
+    2300048: Default5
+    2300050: Default5 1
+    2300052: Default6
+    2300054: Default6 1
+    2300056: Default7
+    2300058: Default7 1
+    2300060: Default8
+    2300062: Default8 1
+    2300064: Default9
+    2300066: Default9 1
+    2300068: polySurface1
+    2300070: polySurface10
+    2300072: polySurface11
+    2300074: polySurface12
+    2300076: polySurface13
+    2300078: polySurface14
+    2300080: polySurface15
+    2300082: polySurface16
+    2300084: polySurface17
+    2300086: polySurface18
+    2300088: polySurface19
+    2300090: polySurface2
+    2300092: polySurface20
+    2300094: polySurface21
+    2300096: polySurface22
+    2300098: polySurface23
+    2300100: polySurface24
+    2300102: polySurface25
+    2300104: polySurface26
+    2300106: polySurface27
+    2300108: polySurface28
+    2300110: polySurface29
+    2300112: polySurface3
+    2300114: polySurface30
+    2300116: polySurface31
+    2300118: polySurface32
+    2300120: polySurface33
+    2300122: polySurface34
+    2300124: polySurface35
+    2300126: polySurface36
+    2300128: polySurface4
+    2300130: polySurface5
+    2300132: polySurface6
+    2300134: polySurface7
+    2300136: polySurface8
+    2300138: polySurface9
+    2300140: pPlane1
+    3300000: cybDrgn_ballJoint_001:Default
+    3300002: cybDrgn_Body_chest_001:Default
+    3300004: cybDrgn_Body_waist_001:Default
+    3300006: cybDrgn_Head_backSheel2_001:Default
+    3300008: cybDrgn_Head_backSheel_001:Default
+    3300010: cybDrgn_Head_foreHeadPiece_001:Default
+    3300012: cybDrgn_Head_jawPiece_001:Default
+    3300014: cybDrgn_Head_topEyeSheel_001:Default
+    3300016: cybDrgn_neck_001:Default
+    3300018: Default
+    3300020: Default 1
+    3300022: Default1
+    3300024: Default1 1
+    3300026: Default10
+    3300028: Default10 1
+    3300030: Default11
+    3300032: Default12
+    3300034: Default13
+    3300036: Default2
+    3300038: Default2 1
+    3300040: Default3
+    3300042: Default3 1
+    3300044: Default4
+    3300046: Default4 1
+    3300048: Default5
+    3300050: Default5 1
+    3300052: Default6
+    3300054: Default6 1
+    3300056: Default7
+    3300058: Default7 1
+    3300060: Default8
+    3300062: Default8 1
+    3300064: Default9
+    3300066: Default9 1
+    3300068: polySurface1
+    3300070: polySurface10
+    3300072: polySurface11
+    3300074: polySurface12
+    3300076: polySurface13
+    3300078: polySurface14
+    3300080: polySurface15
+    3300082: polySurface16
+    3300084: polySurface17
+    3300086: polySurface18
+    3300088: polySurface19
+    3300090: polySurface2
+    3300092: polySurface20
+    3300094: polySurface21
+    3300096: polySurface22
+    3300098: polySurface23
+    3300100: polySurface24
+    3300102: polySurface25
+    3300104: polySurface26
+    3300106: polySurface27
+    3300108: polySurface28
+    3300110: polySurface29
+    3300112: polySurface3
+    3300114: polySurface30
+    3300116: polySurface31
+    3300118: polySurface32
+    3300120: polySurface33
+    3300122: polySurface34
+    3300124: polySurface35
+    3300126: polySurface36
+    3300128: polySurface4
+    3300130: polySurface5
+    3300132: polySurface6
+    3300134: polySurface7
+    3300136: polySurface8
+    3300138: polySurface9
+    3300140: pPlane1
+    4300000: polySurface1
+    4300002: polySurface2
+    4300004: polySurface3
+    4300006: polySurface4
+    4300008: polySurface5
+    4300010: polySurface6
+    4300012: cybDrgn_Head_backSheel_001:Default
+    4300014: cybDrgn_Head_backSheel2_001:Default
+    4300016: cybDrgn_Body_chest_001:Default
+    4300018: cybDrgn_Body_waist_001:Default
+    4300020: polySurface7
+    4300022: polySurface8
+    4300024: polySurface9
+    4300026: polySurface10
+    4300028: polySurface11
+    4300030: polySurface12
+    4300032: polySurface13
+    4300034: polySurface14
+    4300036: polySurface15
+    4300038: polySurface16
+    4300040: polySurface17
+    4300042: polySurface18
+    4300044: polySurface19
+    4300046: polySurface20
+    4300048: polySurface21
+    4300050: polySurface22
+    4300052: polySurface23
+    4300054: polySurface24
+    4300056: polySurface25
+    4300058: polySurface26
+    4300060: polySurface27
+    4300062: polySurface28
+    4300064: polySurface29
+    4300066: polySurface30
+    4300068: polySurface31
+    4300070: polySurface32
+    4300072: polySurface33
+    4300074: polySurface34
+    4300076: Default13
+    4300078: Default12
+    4300080: polySurface35
+    4300082: polySurface36
+    4300084: cybDrgn_Head_foreHeadPiece_001:Default
+    4300086: cybDrgn_Head_topEyeSheel_001:Default
+    4300088: cybDrgn_Head_jawPiece_001:Default
+    4300090: cybDrgn_neck_001:Default
+    4300092: cybDrgn_ballJoint_001:Default
+    4300094: Default
+    4300096: Default1
+    4300098: Default2
+    4300100: Default3
+    4300102: Default4
+    4300104: Default5
+    4300106: Default6
+    4300108: Default7
+    4300110: Default8
+    4300112: Default9
+    4300114: Default10
+    4300116: Default
+    4300118: Default1
+    4300120: Default2
+    4300122: Default3
+    4300124: Default4
+    4300126: Default5
+    4300128: Default6
+    4300130: Default7
+    4300132: Default8
+    4300134: Default9
+    4300136: Default10
+    4300138: Default11
+    4300140: pPlane1
+    9500000: //RootNode
+    11400000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
