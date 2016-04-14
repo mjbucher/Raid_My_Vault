@@ -179,3 +179,15 @@ MonoBehaviour:
       Also Limit the offset to < roomSize. Update floor spawning as well as another
       script
     isComplete: 0
+  - owner:
+      name: Normal
+      color: {r: 0, g: 0, b: 0, a: 1}
+      index: 0
+    task: fix energy barriers for doors
+    isComplete: 0
+  - owner:
+      name: Urgent
+      color: {r: 1, g: 0, b: 0, a: 1}
+      index: 1
+    task: fix characters ~after import
+    isComplete: 0
