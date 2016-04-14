@@ -1,7 +1,11 @@
 fileFormatVersion: 2
-guid: c277b62cb466341d4984d9568fef54ee
+guid: 303f2d8c398f8c54a9354870e02b4f6d
 folderAsset: yes
-timeCreated: 1460586382
+<<<<<<< HEAD:Assets/Prefabs/Entities/Enemies/DroneBot/Meshes/Materials.meta
+timeCreated: 1460607801
+=======
+timeCreated: 1460644054
+>>>>>>> 6d73514dbe44f890dc1f17c53d8c78e187a3bb3b:Assets/Prefabs/GameMaster/NetworkManager/PlayerProfile/Inventory.meta
 licenseType: Free
 DefaultImporter:
   userData: 

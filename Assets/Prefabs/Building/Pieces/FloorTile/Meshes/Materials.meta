@@ -1,7 +1,11 @@
 fileFormatVersion: 2
-guid: 316e954eaf3894970bfbf2ba1ec3b0aa
+guid: bd968dbcb378a994fba854c5b2d1cdec
 folderAsset: yes
-timeCreated: 1460586385
+<<<<<<< HEAD:Assets/Prefabs/Building/Pieces/FloorTile/Meshes/Materials.meta
+timeCreated: 1460597352
+=======
+timeCreated: 1460644053
+>>>>>>> 6d73514dbe44f890dc1f17c53d8c78e187a3bb3b:Assets/Prefabs/GameMaster/NetworkManager/PlayerProfile/PlayerInfo.meta
 licenseType: Free
 DefaultImporter:
   userData: 

@@ -1,1 +1,8 @@
+<<<<<<< HEAD
+sceneSetups:
+- path: Assets/_Scenes/Testing/Test_Dungeon/TestLevel_Lobby_v001.unity
+  isLoaded: 1
+  isActive: 1
+=======
 sceneSetups: []
+>>>>>>> 6d73514dbe44f890dc1f17c53d8c78e187a3bb3b
