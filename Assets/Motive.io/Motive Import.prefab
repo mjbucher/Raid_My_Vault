@@ -85,7 +85,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &103090
 GameObject:
   m_ObjectHideFlags: 1
@@ -783,7 +783,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &131196
 GameObject:
   m_ObjectHideFlags: 1
@@ -1022,7 +1022,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &141348
 GameObject:
   m_ObjectHideFlags: 1
@@ -1093,7 +1093,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &144980
 GameObject:
   m_ObjectHideFlags: 1
@@ -1285,7 +1285,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &154030
 GameObject:
   m_ObjectHideFlags: 1
@@ -1576,7 +1576,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &165216
 GameObject:
   m_ObjectHideFlags: 1
@@ -2394,7 +2394,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &194278
 GameObject:
   m_ObjectHideFlags: 1
@@ -2758,7 +2758,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294965247
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -3339,8 +3339,8 @@ MonoBehaviour:
   m_Script: {fileID: -81156280, guid: 47bf5a37778cdda4abb3860bcdb61079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MapId: mapbox.pirates
-  AccessToken: YOUR MAPBOX TOKEN
+  MapId: mapbox.dark
+  AccessToken: pk.eyJ1IjoibXJrbm93aWQiLCJhIjoiY2lmcmZwcHg2MDcxdnM4bTZlNnlvM3dkMCJ9.z-TtB2ZSfeD1ynp8N2bKtw
   Version: 1
   HighRes: 1
 --- !u!114 &11411254
@@ -7949,7 +7949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerLocation: 14
   KeyboardMovesPlayer: 1
-  PlayerSpeed: 100
+  PlayerSpeed: 10
   UseAnchorPosition: 0
   MapController: {fileID: 11457792}
 --- !u!114 &11485358
@@ -8266,14 +8266,14 @@ MonoBehaviour:
   SpaceName: matthew_bucher
   UserDomain: test_userdomain
   ActivityFeed: test_feed
-  CharacterCatalog: catan_characters
-  ResourceCollectibleCatalog: catan_resources
-  BonusCardCollectibleCatalog: catan_bonus_cards
-  DevelopmentCardCollectibleCatalog: catan_development_cards
-  ScriptCatalog: catan_scripts
-  LocationStoryTagCatalog: catan_story_tags
-  LocationTreasureChestCatalog: catan_treasure_chests
-  AnnotationMarkerCatalog: 
+  CharacterCatalog: Player
+  ResourceCollectibleCatalog: RMV_collect
+  BonusCardCollectibleCatalog: 
+  DevelopmentCardCollectibleCatalog: 
+  ScriptCatalog: Raid_my_Vault
+  LocationStoryTagCatalog: 
+  LocationTreasureChestCatalog: 
+  AnnotationMarkerCatalog: Raid_My_Vault_Annotations
   FoursquareClientId: OVGZLS5D4XEUBLEBPQHPZCMOWM31CAJNQPIMWGP5WNEMHQ40
   FoursquareClientSecret: KBIM4JBKLMFA51FQSFYPACXQK01AR0VQUTCJGNKIT4TT3LRE
   ForecastIOApiKey: YOUR FORECAST API KEY
@@ -8451,7 +8451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SearchMoveDistance: 100
   SearchRange: 1000
-  Source: 0
+  Source: 2
   LocationCatalogName: 
 --- !u!114 &11493658
 MonoBehaviour:
@@ -8807,7 +8807,7 @@ MonoBehaviour:
   Width: 2048
   Height: 2048
   UseTileCache: 1
-  TileSource: {fileID: 11480748}
+  TileSource: {fileID: 11411136}
   EnableTileProcessing: 0
   EmptyTileColor: {r: 0, g: 0, b: 0, a: 0}
   MaxTileLoadMapSpeed: 2

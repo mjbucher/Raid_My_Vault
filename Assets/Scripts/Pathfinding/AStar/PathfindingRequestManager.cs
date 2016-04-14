@@ -27,7 +27,7 @@ namespace AStar
 
 
 
-		public static void RequestPath (Vector3 pathStart, Vector3 pathEnd, Action <Vector3[], bool> callback)
+		public static void RequestPath (Vector3 pathStart, Vector3 pathEnd, Action <List<Vector3>, bool> callback)
 		{
 			PathRequest newRequest = new PathRequest(pathStart, pathEnd, callback);
 			instance.pathRequestQueue.Enqueue(newRequest);
@@ -47,10 +47,10 @@ namespace AStar
 			}
 		}
 
-		public void FinishedProcessingPath(Vector3[] path, bool success)
+		public void FinishedProcessingPath(List<Vector3> path, bool success)
 		{
 			//UnityEngine.Debug.Log("FinishedProcessingPath called success");
-			UnityEngine.Debug.Log("FinishedProcessingPath: path = " + path + ":: success = " + success);
+			//UnityEngine.Debug.Log("FinishedProcessingPath: path = " + path + ":: success = " + success);
 			currentPathRequest.callback(path, success);
 			isProcessingPath = false;
 			TryProcessNext();
@@ -61,9 +61,9 @@ namespace AStar
 		{
 			public Vector3 pathStart;
 			public Vector3 pathEnd;
-			public Action<Vector3[], bool> callback;
+			public Action<List<Vector3>, bool> callback;
 
-			public PathRequest (Vector3 _start, Vector3 _end, Action <Vector3[], bool> _callback)
+			public PathRequest (Vector3 _start, Vector3 _end, Action <List<Vector3>, bool> _callback)
 			{
 				pathStart = _start;
 				pathEnd = _end;

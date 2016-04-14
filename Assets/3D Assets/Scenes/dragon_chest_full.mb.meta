@@ -1,0 +1,279 @@
+fileFormatVersion: 2
+guid: 434396d3f25e69d408b09791d4d539a1
+timeCreated: 1457312468
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: back
+    100002: bottom_latches
+    100004: bottom_latches_1
+    100006: bottom_latches_2
+    100008: chest_bottom
+    100010: chest_top_1
+    100012: chest_top_2
+    100014: curve1
+    100016: curve11
+    100018: curve13
+    100020: curve13 1
+    100022: curve13 2
+    100024: curve13 3
+    100026: curve15
+    100028: curve15 1
+    100030: curve15 2
+    100032: curve15 3
+    100034: curve17
+    100036: curve17 1
+    100038: curve17 2
+    100040: curve17 3
+    100042: curve2
+    100044: curve3
+    100046: curve4
+    100048: curve5
+    100050: curve6
+    100052: curve7
+    100054: curve8
+    100056: //RootNode
+    100058: imagePlane1
+    100060: imagePlane2
+    100062: pCube10
+    100064: pCube5
+    100066: pCube7
+    100068: pCube8
+    100070: pCube9
+    100072: pCylinder1
+    100074: pCylinder11
+    100076: pCylinder12
+    100078: pCylinder13
+    100080: pCylinder14
+    100082: pCylinder15
+    100084: pCylinder16
+    100086: pCylinder2
+    100088: pCylinder20
+    100090: pCylinder21
+    100092: pCylinder22
+    100094: pCylinder23
+    100096: pCylinder24
+    100098: pCylinder3
+    100100: pCylinder4
+    100102: pCylinder5
+    100104: pCylinder6
+    100106: pCylinder7
+    100108: pCylinder8
+    100110: pCylinder9
+    100112: pins
+    100114: polySurface5
+    100116: polySurface6
+    100118: top_latches_1
+    100120: top_latches_2
+    400000: back
+    400002: bottom_latches
+    400004: bottom_latches_1
+    400006: bottom_latches_2
+    400008: chest_bottom
+    400010: chest_top_1
+    400012: chest_top_2
+    400014: curve1
+    400016: curve11
+    400018: curve13
+    400020: curve13 1
+    400022: curve13 2
+    400024: curve13 3
+    400026: curve15
+    400028: curve15 1
+    400030: curve15 2
+    400032: curve15 3
+    400034: curve17
+    400036: curve17 1
+    400038: curve17 2
+    400040: curve17 3
+    400042: curve2
+    400044: curve3
+    400046: curve4
+    400048: curve5
+    400050: curve6
+    400052: curve7
+    400054: curve8
+    400056: //RootNode
+    400058: imagePlane1
+    400060: imagePlane2
+    400062: pCube10
+    400064: pCube5
+    400066: pCube7
+    400068: pCube8
+    400070: pCube9
+    400072: pCylinder1
+    400074: pCylinder11
+    400076: pCylinder12
+    400078: pCylinder13
+    400080: pCylinder14
+    400082: pCylinder15
+    400084: pCylinder16
+    400086: pCylinder2
+    400088: pCylinder20
+    400090: pCylinder21
+    400092: pCylinder22
+    400094: pCylinder23
+    400096: pCylinder24
+    400098: pCylinder3
+    400100: pCylinder4
+    400102: pCylinder5
+    400104: pCylinder6
+    400106: pCylinder7
+    400108: pCylinder8
+    400110: pCylinder9
+    400112: pins
+    400114: polySurface5
+    400116: polySurface6
+    400118: top_latches_1
+    400120: top_latches_2
+    2300000: chest_bottom
+    2300002: chest_top_1
+    2300004: chest_top_2
+    2300006: pCube10
+    2300008: pCube5
+    2300010: pCube7
+    2300012: pCube8
+    2300014: pCube9
+    2300016: pCylinder1
+    2300018: pCylinder11
+    2300020: pCylinder12
+    2300022: pCylinder13
+    2300024: pCylinder14
+    2300026: pCylinder15
+    2300028: pCylinder16
+    2300030: pCylinder2
+    2300032: pCylinder20
+    2300034: pCylinder21
+    2300036: pCylinder22
+    2300038: pCylinder23
+    2300040: pCylinder24
+    2300042: pCylinder3
+    2300044: pCylinder4
+    2300046: pCylinder5
+    2300048: pCylinder6
+    2300050: pCylinder7
+    2300052: pCylinder8
+    2300054: pCylinder9
+    3300000: chest_bottom
+    3300002: chest_top_1
+    3300004: chest_top_2
+    3300006: pCube10
+    3300008: pCube5
+    3300010: pCube7
+    3300012: pCube8
+    3300014: pCube9
+    3300016: pCylinder1
+    3300018: pCylinder11
+    3300020: pCylinder12
+    3300022: pCylinder13
+    3300024: pCylinder14
+    3300026: pCylinder15
+    3300028: pCylinder16
+    3300030: pCylinder2
+    3300032: pCylinder20
+    3300034: pCylinder21
+    3300036: pCylinder22
+    3300038: pCylinder23
+    3300040: pCylinder24
+    3300042: pCylinder3
+    3300044: pCylinder4
+    3300046: pCylinder5
+    3300048: pCylinder6
+    3300050: pCylinder7
+    3300052: pCylinder8
+    3300054: pCylinder9
+    4300000: chest_bottom
+    4300002: pCylinder5
+    4300004: pCylinder6
+    4300006: pCylinder11
+    4300008: pCylinder12
+    4300010: pCylinder13
+    4300012: pCylinder14
+    4300014: pCylinder15
+    4300016: pCylinder16
+    4300018: pCylinder3
+    4300020: pCylinder4
+    4300022: pCylinder1
+    4300024: pCylinder2
+    4300026: pCylinder7
+    4300028: pCylinder8
+    4300030: pCylinder21
+    4300032: pCylinder9
+    4300034: pCube7
+    4300036: pCube5
+    4300038: pCylinder22
+    4300040: pCylinder20
+    4300042: chest_top_1
+    4300044: pCube8
+    4300046: pCube9
+    4300048: pCylinder24
+    4300050: pCylinder23
+    4300052: chest_top_2
+    4300054: pCube10
+    9500000: //RootNode
+    11400000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

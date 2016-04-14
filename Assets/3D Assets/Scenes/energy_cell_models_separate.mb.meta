@@ -1,0 +1,294 @@
+fileFormatVersion: 2
+guid: 6acbbc7e4834f2941afd0598d6a9ff79
+timeCreated: 1457312512
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: control_rods
+    100002: curve1
+    100004: curve1 1
+    100006: curve10
+    100008: curve10 1
+    100010: curve11
+    100012: curve11 1
+    100014: curve12
+    100016: curve12 1
+    100018: curve2
+    100020: curve2 1
+    100022: curve21
+    100024: curve22
+    100026: curve23
+    100028: curve24
+    100030: curve3
+    100032: curve3 1
+    100034: curve32
+    100036: curve32 1
+    100038: curve33
+    100040: curve34
+    100042: curve35
+    100044: curve36
+    100046: curve4
+    100048: curve4 1
+    100050: curve5
+    100052: curve6
+    100054: curve6 1
+    100056: curve7
+    100058: curve7 1
+    100060: curve8
+    100062: curve9
+    100064: curve9 1
+    100066: energy
+    100068: energy 1
+    100070: //RootNode
+    100072: energy_transfer_pipe1
+    100074: energy_transfer_pipe1 1
+    100076: full_pipe
+    100078: full_pipe1
+    100080: group1
+    100082: group2
+    100084: group3
+    100086: imagePlane1
+    100088: imagePlane2
+    100090: imagePlane3
+    100092: imagePlane4
+    100094: imagePlane5
+    100096: main_reactor
+    100098: pCube3
+    100100: pCylinder10
+    100102: pCylinder11
+    100104: pCylinder12
+    100106: pCylinder13
+    100108: pCylinder14
+    100110: pCylinder15
+    100112: pCylinder16
+    100114: pCylinder17
+    100116: pCylinder18
+    100118: pCylinder19
+    100120: pCylinder2
+    100122: pCylinder3
+    100124: pCylinder4
+    100126: pCylinder5
+    100128: pCylinder6
+    100130: pCylinder7
+    100132: pCylinder8
+    100134: pCylinder9
+    100136: persp1
+    100138: pointLight1
+    100140: pointLight2
+    100142: power_generator
+    100144: power_generator 1
+    400000: control_rods
+    400002: curve1
+    400004: curve1 1
+    400006: curve10
+    400008: curve10 1
+    400010: curve11
+    400012: curve11 1
+    400014: curve12
+    400016: curve12 1
+    400018: curve2
+    400020: curve2 1
+    400022: curve21
+    400024: curve22
+    400026: curve23
+    400028: curve24
+    400030: curve3
+    400032: curve3 1
+    400034: curve32
+    400036: curve32 1
+    400038: curve33
+    400040: curve34
+    400042: curve35
+    400044: curve36
+    400046: curve4
+    400048: curve4 1
+    400050: curve5
+    400052: curve6
+    400054: curve6 1
+    400056: curve7
+    400058: curve7 1
+    400060: curve8
+    400062: curve9
+    400064: curve9 1
+    400066: energy
+    400068: energy 1
+    400070: //RootNode
+    400072: energy_transfer_pipe1
+    400074: energy_transfer_pipe1 1
+    400076: full_pipe
+    400078: full_pipe1
+    400080: group1
+    400082: group2
+    400084: group3
+    400086: imagePlane1
+    400088: imagePlane2
+    400090: imagePlane3
+    400092: imagePlane4
+    400094: imagePlane5
+    400096: main_reactor
+    400098: pCube3
+    400100: pCylinder10
+    400102: pCylinder11
+    400104: pCylinder12
+    400106: pCylinder13
+    400108: pCylinder14
+    400110: pCylinder15
+    400112: pCylinder16
+    400114: pCylinder17
+    400116: pCylinder18
+    400118: pCylinder19
+    400120: pCylinder2
+    400122: pCylinder3
+    400124: pCylinder4
+    400126: pCylinder5
+    400128: pCylinder6
+    400130: pCylinder7
+    400132: pCylinder8
+    400134: pCylinder9
+    400136: persp1
+    400138: pointLight1
+    400140: pointLight2
+    400142: power_generator
+    400144: power_generator 1
+    2300000: energy
+    2300002: energy 1
+    2300004: energy_transfer_pipe1
+    2300006: energy_transfer_pipe1 1
+    2300008: group3
+    2300010: main_reactor
+    2300012: pCube3
+    2300014: pCylinder10
+    2300016: pCylinder11
+    2300018: pCylinder12
+    2300020: pCylinder13
+    2300022: pCylinder14
+    2300024: pCylinder15
+    2300026: pCylinder16
+    2300028: pCylinder17
+    2300030: pCylinder18
+    2300032: pCylinder19
+    2300034: pCylinder2
+    2300036: pCylinder3
+    2300038: pCylinder4
+    2300040: pCylinder5
+    2300042: pCylinder6
+    2300044: pCylinder7
+    2300046: pCylinder8
+    2300048: pCylinder9
+    3300000: energy
+    3300002: energy 1
+    3300004: energy_transfer_pipe1
+    3300006: energy_transfer_pipe1 1
+    3300008: group3
+    3300010: main_reactor
+    3300012: pCube3
+    3300014: pCylinder10
+    3300016: pCylinder11
+    3300018: pCylinder12
+    3300020: pCylinder13
+    3300022: pCylinder14
+    3300024: pCylinder15
+    3300026: pCylinder16
+    3300028: pCylinder17
+    3300030: pCylinder18
+    3300032: pCylinder19
+    3300034: pCylinder2
+    3300036: pCylinder3
+    3300038: pCylinder4
+    3300040: pCylinder5
+    3300042: pCylinder6
+    3300044: pCylinder7
+    3300046: pCylinder8
+    3300048: pCylinder9
+    4300000: main_reactor
+    4300002: pCylinder19
+    4300004: pCylinder18
+    4300006: pCylinder17
+    4300008: pCylinder16
+    4300010: pCylinder15
+    4300012: pCylinder14
+    4300014: pCylinder3
+    4300016: pCylinder2
+    4300018: pCylinder8
+    4300020: pCylinder7
+    4300022: pCylinder13
+    4300024: pCylinder12
+    4300026: pCylinder11
+    4300028: pCylinder10
+    4300030: pCylinder9
+    4300032: pCylinder6
+    4300034: pCylinder5
+    4300036: pCylinder4
+    4300038: energy_transfer_pipe1
+    4300040: energy
+    4300042: energy_transfer_pipe1
+    4300044: energy
+    4300046: group3
+    4300048: pCube3
+    9500000: //RootNode
+    11400000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

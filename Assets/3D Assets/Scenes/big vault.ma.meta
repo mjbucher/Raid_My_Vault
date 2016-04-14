@@ -1,0 +1,490 @@
+fileFormatVersion: 2
+guid: 41981ca5979dfc746addc6a03aed893f
+timeCreated: 1457312466
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Door2
+    100004: Door3
+    100006: floor_tile:pCube7
+    100008: floor_tile:pCube8
+    100010: floor_tile:pCube8_polySurface1
+    100012: floor_tile:transform1
+    100014: floor_tile:transform10
+    100016: floor_tile:transform11
+    100018: floor_tile:transform12
+    100020: floor_tile:transform13
+    100022: floor_tile:transform14
+    100024: floor_tile:transform15
+    100026: floor_tile:transform16
+    100028: floor_tile:transform17
+    100030: floor_tile:transform18
+    100032: floor_tile:transform19
+    100034: floor_tile:transform2
+    100036: floor_tile:transform20
+    100038: floor_tile:transform21
+    100040: floor_tile:transform22
+    100042: floor_tile:transform23
+    100044: floor_tile:transform24
+    100046: floor_tile:transform25
+    100048: floor_tile:transform26
+    100050: floor_tile:transform27
+    100052: floor_tile:transform28
+    100054: floor_tile:transform29
+    100056: floor_tile:transform3
+    100058: floor_tile:transform30
+    100060: floor_tile:transform31
+    100062: floor_tile:transform32
+    100064: floor_tile:transform33
+    100066: floor_tile:transform34
+    100068: floor_tile:transform35
+    100070: floor_tile:transform36
+    100072: floor_tile:transform37
+    100074: floor_tile:transform38
+    100076: floor_tile:transform39
+    100078: floor_tile:transform4
+    100080: floor_tile:transform40
+    100082: floor_tile:transform41
+    100084: floor_tile:transform42
+    100086: floor_tile:transform43
+    100088: floor_tile:transform44
+    100090: floor_tile:transform45
+    100092: floor_tile:transform46
+    100094: floor_tile:transform47
+    100096: floor_tile:transform48
+    100098: floor_tile:transform49
+    100100: floor_tile:transform5
+    100102: floor_tile:transform50
+    100104: floor_tile:transform51
+    100106: floor_tile:transform52
+    100108: floor_tile:transform53
+    100110: floor_tile:transform54
+    100112: floor_tile:transform55
+    100114: floor_tile:transform56
+    100116: floor_tile:transform57
+    100118: floor_tile:transform58
+    100120: floor_tile:transform59
+    100122: floor_tile:transform6
+    100124: floor_tile:transform7
+    100126: floor_tile:transform8
+    100128: floor_tile:transform9
+    100130: pCube1
+    100132: pCube10
+    100134: pCube11
+    100136: pCube12
+    100138: pCube13
+    100140: pCube14
+    100142: pCube15
+    100144: pCube16
+    100146: pCube17
+    100148: pCube18
+    100150: pCube19
+    100152: pCube2
+    100154: pCube20
+    100156: pCube21
+    100158: pCube22
+    100160: pCube23
+    100162: pCube3
+    100164: pCube4
+    100166: pCube5
+    100168: pCube6
+    100170: pCube7
+    100172: pCube8
+    100174: pCube9
+    100176: pCylinder1
+    100178: pCylinder2
+    100180: polySurface1
+    100182: polySurface1 1
+    100184: polySurface1 2
+    100186: polySurface1 3
+    100188: polySurface11
+    100190: polySurface11 1
+    100192: polySurface12
+    100194: polySurface13
+    100196: polySurface14
+    100198: polySurface15
+    100200: polySurface16
+    100202: polySurface17
+    100204: polySurface18
+    100206: polySurface19
+    100208: polySurface19 1
+    100210: polySurface19 2
+    100212: polySurface2
+    100214: polySurface2 1
+    100216: polySurface21
+    100218: polySurface22
+    100220: polySurface23
+    100222: polySurface25
+    100224: polySurface26
+    100226: polySurface27
+    100228: polySurface28
+    100230: polySurface29
+    100232: polySurface3
+    100234: polySurface30
+    100236: polySurface31
+    100238: polySurface32
+    100240: polySurface33
+    100242: polySurface34
+    100244: polySurface35
+    100246: polySurface36
+    100248: polySurface37
+    100250: polySurface38
+    100252: polySurface39
+    100254: polySurface4
+    100256: polySurface40
+    100258: polySurface41
+    100260: polySurface42
+    100262: polySurface43
+    100264: polySurface44
+    100266: polySurface45
+    100268: polySurface46
+    100270: polySurface47
+    100272: polySurface48
+    100274: polySurface5
+    100276: polySurface6
+    100278: polySurface7
+    100280: polySurface8
+    100282: polySurface8 1
+    100284: polySurface8 2
+    100286: polySurface9
+    100288: transform1
+    100290: transform10
+    100292: transform11
+    100294: transform12
+    100296: transform13
+    100298: transform13 1
+    100300: transform14
+    100302: transform14 1
+    100304: transform15
+    100306: transform16
+    100308: transform17
+    100310: transform18
+    100312: transform19
+    100314: transform20
+    100316: transform21
+    100318: transform22
+    100320: transform22 1
+    100322: transform23
+    100324: transform23 1
+    100326: transform23 2
+    100328: transform24
+    100330: transform25
+    100332: transform26
+    100334: transform26 1
+    100336: transform26 2
+    100338: transform27
+    100340: transform28
+    100342: transform29
+    100344: transform30
+    100346: transform31
+    100348: transform32
+    100350: transform33
+    100352: transform36
+    100354: transform4
+    100356: transform5
+    100358: transform6
+    100360: transform7
+    100362: transform8
+    100364: transform9
+    100366: unlocked_door:pCube1
+    100368: unlocked_door:pCube3
+    100370: unlocked_door:pCube4
+    100372: unlocked_door:polySurface1
+    100374: unlocked_door:polySurface10
+    100376: unlocked_door:polySurface2
+    100378: unlocked_door:polySurface2 1
+    100380: unlocked_door:polySurface4
+    100382: unlocked_door:polySurface5
+    100384: unlocked_door:polySurface6
+    100386: unlocked_door:polySurface8
+    100388: unlocked_door:polySurface8 1
+    100390: unlocked_door:polySurface9
+    100392: unlocked_door:transform10
+    100394: unlocked_door:transform11
+    100396: unlocked_door:transform12
+    100398: unlocked_door:transform13
+    100400: unlocked_door:transform14
+    100402: unlocked_door:transform15
+    100404: unlocked_door:transform6
+    100406: unlocked_door:transform7
+    100408: unlocked_door:transform8
+    100410: unlocked_door:transform9
+    100412: Wall:pCube1
+    400000: //RootNode
+    400002: Door2
+    400004: Door3
+    400006: floor_tile:pCube7
+    400008: floor_tile:pCube8
+    400010: floor_tile:pCube8_polySurface1
+    400012: floor_tile:transform1
+    400014: floor_tile:transform10
+    400016: floor_tile:transform11
+    400018: floor_tile:transform12
+    400020: floor_tile:transform13
+    400022: floor_tile:transform14
+    400024: floor_tile:transform15
+    400026: floor_tile:transform16
+    400028: floor_tile:transform17
+    400030: floor_tile:transform18
+    400032: floor_tile:transform19
+    400034: floor_tile:transform2
+    400036: floor_tile:transform20
+    400038: floor_tile:transform21
+    400040: floor_tile:transform22
+    400042: floor_tile:transform23
+    400044: floor_tile:transform24
+    400046: floor_tile:transform25
+    400048: floor_tile:transform26
+    400050: floor_tile:transform27
+    400052: floor_tile:transform28
+    400054: floor_tile:transform29
+    400056: floor_tile:transform3
+    400058: floor_tile:transform30
+    400060: floor_tile:transform31
+    400062: floor_tile:transform32
+    400064: floor_tile:transform33
+    400066: floor_tile:transform34
+    400068: floor_tile:transform35
+    400070: floor_tile:transform36
+    400072: floor_tile:transform37
+    400074: floor_tile:transform38
+    400076: floor_tile:transform39
+    400078: floor_tile:transform4
+    400080: floor_tile:transform40
+    400082: floor_tile:transform41
+    400084: floor_tile:transform42
+    400086: floor_tile:transform43
+    400088: floor_tile:transform44
+    400090: floor_tile:transform45
+    400092: floor_tile:transform46
+    400094: floor_tile:transform47
+    400096: floor_tile:transform48
+    400098: floor_tile:transform49
+    400100: floor_tile:transform5
+    400102: floor_tile:transform50
+    400104: floor_tile:transform51
+    400106: floor_tile:transform52
+    400108: floor_tile:transform53
+    400110: floor_tile:transform54
+    400112: floor_tile:transform55
+    400114: floor_tile:transform56
+    400116: floor_tile:transform57
+    400118: floor_tile:transform58
+    400120: floor_tile:transform59
+    400122: floor_tile:transform6
+    400124: floor_tile:transform7
+    400126: floor_tile:transform8
+    400128: floor_tile:transform9
+    400130: pCube1
+    400132: pCube10
+    400134: pCube11
+    400136: pCube12
+    400138: pCube13
+    400140: pCube14
+    400142: pCube15
+    400144: pCube16
+    400146: pCube17
+    400148: pCube18
+    400150: pCube19
+    400152: pCube2
+    400154: pCube20
+    400156: pCube21
+    400158: pCube22
+    400160: pCube23
+    400162: pCube3
+    400164: pCube4
+    400166: pCube5
+    400168: pCube6
+    400170: pCube7
+    400172: pCube8
+    400174: pCube9
+    400176: pCylinder1
+    400178: pCylinder2
+    400180: polySurface1
+    400182: polySurface1 1
+    400184: polySurface1 2
+    400186: polySurface1 3
+    400188: polySurface11
+    400190: polySurface11 1
+    400192: polySurface12
+    400194: polySurface13
+    400196: polySurface14
+    400198: polySurface15
+    400200: polySurface16
+    400202: polySurface17
+    400204: polySurface18
+    400206: polySurface19
+    400208: polySurface19 1
+    400210: polySurface19 2
+    400212: polySurface2
+    400214: polySurface2 1
+    400216: polySurface21
+    400218: polySurface22
+    400220: polySurface23
+    400222: polySurface25
+    400224: polySurface26
+    400226: polySurface27
+    400228: polySurface28
+    400230: polySurface29
+    400232: polySurface3
+    400234: polySurface30
+    400236: polySurface31
+    400238: polySurface32
+    400240: polySurface33
+    400242: polySurface34
+    400244: polySurface35
+    400246: polySurface36
+    400248: polySurface37
+    400250: polySurface38
+    400252: polySurface39
+    400254: polySurface4
+    400256: polySurface40
+    400258: polySurface41
+    400260: polySurface42
+    400262: polySurface43
+    400264: polySurface44
+    400266: polySurface45
+    400268: polySurface46
+    400270: polySurface47
+    400272: polySurface48
+    400274: polySurface5
+    400276: polySurface6
+    400278: polySurface7
+    400280: polySurface8
+    400282: polySurface8 1
+    400284: polySurface8 2
+    400286: polySurface9
+    400288: transform1
+    400290: transform10
+    400292: transform11
+    400294: transform12
+    400296: transform13
+    400298: transform13 1
+    400300: transform14
+    400302: transform14 1
+    400304: transform15
+    400306: transform16
+    400308: transform17
+    400310: transform18
+    400312: transform19
+    400314: transform20
+    400316: transform21
+    400318: transform22
+    400320: transform22 1
+    400322: transform23
+    400324: transform23 1
+    400326: transform23 2
+    400328: transform24
+    400330: transform25
+    400332: transform26
+    400334: transform26 1
+    400336: transform26 2
+    400338: transform27
+    400340: transform28
+    400342: transform29
+    400344: transform30
+    400346: transform31
+    400348: transform32
+    400350: transform33
+    400352: transform36
+    400354: transform4
+    400356: transform5
+    400358: transform6
+    400360: transform7
+    400362: transform8
+    400364: transform9
+    400366: unlocked_door:pCube1
+    400368: unlocked_door:pCube3
+    400370: unlocked_door:pCube4
+    400372: unlocked_door:polySurface1
+    400374: unlocked_door:polySurface10
+    400376: unlocked_door:polySurface2
+    400378: unlocked_door:polySurface2 1
+    400380: unlocked_door:polySurface4
+    400382: unlocked_door:polySurface5
+    400384: unlocked_door:polySurface6
+    400386: unlocked_door:polySurface8
+    400388: unlocked_door:polySurface8 1
+    400390: unlocked_door:polySurface9
+    400392: unlocked_door:transform10
+    400394: unlocked_door:transform11
+    400396: unlocked_door:transform12
+    400398: unlocked_door:transform13
+    400400: unlocked_door:transform14
+    400402: unlocked_door:transform15
+    400404: unlocked_door:transform6
+    400406: unlocked_door:transform7
+    400408: unlocked_door:transform8
+    400410: unlocked_door:transform9
+    400412: Wall:pCube1
+    2300000: floor_tile:pCube8_polySurface1
+    3300000: floor_tile:pCube8_polySurface1
+    4300000: floor_tile:pCube8_polySurface1
+    9500000: //RootNode
+    11400000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

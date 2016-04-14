@@ -27,25 +27,27 @@ namespace AStar
 			
 		public void StartFindPath (Vector3 startPos, Vector3 targetPos)
 		{
-			//UnityEngine.Debug.Log("Coroutine StartFindPath called");
-			StartCoroutine(FindPath(startPos, targetPos));
+		    UnityEngine.Debug.Log("Coroutine StartFindPath called");
+			FindPath(startPos, targetPos);
 		}
 
 
-		IEnumerator FindPath (Vector3 startPos, Vector3 targetPos)
+		void FindPath (Vector3 startPos, Vector3 targetPos)
 		{
-			//UnityEngine.Debug.Log("starting stopwatch in FindPath");
+			UnityEngine.Debug.Log("starting stopwatch in FindPath");
 			Stopwatch sw = new Stopwatch();
 			sw.Start();
 
-			Vector3[] waypoints = new Vector3[0];
+            List<Vector3> waypoints = new List<Vector3>();
 			bool pathSuccess = false;
 
 			PathfindingNode startNode = grid.GetNodeFromWorldPoint(startPos);
-			PathfindingNode targetNode = grid.GetNodeFromWorldPoint(targetPos);			
+            UnityEngine.Debug.Log("startNode: " + startNode);
+			PathfindingNode targetNode = grid.GetNodeFromWorldPoint(targetPos);
+            UnityEngine.Debug.Log("end node: " + targetNode);
 
-			//UnityEngine.Debug.Log("if statement starting");
-			UD.Log("target.walkable: " + targetNode.walkable + " ::: start.walkable = " + startNode.walkable);
+            //UnityEngine.Debug.Log("if statement starting");
+            UD.Log("target.walkable =  " + targetNode.walkable + " ::: start.walkable = " + startNode.walkable);
 			if (startNode.walkable && targetNode.walkable)
 			{
 				//UD.Log("both start and target are walkable");
@@ -92,17 +94,18 @@ namespace AStar
 						}
 					}
 				}
-				yield return null;
+				//yield return null;
 				if (pathSuccess)
 				{
 					waypoints = RetracePath(startNode, targetNode);
+                    UnityEngine.Debug.Log("path: " + waypoints);
 				}
 				//UnityEngine.Debug.Log("calling to request manager");
 				requestManager.FinishedProcessingPath(waypoints, pathSuccess);
 			}
 		}
 
-		Vector3[] RetracePath(PathfindingNode startNode, PathfindingNode endNode)
+        List<Vector3> RetracePath(PathfindingNode startNode, PathfindingNode endNode)
 		{
 			List<PathfindingNode> path = new List<PathfindingNode>();
 			PathfindingNode currentNode = endNode;
@@ -113,18 +116,34 @@ namespace AStar
 				currentNode = currentNode.parent;
 			}
 
-			Vector3[] waypoints = SimplifyPath(path);
-			
-			Array.Reverse(waypoints);
-			return waypoints;
+            List<Vector3> waypoints = SimplifyPath(path);
+            //List<Vector3> waypoints = FullPath(path);
+            //Array.Reverse(waypoints);
+            waypoints.Reverse();
+            return waypoints;
+            //path.Reverse();
+            //return path;
 		}
 
-		Vector3[] SimplifyPath(List<PathfindingNode> path)
+        List<Vector3> FullPath (List<PathfindingNode> path)
+        {
+            List<Vector3> waypoints = new List<Vector3>();
+            //Vector2 directionOld = Vector2.zero;
+
+            for (int i = 1; i < path.Count; i++) // i =1 if player stops before target, 0 if player stops 
+            {
+                waypoints.Add(path[i].worldPosition);
+            }
+            return waypoints;//.ToArray();
+        }
+
+
+        List<Vector3> SimplifyPath(List<PathfindingNode> path)
 		{
 			List<Vector3> waypoints = new List<Vector3>();
 			Vector2 directionOld = Vector2.zero;
 
-			for (int i = 1; i < path.Count; i++)
+			for (int i = 1; i < path.Count; i++) // i =1 if player stops before target, 0 if player stops 
 			{
 				Vector2 directionNew = new Vector2(path[i-1].gridX - path[i].gridX, path[i-1].gridY - path[i].gridY);
 				if (directionNew != directionOld)
@@ -133,7 +152,7 @@ namespace AStar
 				}
 				directionOld = directionNew;
 			}
-			return waypoints.ToArray();
+            return waypoints;//.ToArray();
 		}
 			
 		public int GetDistance (PathfindingNode nodeA, PathfindingNode nodeB) 

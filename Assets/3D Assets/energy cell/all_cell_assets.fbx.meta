@@ -1,0 +1,253 @@
+fileFormatVersion: 2
+guid: 9a1423389bf9bd447b24ccf4c5114381
+timeCreated: 1457312549
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: control_rods
+    100004: curve1
+    100006: curve1 1
+    100008: curve10
+    100010: curve10 1
+    100012: curve11
+    100014: curve11 1
+    100016: curve12
+    100018: curve12 1
+    100020: curve2
+    100022: curve2 1
+    100024: curve21
+    100026: curve22
+    100028: curve23
+    100030: curve24
+    100032: curve3
+    100034: curve3 1
+    100036: curve4
+    100038: curve4 1
+    100040: curve5
+    100042: curve6
+    100044: curve6 1
+    100046: curve7
+    100048: curve7 1
+    100050: curve8
+    100052: curve9
+    100054: curve9 1
+    100056: energy
+    100058: energy 1
+    100060: energy_transfer_pipe1
+    100062: energy_transfer_pipe1 1
+    100064: full_pipe
+    100066: full_pipe1
+    100068: group3
+    100070: main_reactor
+    100072: pCylinder10
+    100074: pCylinder11
+    100076: pCylinder12
+    100078: pCylinder13
+    100080: pCylinder14
+    100082: pCylinder15
+    100084: pCylinder16
+    100086: pCylinder17
+    100088: pCylinder18
+    100090: pCylinder19
+    100092: pCylinder2
+    100094: pCylinder3
+    100096: pCylinder4
+    100098: pCylinder5
+    100100: pCylinder6
+    100102: pCylinder7
+    100104: pCylinder8
+    100106: pCylinder9
+    400000: //RootNode
+    400002: control_rods
+    400004: curve1
+    400006: curve1 1
+    400008: curve10
+    400010: curve10 1
+    400012: curve11
+    400014: curve11 1
+    400016: curve12
+    400018: curve12 1
+    400020: curve2
+    400022: curve2 1
+    400024: curve21
+    400026: curve22
+    400028: curve23
+    400030: curve24
+    400032: curve3
+    400034: curve3 1
+    400036: curve4
+    400038: curve4 1
+    400040: curve5
+    400042: curve6
+    400044: curve6 1
+    400046: curve7
+    400048: curve7 1
+    400050: curve8
+    400052: curve9
+    400054: curve9 1
+    400056: energy
+    400058: energy 1
+    400060: energy_transfer_pipe1
+    400062: energy_transfer_pipe1 1
+    400064: full_pipe
+    400066: full_pipe1
+    400068: group3
+    400070: main_reactor
+    400072: pCylinder10
+    400074: pCylinder11
+    400076: pCylinder12
+    400078: pCylinder13
+    400080: pCylinder14
+    400082: pCylinder15
+    400084: pCylinder16
+    400086: pCylinder17
+    400088: pCylinder18
+    400090: pCylinder19
+    400092: pCylinder2
+    400094: pCylinder3
+    400096: pCylinder4
+    400098: pCylinder5
+    400100: pCylinder6
+    400102: pCylinder7
+    400104: pCylinder8
+    400106: pCylinder9
+    2300000: energy
+    2300002: energy 1
+    2300004: energy_transfer_pipe1
+    2300006: energy_transfer_pipe1 1
+    2300008: group3
+    2300010: main_reactor
+    2300012: pCylinder10
+    2300014: pCylinder11
+    2300016: pCylinder12
+    2300018: pCylinder13
+    2300020: pCylinder14
+    2300022: pCylinder15
+    2300024: pCylinder16
+    2300026: pCylinder17
+    2300028: pCylinder18
+    2300030: pCylinder19
+    2300032: pCylinder2
+    2300034: pCylinder3
+    2300036: pCylinder4
+    2300038: pCylinder5
+    2300040: pCylinder6
+    2300042: pCylinder7
+    2300044: pCylinder8
+    2300046: pCylinder9
+    3300000: energy
+    3300002: energy 1
+    3300004: energy_transfer_pipe1
+    3300006: energy_transfer_pipe1 1
+    3300008: group3
+    3300010: main_reactor
+    3300012: pCylinder10
+    3300014: pCylinder11
+    3300016: pCylinder12
+    3300018: pCylinder13
+    3300020: pCylinder14
+    3300022: pCylinder15
+    3300024: pCylinder16
+    3300026: pCylinder17
+    3300028: pCylinder18
+    3300030: pCylinder19
+    3300032: pCylinder2
+    3300034: pCylinder3
+    3300036: pCylinder4
+    3300038: pCylinder5
+    3300040: pCylinder6
+    3300042: pCylinder7
+    3300044: pCylinder8
+    3300046: pCylinder9
+    4300000: main_reactor
+    4300002: pCylinder19
+    4300004: pCylinder18
+    4300006: pCylinder17
+    4300008: pCylinder16
+    4300010: pCylinder15
+    4300012: pCylinder14
+    4300014: pCylinder3
+    4300016: pCylinder2
+    4300018: pCylinder8
+    4300020: pCylinder7
+    4300022: pCylinder13
+    4300024: pCylinder12
+    4300026: pCylinder11
+    4300028: pCylinder10
+    4300030: pCylinder9
+    4300032: pCylinder6
+    4300034: pCylinder5
+    4300036: pCylinder4
+    4300038: energy_transfer_pipe1
+    4300040: energy
+    4300042: energy_transfer_pipe1
+    4300044: energy
+    4300046: group3
+    9500000: //RootNode
+    11400000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

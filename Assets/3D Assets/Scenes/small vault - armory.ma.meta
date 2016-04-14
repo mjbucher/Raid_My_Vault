@@ -1,0 +1,212 @@
+fileFormatVersion: 2
+guid: 2f482ce0b9e40af4db4f4b350c51d176
+timeCreated: 1457312460
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: floor_tile:pCube7
+    100002: floor_tile:pCube8
+    100004: floor_tile:transform1
+    100006: floor_tile:transform10
+    100008: floor_tile:transform11
+    100010: floor_tile:transform12
+    100012: floor_tile:transform13
+    100014: floor_tile:transform14
+    100016: floor_tile:transform15
+    100018: floor_tile:transform16
+    100020: floor_tile:transform17
+    100022: floor_tile:transform18
+    100024: floor_tile:transform19
+    100026: floor_tile:transform2
+    100028: floor_tile:transform20
+    100030: floor_tile:transform21
+    100032: floor_tile:transform22
+    100034: floor_tile:transform3
+    100036: floor_tile:transform4
+    100038: floor_tile:transform5
+    100040: floor_tile:transform6
+    100042: floor_tile:transform7
+    100044: floor_tile:transform8
+    100046: floor_tile:transform9
+    100048: pCube1
+    100050: pCube10
+    100052: pCube11
+    100054: pCube12
+    100056: pCube13
+    100058: pCube14
+    100060: pCube15
+    100062: pCube16
+    100064: pCube17
+    100066: pCube18
+    100068: pCube19
+    100070: pCube2
+    100072: pCube20
+    100074: pCube21
+    100076: pCube22
+    100078: pCube23
+    100080: pCube7
+    100082: pCube8
+    100084: pCube9
+    100086: //RootNode
+    100088: unlocked_door:pCube1
+    100090: unlocked_door:pCube3
+    100092: unlocked_door:pCube4
+    100094: unlocked_door:polySurface1
+    100096: unlocked_door:polySurface10
+    100098: unlocked_door:polySurface2
+    100100: unlocked_door:polySurface2 1
+    100102: unlocked_door:polySurface4
+    100104: unlocked_door:polySurface5
+    100106: unlocked_door:polySurface6
+    100108: unlocked_door:polySurface8
+    100110: unlocked_door:polySurface8 1
+    100112: unlocked_door:polySurface9
+    100114: unlocked_door:transform10
+    100116: unlocked_door:transform11
+    100118: unlocked_door:transform12
+    100120: unlocked_door:transform13
+    100122: unlocked_door:transform14
+    100124: unlocked_door:transform15
+    100126: unlocked_door:transform6
+    100128: unlocked_door:transform7
+    100130: unlocked_door:transform8
+    100132: unlocked_door:transform9
+    100134: Wall:pCube1
+    400000: floor_tile:pCube7
+    400002: floor_tile:pCube8
+    400004: floor_tile:transform1
+    400006: floor_tile:transform10
+    400008: floor_tile:transform11
+    400010: floor_tile:transform12
+    400012: floor_tile:transform13
+    400014: floor_tile:transform14
+    400016: floor_tile:transform15
+    400018: floor_tile:transform16
+    400020: floor_tile:transform17
+    400022: floor_tile:transform18
+    400024: floor_tile:transform19
+    400026: floor_tile:transform2
+    400028: floor_tile:transform20
+    400030: floor_tile:transform21
+    400032: floor_tile:transform22
+    400034: floor_tile:transform3
+    400036: floor_tile:transform4
+    400038: floor_tile:transform5
+    400040: floor_tile:transform6
+    400042: floor_tile:transform7
+    400044: floor_tile:transform8
+    400046: floor_tile:transform9
+    400048: pCube1
+    400050: pCube10
+    400052: pCube11
+    400054: pCube12
+    400056: pCube13
+    400058: pCube14
+    400060: pCube15
+    400062: pCube16
+    400064: pCube17
+    400066: pCube18
+    400068: pCube19
+    400070: pCube2
+    400072: pCube20
+    400074: pCube21
+    400076: pCube22
+    400078: pCube23
+    400080: pCube7
+    400082: pCube8
+    400084: pCube9
+    400086: //RootNode
+    400088: unlocked_door:pCube1
+    400090: unlocked_door:pCube3
+    400092: unlocked_door:pCube4
+    400094: unlocked_door:polySurface1
+    400096: unlocked_door:polySurface10
+    400098: unlocked_door:polySurface2
+    400100: unlocked_door:polySurface2 1
+    400102: unlocked_door:polySurface4
+    400104: unlocked_door:polySurface5
+    400106: unlocked_door:polySurface6
+    400108: unlocked_door:polySurface8
+    400110: unlocked_door:polySurface8 1
+    400112: unlocked_door:polySurface9
+    400114: unlocked_door:transform10
+    400116: unlocked_door:transform11
+    400118: unlocked_door:transform12
+    400120: unlocked_door:transform13
+    400122: unlocked_door:transform14
+    400124: unlocked_door:transform15
+    400126: unlocked_door:transform6
+    400128: unlocked_door:transform7
+    400130: unlocked_door:transform8
+    400132: unlocked_door:transform9
+    400134: Wall:pCube1
+    2300000: floor_tile:pCube8
+    3300000: floor_tile:pCube8
+    4300000: floor_tile:pCube8
+    9500000: //RootNode
+    11400000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

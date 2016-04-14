@@ -1,0 +1,145 @@
+fileFormatVersion: 2
+guid: f58f96c92053f5a4eb8c950fc250881d
+timeCreated: 1457332383
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: base
+    100002: //RootNode
+    100004: camera_body_002:Default
+    100006: camera_body_geo_g
+    100008: camera_geo
+    100010: camera_head_joint
+    100012: camera_IFlens_001:Default
+    100014: camera_Llens_001:Default
+    100016: camera_LlensBody_001:Default
+    100018: camera_shell_002:Default
+    100020: camera_Slens_001:Default
+    100022: camera_SlensBody_001:Default
+    100024: HRotate_ctrl
+    100026: HRotate_ctrl_o
+    100028: hRotate_joint
+    100030: joint
+    100032: Master_ctrl
+    100034: Master_ctrl_o
+    100036: root_j
+    100038: VRotate_ctrl
+    100040: VRotate_ctrl_o
+    100042: vRotate_joint
+    400000: base
+    400002: //RootNode
+    400004: camera_body_002:Default
+    400006: camera_body_geo_g
+    400008: camera_geo
+    400010: camera_head_joint
+    400012: camera_IFlens_001:Default
+    400014: camera_Llens_001:Default
+    400016: camera_LlensBody_001:Default
+    400018: camera_shell_002:Default
+    400020: camera_Slens_001:Default
+    400022: camera_SlensBody_001:Default
+    400024: HRotate_ctrl
+    400026: HRotate_ctrl_o
+    400028: hRotate_joint
+    400030: joint
+    400032: Master_ctrl
+    400034: Master_ctrl_o
+    400036: root_j
+    400038: VRotate_ctrl
+    400040: VRotate_ctrl_o
+    400042: vRotate_joint
+    2300000: base
+    2300002: camera_body_002:Default
+    2300004: camera_IFlens_001:Default
+    2300006: camera_Llens_001:Default
+    2300008: camera_LlensBody_001:Default
+    2300010: camera_shell_002:Default
+    2300012: camera_Slens_001:Default
+    2300014: camera_SlensBody_001:Default
+    2300016: joint
+    3300000: base
+    3300002: camera_body_002:Default
+    3300004: camera_IFlens_001:Default
+    3300006: camera_Llens_001:Default
+    3300008: camera_LlensBody_001:Default
+    3300010: camera_shell_002:Default
+    3300012: camera_Slens_001:Default
+    3300014: camera_SlensBody_001:Default
+    3300016: joint
+    4300000: base
+    4300002: joint
+    4300004: camera_body_002:Default
+    4300006: camera_IFlens_001:Default
+    4300008: camera_Llens_001:Default
+    4300010: camera_LlensBody_001:Default
+    4300012: camera_shell_002:Default
+    4300014: camera_Slens_001:Default
+    4300016: camera_SlensBody_001:Default
+    7400000: Take 001
+    9500000: //RootNode
+    11400000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

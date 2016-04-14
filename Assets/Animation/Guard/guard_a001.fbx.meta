@@ -1,0 +1,202 @@
+fileFormatVersion: 2
+guid: 139a4eb88c31f004392980b00e1d8f75
+timeCreated: 1457332355
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: camera1
+    100002: chest
+    100004: chest_ctrl
+    100006: chest_ctrl_o
+    100008: chest_joint
+    100010: Default
+    100012: group6
+    100014: //RootNode
+    100016: guard_ears_001:Default
+    100018: guard_eye_001:Default
+    100020: guard_forehead_001:Default
+    100022: guard_geo
+    100024: guard_Head_backShell2_001:Default
+    100026: guard_Head_backShell_001:Default
+    100028: guard_headTop_001:Default
+    100030: guard_mouth_001:Default
+    100032: head_ctrl
+    100034: head_ctrl_o
+    100036: head_geo_g
+    100038: head_joint
+    100040: L_wheel
+    100042: L_wheel_ctrl
+    100044: L_wheel_ctrl_o
+    100046: L_wheel_joint
+    100048: Master_ctrl
+    100050: Master_ctrl_o
+    100052: neck
+    100054: neck_ctrl
+    100056: neck_ctrl_o
+    100058: neck_joint
+    100060: nurbsCircle2
+    100062: R_wheel
+    100064: R_wheel_ctrl
+    100066: R_wheel_ctrl_o
+    100068: R_wheel_joint
+    100070: root_ctrl
+    100072: root_ctrl_o
+    100074: root_joint
+    100076: VRayLightRect1
+    100078: VRayLightRect2
+    100080: VRayLightRect3
+    100082: waist
+    100084: wheelShell
+    400000: camera1
+    400002: chest
+    400004: chest_ctrl
+    400006: chest_ctrl_o
+    400008: chest_joint
+    400010: Default
+    400012: group6
+    400014: //RootNode
+    400016: guard_ears_001:Default
+    400018: guard_eye_001:Default
+    400020: guard_forehead_001:Default
+    400022: guard_geo
+    400024: guard_Head_backShell2_001:Default
+    400026: guard_Head_backShell_001:Default
+    400028: guard_headTop_001:Default
+    400030: guard_mouth_001:Default
+    400032: head_ctrl
+    400034: head_ctrl_o
+    400036: head_geo_g
+    400038: head_joint
+    400040: L_wheel
+    400042: L_wheel_ctrl
+    400044: L_wheel_ctrl_o
+    400046: L_wheel_joint
+    400048: Master_ctrl
+    400050: Master_ctrl_o
+    400052: neck
+    400054: neck_ctrl
+    400056: neck_ctrl_o
+    400058: neck_joint
+    400060: nurbsCircle2
+    400062: R_wheel
+    400064: R_wheel_ctrl
+    400066: R_wheel_ctrl_o
+    400068: R_wheel_joint
+    400070: root_ctrl
+    400072: root_ctrl_o
+    400074: root_joint
+    400076: VRayLightRect1
+    400078: VRayLightRect2
+    400080: VRayLightRect3
+    400082: waist
+    400084: wheelShell
+    2300000: chest
+    2300002: Default
+    2300004: guard_ears_001:Default
+    2300006: guard_eye_001:Default
+    2300008: guard_forehead_001:Default
+    2300010: guard_Head_backShell2_001:Default
+    2300012: guard_Head_backShell_001:Default
+    2300014: guard_headTop_001:Default
+    2300016: guard_mouth_001:Default
+    2300018: L_wheel
+    2300020: neck
+    2300022: R_wheel
+    2300024: waist
+    2300026: wheelShell
+    3300000: chest
+    3300002: Default
+    3300004: guard_ears_001:Default
+    3300006: guard_eye_001:Default
+    3300008: guard_forehead_001:Default
+    3300010: guard_Head_backShell2_001:Default
+    3300012: guard_Head_backShell_001:Default
+    3300014: guard_headTop_001:Default
+    3300016: guard_mouth_001:Default
+    3300018: L_wheel
+    3300020: neck
+    3300022: R_wheel
+    3300024: waist
+    3300026: wheelShell
+    4300000: Default
+    4300002: chest
+    4300004: neck
+    4300006: waist
+    4300008: wheelShell
+    4300010: R_wheel
+    4300012: L_wheel
+    4300014: guard_ears_001:Default
+    4300016: guard_eye_001:Default
+    4300018: guard_forehead_001:Default
+    4300020: guard_Head_backShell_001:Default
+    4300022: guard_Head_backShell2_001:Default
+    4300024: guard_headTop_001:Default
+    4300026: guard_mouth_001:Default
+    7400000: Take 001
+    9500000: //RootNode
+    11400000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,132 @@
+fileFormatVersion: 2
+guid: 2808af9fe75ab7c49841cc35c3a47269
+timeCreated: 1457332357
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: base
+    100002: body
+    100004: camera1
+    100006: HRotate_ctrl
+    100008: HRotate_ctrl_o
+    100010: HRotate_joint
+    100012: L_gun
+    100014: L_gun_ctrl
+    100016: L_gun_ctrl_o
+    100018: L_gun_joint
+    100020: light
+    100022: Master_ctrl
+    100024: Master_ctrl_o
+    100026: R_gun
+    100028: R_gun_ctrl
+    100030: R_gun_ctrl_o
+    100032: R_gun_joint
+    100034: root_joint
+    100036: //RootNode
+    100038: turret_geo
+    100040: VRayLightRect1
+    100042: VRayLightRect2
+    100044: VRayLightRect3
+    400000: base
+    400002: body
+    400004: camera1
+    400006: HRotate_ctrl
+    400008: HRotate_ctrl_o
+    400010: HRotate_joint
+    400012: L_gun
+    400014: L_gun_ctrl
+    400016: L_gun_ctrl_o
+    400018: L_gun_joint
+    400020: light
+    400022: Master_ctrl
+    400024: Master_ctrl_o
+    400026: R_gun
+    400028: R_gun_ctrl
+    400030: R_gun_ctrl_o
+    400032: R_gun_joint
+    400034: root_joint
+    400036: //RootNode
+    400038: turret_geo
+    400040: VRayLightRect1
+    400042: VRayLightRect2
+    400044: VRayLightRect3
+    2300000: base
+    2300002: body
+    2300004: L_gun
+    2300006: R_gun
+    3300000: base
+    3300002: body
+    3300004: L_gun
+    3300006: R_gun
+    4300000: base
+    4300002: body
+    4300004: R_gun
+    4300006: L_gun
+    7400000: Take 001
+    9500000: //RootNode
+    11400000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
