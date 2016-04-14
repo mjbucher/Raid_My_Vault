@@ -13,6 +13,8 @@ public class InputManager : MonoBehaviour
     public GameObject playerModel;
     public bool isWalking = false;
     private GameMaster GM;
+    private NavMeshAgent agent;
+
 
     Player player;
 
@@ -26,6 +28,7 @@ public class InputManager : MonoBehaviour
         GM = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
 		pathUnit = GetComponent<PathfindingUnit>();
         player = GetComponent<Player>();
+        agent = GetComponent<NavMeshAgent>();
 		
 	}
 
@@ -72,8 +75,8 @@ public class InputManager : MonoBehaviour
             tempT.position += ((Vector3.forward * ver) + (Vector3.right * hor)) * Time.deltaTime * player.speed;
             //play walking
             isWalking = true;
-            transform.rotation = tempT.rotation;
-            pathUnit.Update_Path(tempT);
+            //transform.rotation = tempT.rotation;
+            //pathUnit.Update_Path(tempT);
         }
         else
         {
@@ -102,9 +105,10 @@ public class InputManager : MonoBehaviour
             // float nX = hit.point.x % 0.5f;
             // float nZ = hit.point.x % 0.5f == 0 ? hit.point.x : (int)hit.point.x;
             //worldTarget = RoundToGrid(hit.point);//new Vector3(nX, hit.point.y, nZ);
-            worldTarget = hit.collider.gameObject.transform.position + RoundToGrid(hit.point) + new Vector3( -1, 0, -1); // this is an offset
-            pathUnit.Update_Path(worldTarget);
+            worldTarget = hit.point;  //hit.collider.gameObject.transform.position + RoundToGrid(hit.point) + new Vector3( -1, 0, -1); // this is an offset
+            //pathUnit.Update_Path(worldTarget);
             // debug sight
+            agent.destination = worldTarget;
             
             if (ds != null)
                 Destroy(ds);
