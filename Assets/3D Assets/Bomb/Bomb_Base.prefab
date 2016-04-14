@@ -55,7 +55,7 @@ Transform:
   m_GameObject: {fileID: 190260}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.002003241, y: 0.0006447987, z: 0.002003241}
   m_Children: []
   m_Father: {fileID: 430868}
   m_RootOrder: 0
@@ -69,7 +69,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 67d9d3c6f9890524aa2c4c8f9de7c1cd, type: 2}
+  - {fileID: 2100000, guid: 137b9fc93c72afe479d7560404039c4f, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -139,7 +139,15 @@ MonoBehaviour:
     - LIIF: -233967762
       InstanceTarget: {fileID: 190260}
   Modifications:
-    Modificated: []
+    Modificated:
+    - Object: {fileID: 440794}
+      ObjeckLink: -765337030
+      PropertyPath: m_LocalPosition
+      Mode: 0
+    - Object: {fileID: 190260}
+      ObjeckLink: -233967762
+      PropertyPath: m_Name
+      Mode: 0
     NonPrefabObjects: []
     NonPrefabComponents: []
     RemovedObjects: 
