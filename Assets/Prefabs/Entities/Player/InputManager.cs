@@ -29,7 +29,7 @@ public class InputManager : MonoBehaviour
 		pathUnit = GetComponent<PathfindingUnit>();
         player = GetComponent<Player>();
         agent = GetComponent<NavMeshAgent>();
-		
+        agent.autoBraking = false;
 	}
 
     void Update ()
@@ -110,6 +110,7 @@ public class InputManager : MonoBehaviour
             // debug sight
             agent.destination = worldTarget;
             
+            // debug sphere for checking raycast
             if (ds != null)
                 Destroy(ds);
             ds = Instantiate(GameObject.FindWithTag("Debug Locator")) as GameObject;
