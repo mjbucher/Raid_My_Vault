@@ -1,2 +1,5 @@
 Base path: C:/Program Files/Unity/Editor/Data
 Cmd: getPlatforms
+Cmd: preprocess
+  error: 1 plat 18 at (106): Both vertex and fragment programs must be present in a CGPROGRAM. Excluding it from compilation.
+  insize=2924 outsize=2225 ok=1
