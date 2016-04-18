@@ -8,7 +8,7 @@ public class MovementController : MonoBehaviour
 {
 	[HideInInspector] public Entity thisEntity;
     // used for new coordinate points
-    public Path targetPath; 
+    //public Path targetPath; 
     public NavMeshPath path;
     int currentPathIndex;
     GameObject currentPathPoint;
@@ -31,7 +31,9 @@ public class MovementController : MonoBehaviour
     public void Start ()
     {
         agent.autoBraking = false;
-        GotoNextPoint();
+        if (points.Length > 0)
+            transform.position = points[0].position;
+            GotoNextPoint();
     }
 
 

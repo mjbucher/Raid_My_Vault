@@ -172,13 +172,14 @@ public class WallManager : MonoBehaviour
         rightSpawnerStart.transform.localPosition = new Vector3(_length - 1, 0, 0) + leftSpawnerStart.transform.localPosition;
         enteranceSpawnPoint.localPosition = ((rightSpawnerStart.transform.localPosition - leftSpawnerStart.transform.localPosition) / 2.0f) + new Vector3(enteranceOffset, 0, 0);
         // determine how to use end points
-        //if (enteranceEnabled)
-        //{
+        if (enteranceEnabled)
+        {
+            SpawnEnterance();
         //    if (CheckEntrance() == true)
         //        SpawnEnterance();
         //    else
         //        enteranceEnabled = false;
-        //}
+        }
         if (enteranceEnabled)
         {
             // set position end points

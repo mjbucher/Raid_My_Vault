@@ -118,7 +118,6 @@ GameObject:
   - 114: {fileID: 11414836}
   - 195: {fileID: 19523118}
   - 114: {fileID: 11470676}
-  - 114: {fileID: 11478756}
   - 65: {fileID: 6587710}
   m_Layer: 0
   m_Name: GuardBot
@@ -201,8 +200,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190622}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: 0, z: 2.5}
+  m_LocalRotation: {x: 0, y: -0.000000014901161, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 485360}
@@ -409,10 +408,10 @@ MonoBehaviour:
   deathSequence: {fileID: 0}
   direction: 0
   gridSnapVector: {x: 0.5, y: 0.5, z: 0.5}
-  agent: {fileID: 0}
+  agent: {fileID: 19523118}
   detectionMethod: {fileID: 11497482}
   attackManager: {fileID: 0}
-  movementController: {fileID: 0}
+  movementController: {fileID: 11470676}
 --- !u!114 &11438950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -462,7 +461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisEntity: {fileID: 0}
-  targetPath: {fileID: 11478756}
+  targetPath: {fileID: 0}
   points:
   - {fileID: 0}
   - {fileID: 0}
@@ -480,21 +479,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathType: 1
---- !u!114 &11478756
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 190622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffd2366e41d8b424db0f92266e2a5c89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pathPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  currentPoint: {fileID: 0}
 --- !u!114 &11479200
 MonoBehaviour:
   m_ObjectHideFlags: 1

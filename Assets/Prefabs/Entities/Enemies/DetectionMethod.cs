@@ -10,8 +10,8 @@ public class DetectionMethod : MonoBehaviour
 	[Tooltip("Action that should occur when I spot and enemy")]
 	public DetectionMode mode;
 	//[Header("Not Implemented")]
-	[HideInInspector] public DetectionShape shape;
-	public Transform detectionRayStart;
+	//[HideInInspector] public DetectionShape shape;
+	//public Transform detectionRayStart;
 	//[Space(20.0f)]
 	//public Weapon weapon;
 	[Range(1,7)] [Tooltip("The range of AI's vision")]

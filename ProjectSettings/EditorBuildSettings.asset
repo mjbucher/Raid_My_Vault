@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/_Scenes/Development/Main_Menu_Dev.unity
   - enabled: 1
     path: Assets/_Scenes/Testing/Test_Dungeon.unity
+  - enabled: 1
+    path: Assets/_Scenes/Testing/Test_Dungeon/TestLevel01_Easy_v001.unity
