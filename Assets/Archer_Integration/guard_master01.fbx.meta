@@ -1,0 +1,630 @@
+fileFormatVersion: 2
+guid: bfa2c5f41112c4b50b280e99d3bf42d1
+timeCreated: 1460742166
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: chest_ctrl
+    100002: chest_ctrl_o
+    100004: chest_joint
+    100006: guard_geo1
+    100008: //RootNode
+    100010: head_ctrl
+    100012: head_ctrl_o
+    100014: head_joint
+    100016: L_wheel_ctrl
+    100018: L_wheel_ctrl_o
+    100020: L_wheel_joint
+    100022: Master_ctrl
+    100024: Master_ctrl_o
+    100026: neck_ctrl
+    100028: neck_ctrl_o
+    100030: neck_joint
+    100032: R_wheel_ctrl
+    100034: R_wheel_ctrl_o
+    100036: R_wheel_joint
+    100038: root_ctrl
+    100040: root_ctrl_o
+    100042: root_joint
+    400000: chest_ctrl
+    400002: chest_ctrl_o
+    400004: chest_joint
+    400006: guard_geo1
+    400008: //RootNode
+    400010: head_ctrl
+    400012: head_ctrl_o
+    400014: head_joint
+    400016: L_wheel_ctrl
+    400018: L_wheel_ctrl_o
+    400020: L_wheel_joint
+    400022: Master_ctrl
+    400024: Master_ctrl_o
+    400026: neck_ctrl
+    400028: neck_ctrl_o
+    400030: neck_joint
+    400032: R_wheel_ctrl
+    400034: R_wheel_ctrl_o
+    400036: R_wheel_joint
+    400038: root_ctrl
+    400040: root_ctrl_o
+    400042: root_joint
+    4300000: guard_geo1
+    7400000: foward
+    7400002: turn
+    7400004: head turn
+    7400006: tilt foward
+    7400008: stealth down
+    7400010: disable
+    7400012: stealth recover
+    9500000: //RootNode
+    11400000: //RootNode
+    13700000: guard_geo1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: foward
+      takeName: Take 001
+      firstFrame: 24
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: guard_geo1
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl/head_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl/head_ctrl_o/head_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/L_wheel_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/L_wheel_ctrl_o/L_wheel_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/R_wheel_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/R_wheel_ctrl_o/R_wheel_ctrl
+        weight: 1
+      - path: root_joint
+        weight: 1
+      - path: root_joint/chest_joint
+        weight: 1
+      - path: root_joint/chest_joint/neck_joint
+        weight: 1
+      - path: root_joint/chest_joint/neck_joint/head_joint
+        weight: 1
+      - path: root_joint/L_wheel_joint
+        weight: 1
+      - path: root_joint/R_wheel_joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: turn
+      takeName: Take 001
+      firstFrame: 151
+      lastFrame: 187
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: guard_geo1
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl/head_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl/head_ctrl_o/head_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/L_wheel_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/L_wheel_ctrl_o/L_wheel_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/R_wheel_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/R_wheel_ctrl_o/R_wheel_ctrl
+        weight: 1
+      - path: root_joint
+        weight: 1
+      - path: root_joint/chest_joint
+        weight: 1
+      - path: root_joint/chest_joint/neck_joint
+        weight: 1
+      - path: root_joint/chest_joint/neck_joint/head_joint
+        weight: 1
+      - path: root_joint/L_wheel_joint
+        weight: 1
+      - path: root_joint/R_wheel_joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: head turn
+      takeName: Take 001
+      firstFrame: 201
+      lastFrame: 225
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: guard_geo1
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl/head_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl/head_ctrl_o/head_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/L_wheel_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/L_wheel_ctrl_o/L_wheel_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/R_wheel_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/R_wheel_ctrl_o/R_wheel_ctrl
+        weight: 1
+      - path: root_joint
+        weight: 1
+      - path: root_joint/chest_joint
+        weight: 1
+      - path: root_joint/chest_joint/neck_joint
+        weight: 1
+      - path: root_joint/chest_joint/neck_joint/head_joint
+        weight: 1
+      - path: root_joint/L_wheel_joint
+        weight: 1
+      - path: root_joint/R_wheel_joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: tilt foward
+      takeName: Take 001
+      firstFrame: 231
+      lastFrame: 240
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: guard_geo1
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl/head_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl/head_ctrl_o/head_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/L_wheel_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/L_wheel_ctrl_o/L_wheel_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/R_wheel_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/R_wheel_ctrl_o/R_wheel_ctrl
+        weight: 1
+      - path: root_joint
+        weight: 1
+      - path: root_joint/chest_joint
+        weight: 1
+      - path: root_joint/chest_joint/neck_joint
+        weight: 1
+      - path: root_joint/chest_joint/neck_joint/head_joint
+        weight: 1
+      - path: root_joint/L_wheel_joint
+        weight: 1
+      - path: root_joint/R_wheel_joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: stealth down
+      takeName: Take 001
+      firstFrame: 263
+      lastFrame: 350
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: guard_geo1
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl/head_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl/head_ctrl_o/head_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/L_wheel_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/L_wheel_ctrl_o/L_wheel_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/R_wheel_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/R_wheel_ctrl_o/R_wheel_ctrl
+        weight: 1
+      - path: root_joint
+        weight: 1
+      - path: root_joint/chest_joint
+        weight: 1
+      - path: root_joint/chest_joint/neck_joint
+        weight: 1
+      - path: root_joint/chest_joint/neck_joint/head_joint
+        weight: 1
+      - path: root_joint/L_wheel_joint
+        weight: 1
+      - path: root_joint/R_wheel_joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: disable
+      takeName: Take 001
+      firstFrame: 251
+      lastFrame: 263
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: guard_geo1
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl/head_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl/head_ctrl_o/head_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/L_wheel_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/L_wheel_ctrl_o/L_wheel_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/R_wheel_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/R_wheel_ctrl_o/R_wheel_ctrl
+        weight: 1
+      - path: root_joint
+        weight: 1
+      - path: root_joint/chest_joint
+        weight: 1
+      - path: root_joint/chest_joint/neck_joint
+        weight: 1
+      - path: root_joint/chest_joint/neck_joint/head_joint
+        weight: 1
+      - path: root_joint/L_wheel_joint
+        weight: 1
+      - path: root_joint/R_wheel_joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: stealth recover
+      takeName: Take 001
+      firstFrame: 361
+      lastFrame: 380
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: guard_geo1
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl/head_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/chest_ctrl_o/chest_ctrl/neck_ctrl_o/neck_ctrl/head_ctrl_o/head_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/L_wheel_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/L_wheel_ctrl_o/L_wheel_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/R_wheel_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/root_ctrl_o/root_ctrl/R_wheel_ctrl_o/R_wheel_ctrl
+        weight: 1
+      - path: root_joint
+        weight: 1
+      - path: root_joint/chest_joint
+        weight: 1
+      - path: root_joint/chest_joint/neck_joint
+        weight: 1
+      - path: root_joint/chest_joint/neck_joint/head_joint
+        weight: 1
+      - path: root_joint/L_wheel_joint
+        weight: 1
+      - path: root_joint/R_wheel_joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

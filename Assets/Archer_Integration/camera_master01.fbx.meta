@@ -1,0 +1,311 @@
+fileFormatVersion: 2
+guid: d9e3996de37ee4f75a391324ec779f06
+timeCreated: 1460740759
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: camera_geo1
+    100002: camera_head_joint
+    100004: //RootNode
+    100006: HRotate_ctrl
+    100008: HRotate_ctrl_o
+    100010: hRotate_joint
+    100012: Master_ctrl
+    100014: Master_ctrl_o
+    100016: root_j
+    100018: VRotate_ctrl
+    100020: VRotate_ctrl_o
+    100022: vRotate_joint
+    400000: camera_geo1
+    400002: camera_head_joint
+    400004: //RootNode
+    400006: HRotate_ctrl
+    400008: HRotate_ctrl_o
+    400010: hRotate_joint
+    400012: Master_ctrl
+    400014: Master_ctrl_o
+    400016: root_j
+    400018: VRotate_ctrl
+    400020: VRotate_ctrl_o
+    400022: vRotate_joint
+    4300000: camera_geo1
+    7400000: Turn Left
+    7400002: Turn Right
+    7400004: down
+    7400006: recover
+    9500000: //RootNode
+    11400000: //RootNode
+    13700000: camera_geo1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Turn Left
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: camera_geo1
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/VRotate_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/VRotate_ctrl_o/VRotate_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/VRotate_ctrl_o/VRotate_ctrl/HRotate_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/VRotate_ctrl_o/VRotate_ctrl/HRotate_ctrl_o/HRotate_ctrl
+        weight: 1
+      - path: root_j
+        weight: 1
+      - path: root_j/vRotate_joint
+        weight: 1
+      - path: root_j/vRotate_joint/hRotate_joint
+        weight: 1
+      - path: root_j/vRotate_joint/hRotate_joint/camera_head_joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Turn Right
+      takeName: Take 001
+      firstFrame: 51
+      lastFrame: 98
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: camera_geo1
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/VRotate_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/VRotate_ctrl_o/VRotate_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/VRotate_ctrl_o/VRotate_ctrl/HRotate_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/VRotate_ctrl_o/VRotate_ctrl/HRotate_ctrl_o/HRotate_ctrl
+        weight: 1
+      - path: root_j
+        weight: 1
+      - path: root_j/vRotate_joint
+        weight: 1
+      - path: root_j/vRotate_joint/hRotate_joint
+        weight: 1
+      - path: root_j/vRotate_joint/hRotate_joint/camera_head_joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: down
+      takeName: Take 001
+      firstFrame: 101
+      lastFrame: 127
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: camera_geo1
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/VRotate_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/VRotate_ctrl_o/VRotate_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/VRotate_ctrl_o/VRotate_ctrl/HRotate_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/VRotate_ctrl_o/VRotate_ctrl/HRotate_ctrl_o/HRotate_ctrl
+        weight: 1
+      - path: root_j
+        weight: 1
+      - path: root_j/vRotate_joint
+        weight: 1
+      - path: root_j/vRotate_joint/hRotate_joint
+        weight: 1
+      - path: root_j/vRotate_joint/hRotate_joint/camera_head_joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: recover
+      takeName: Take 001
+      firstFrame: 131
+      lastFrame: 145
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: camera_geo1
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/VRotate_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/VRotate_ctrl_o/VRotate_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/VRotate_ctrl_o/VRotate_ctrl/HRotate_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/VRotate_ctrl_o/VRotate_ctrl/HRotate_ctrl_o/HRotate_ctrl
+        weight: 1
+      - path: root_j
+        weight: 1
+      - path: root_j/vRotate_joint
+        weight: 1
+      - path: root_j/vRotate_joint/hRotate_joint
+        weight: 1
+      - path: root_j/vRotate_joint/hRotate_joint/camera_head_joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

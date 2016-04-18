@@ -1,0 +1,331 @@
+fileFormatVersion: 2
+guid: 86fac7e735c0449bb98f1d5dae334a39
+timeCreated: 1460742641
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: HRotate_ctrl
+    100002: HRotate_ctrl_o
+    100004: HRotate_joint
+    100006: L_gun_ctrl
+    100008: L_gun_ctrl_o
+    100010: L_gun_joint
+    100012: Master_ctrl
+    100014: Master_ctrl_o
+    100016: R_gun_ctrl
+    100018: R_gun_ctrl_o
+    100020: R_gun_joint
+    100022: root_joint
+    100024: turret_geo1
+    100026: //RootNode
+    400000: HRotate_ctrl
+    400002: HRotate_ctrl_o
+    400004: HRotate_joint
+    400006: L_gun_ctrl
+    400008: L_gun_ctrl_o
+    400010: L_gun_joint
+    400012: Master_ctrl
+    400014: Master_ctrl_o
+    400016: R_gun_ctrl
+    400018: R_gun_ctrl_o
+    400020: R_gun_joint
+    400022: root_joint
+    400024: turret_geo1
+    400026: //RootNode
+    4300000: turret_geo1
+    7400000: turn 180
+    7400002: turn left
+    7400004: turn right
+    7400006: gun up and down
+    9500000: //RootNode
+    11400000: //RootNode
+    13700000: turret_geo1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: turn 180
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o/HRotate_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o/HRotate_ctrl/L_gun_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o/HRotate_ctrl/L_gun_ctrl_o/L_gun_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o/HRotate_ctrl/R_gun_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o/HRotate_ctrl/R_gun_ctrl_o/R_gun_ctrl
+        weight: 1
+      - path: root_joint
+        weight: 1
+      - path: root_joint/HRotate_joint
+        weight: 1
+      - path: root_joint/HRotate_joint/L_gun_joint
+        weight: 1
+      - path: root_joint/HRotate_joint/R_gun_joint
+        weight: 1
+      - path: turret_geo1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: turn left
+      takeName: Take 001
+      firstFrame: 31
+      lastFrame: 54
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o/HRotate_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o/HRotate_ctrl/L_gun_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o/HRotate_ctrl/L_gun_ctrl_o/L_gun_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o/HRotate_ctrl/R_gun_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o/HRotate_ctrl/R_gun_ctrl_o/R_gun_ctrl
+        weight: 1
+      - path: root_joint
+        weight: 1
+      - path: root_joint/HRotate_joint
+        weight: 1
+      - path: root_joint/HRotate_joint/L_gun_joint
+        weight: 1
+      - path: root_joint/HRotate_joint/R_gun_joint
+        weight: 1
+      - path: turret_geo1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: turn right
+      takeName: Take 001
+      firstFrame: 61
+      lastFrame: 84
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o/HRotate_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o/HRotate_ctrl/L_gun_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o/HRotate_ctrl/L_gun_ctrl_o/L_gun_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o/HRotate_ctrl/R_gun_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o/HRotate_ctrl/R_gun_ctrl_o/R_gun_ctrl
+        weight: 1
+      - path: root_joint
+        weight: 1
+      - path: root_joint/HRotate_joint
+        weight: 1
+      - path: root_joint/HRotate_joint/L_gun_joint
+        weight: 1
+      - path: root_joint/HRotate_joint/R_gun_joint
+        weight: 1
+      - path: turret_geo1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: gun up and down
+      takeName: Take 001
+      firstFrame: 91
+      lastFrame: 114
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o/HRotate_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o/HRotate_ctrl/L_gun_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o/HRotate_ctrl/L_gun_ctrl_o/L_gun_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o/HRotate_ctrl/R_gun_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/HRotate_ctrl_o/HRotate_ctrl/R_gun_ctrl_o/R_gun_ctrl
+        weight: 1
+      - path: root_joint
+        weight: 1
+      - path: root_joint/HRotate_joint
+        weight: 1
+      - path: root_joint/HRotate_joint/L_gun_joint
+        weight: 1
+      - path: root_joint/HRotate_joint/R_gun_joint
+        weight: 1
+      - path: turret_geo1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

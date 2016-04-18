@@ -1,0 +1,347 @@
+fileFormatVersion: 2
+guid: 4471e854547bc4683bb1fc4872f192f7
+timeCreated: 1460741860
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: body_ctrl
+    100002: body_ctrl_o
+    100004: drone_geo1
+    100006: drone_joint
+    100008: //RootNode
+    100010: Master_ctrl
+    100012: Master_ctrl_o
+    400000: body_ctrl
+    400002: body_ctrl_o
+    400004: drone_geo1
+    400006: drone_joint
+    400008: //RootNode
+    400010: Master_ctrl
+    400012: Master_ctrl_o
+    4300000: drone_geo1
+    7400000: float
+    7400002: Turn Left
+    7400004: Turn Right
+    7400006: down
+    7400008: recover
+    7400010: run away
+    9500000: //RootNode
+    11400000: //RootNode
+    13700000: drone_geo1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: float
+      takeName: Take 001
+      firstFrame: 12
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: drone_geo1
+        weight: 1
+      - path: drone_joint
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/body_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/body_ctrl_o/body_ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 12
+    - serializedVersion: 16
+      name: Turn Left
+      takeName: Take 001
+      firstFrame: 81
+      lastFrame: 93
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: drone_geo1
+        weight: 1
+      - path: drone_joint
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/body_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/body_ctrl_o/body_ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 12
+    - serializedVersion: 16
+      name: Turn Right
+      takeName: Take 001
+      firstFrame: 101
+      lastFrame: 113
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: drone_geo1
+        weight: 1
+      - path: drone_joint
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/body_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/body_ctrl_o/body_ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 12
+    - serializedVersion: 16
+      name: down
+      takeName: Take 001
+      firstFrame: 121
+      lastFrame: 145
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: drone_geo1
+        weight: 1
+      - path: drone_joint
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/body_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/body_ctrl_o/body_ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 12
+    - serializedVersion: 16
+      name: recover
+      takeName: Take 001
+      firstFrame: 151
+      lastFrame: 175
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: drone_geo1
+        weight: 1
+      - path: drone_joint
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/body_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/body_ctrl_o/body_ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 12
+    - serializedVersion: 16
+      name: run away
+      takeName: Take 001
+      firstFrame: 181
+      lastFrame: 209
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: drone_geo1
+        weight: 1
+      - path: drone_joint
+        weight: 1
+      - path: Master_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/body_ctrl_o
+        weight: 1
+      - path: Master_ctrl_o/Master_ctrl/body_ctrl_o/body_ctrl
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 12
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
