@@ -1,7 +1,11 @@
 fileFormatVersion: 2
 guid: 44717640e184a0a409d05def698485b7
 folderAsset: yes
+<<<<<<< HEAD
 timeCreated: 1460649446
+=======
+timeCreated: 1460650978
+>>>>>>> Scott_Working_Branch
 licenseType: Free
 DefaultImporter:
   userData: 

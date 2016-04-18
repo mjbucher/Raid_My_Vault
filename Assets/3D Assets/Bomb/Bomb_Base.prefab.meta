@@ -1,6 +1,10 @@
 fileFormatVersion: 2
 guid: 49c4ef4a07b016845aa9b0f90f2e0f29
+<<<<<<< HEAD
 timeCreated: 1460747788
+=======
+timeCreated: 1460650419
+>>>>>>> Scott_Working_Branch
 licenseType: Free
 NativeFormatImporter:
   userData: HaveNested_true
