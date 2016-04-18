@@ -33,12 +33,13 @@ public class Enemy : Entity
 	//[HideInInspector] public HealthManager healthManager;
 
 	private Collider detectCol;
-
+    public MovementController movementController;
 	void Awake ()
 	{
 		detectCol = GetComponentInChildren<Collider>();
 		detectionMethod = GetComponent<DetectionMethod>();
 		attackManager = GetComponent<AttackManager>();
+        movementController = GetComponent<MovementController>();
 		//deathSequence = GetComponent<DeathSequence>();
 		//healthManager = GetComponent<HealthManager>();
 
@@ -54,14 +55,14 @@ public class Enemy : Entity
 	}
 
 
-	public IEnumerator FoundTarget(GameObject target)
+	public void  FoundTarget(GameObject target)
 	{
 		// if enemmy should alert
 		if (detectionMethod.mode == DetectionMode.Alert)
 		{
-			// play alert effects
-			// add alert count
-			yield return StartCoroutine(GM.AddDetection(1));
+            // play alert effects
+            // add alert count
+            GM.AddDetection(1);
 		}
 		// if enemy should attack
 		else if (detectionMethod.mode == DetectionMode.Attack)

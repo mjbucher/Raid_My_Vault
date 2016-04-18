@@ -10,6 +10,9 @@ TagManager:
   - Room
   - Floor
   - Debug Locator
+  - Isometric Camera
+  - Top Down Camera
+  - Entrance
   layers:
   - Default
   - TransparentFX

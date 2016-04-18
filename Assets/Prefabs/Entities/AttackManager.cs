@@ -16,20 +16,20 @@ public class AttackManager : MonoBehaviour
 
 	void Awake ()
 	{
-		SpawnWeapon();
+		//SpawnWeapon();
 	}
 
 
-	void Update ()
-	{
-		if (reloadWeapon)
-		{
-			DestroyImmediate(weaponObject);
-			SpawnWeapon();
-			reloadWeapon = false;
-			Debug.Log("Weapon Reloaded on: " + gameObject.name);
-		}
-	}
+	//void Update ()
+	//{
+	//	if (reloadWeapon)
+	//	{
+	//		//DestroyImmediate(weaponObject);
+	//		//SpawnWeapon();
+	//		reloadWeapon = false;
+	//		Debug.Log("Weapon Reloaded on: " + gameObject.name);
+	//	}
+	//}
 
 
 	void SpawnWeapon ()

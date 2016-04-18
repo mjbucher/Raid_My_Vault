@@ -20,26 +20,25 @@ public class GameMaster : MonoBehaviour
 	[HideInInspector] public MasterManager MM;
 	public GameStateEnum currentState = GameStateEnum.Active;
 	public SubState currentSubState = SubState.None;
+
+    public int detectionAmount = 0;
     //public TestingStateEnum currentTestingState;
-	int detectionAmount = 0;
+    public void Awake()
+    {
+        // singleton construct
+        if (GM == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            GM = this;
+        } else if (GM != this)
+        {
+            Destroy(gameObject);
+        }
 
-	public void Awake()
-	{
-		if ( GM == null) 
-		{
-			DontDestroyOnLoad(gameObject);
-			GM = this;
-		}
-		else if (GM != this)
-		{
-			Destroy(gameObject);
-		}
-
-		MM = gameObject.GetComponent<MasterManager>();
-	}
-
-	// update this later ***
-	public void Switch_GameState (GameStateEnum _targetState)
+        MM = gameObject.GetComponent<MasterManager>();
+    }
+    // update this later ***
+    public void Switch_GameState (GameStateEnum _targetState)
 	{
 		// get current state --> _temp
 		// enable targeted states Manager
@@ -66,23 +65,20 @@ public class GameMaster : MonoBehaviour
 			default:
 				break;
 		}
-        Debug.Log("wHY SO SERIOUS???");
+        
 	}
 
 	/// <summary>
 	/// Adds the detected stat, and deals with reprocussions
 	/// </summary>
-	public IEnumerator  AddDetection (int _amount)
-	{
-		// return
-		yield return null;
+	public void  AddDetection (int _amount)
+    { 
 		// add detection
 		detectionAmount += _amount;
 		// check if exposed
 			// if so played visual effect and start things
 		// else nothing
-		//stop coroutine
-		StopCoroutine("AddDetection");
+		
 	}
 
 

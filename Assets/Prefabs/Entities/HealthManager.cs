@@ -8,7 +8,9 @@ public class HealthManager : MonoBehaviour
 	[HideInInspector] public float invulnerableTime = 0.5f;
 
 	int maxHealth;
+    int currenHealth;
 	int maxShield;
+    int currentShield;
 
 	void Awake ()
 	{

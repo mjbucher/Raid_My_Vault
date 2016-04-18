@@ -14,6 +14,7 @@ public  class MasterManager : MonoBehaviour
 	public CipherManager cipherManager;
 	public MotiveManager motiveManager;
 	public NetworkManager networkManager;
+ 
 
 	public void Awake()
 	{
@@ -66,6 +67,35 @@ public  class MasterManager : MonoBehaviour
 		networkManager.enabled = !networkManager.enabled;
 		Debug.Log("Network Manager Now : " + networkManager.enabled);
 	}
+
+    public void SoloToggle(string _layoutName)
+    {
+        string nameLower = _layoutName.ToLower();
+        if (nameLower == "hub")
+        {
+
+        }
+        else if (nameLower == "leveleditor")
+        {
+
+        }
+        else if (nameLower == "dungeon")
+        {
+
+        }
+        else if (nameLower == "cipher")
+        {
+
+        }
+        else if (nameLower == "motive")
+        {
+            
+        }
+        else if (nameLower == "network" )
+        {
+
+        }
+    }
 	#endregion
 }
 

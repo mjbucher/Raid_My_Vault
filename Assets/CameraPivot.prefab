@@ -35,7 +35,7 @@ GameObject:
   - 114: {fileID: 11461312}
   m_Layer: 0
   m_Name: Isometric Camera
-  m_TagString: MainCamera
+  m_TagString: Isometric Camera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +58,7 @@ GameObject:
   - 114: {fileID: 11458172}
   m_Layer: 0
   m_Name: Top Down Camera
-  m_TagString: MainCamera
+  m_TagString: Top Down Camera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 108774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34, y: 0, z: 6}
+  m_LocalPosition: {x: 10, y: 0, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 414094}
@@ -460,7 +460,10 @@ MonoBehaviour:
   downwardAngle: 0
   targetPos: {fileID: 0}
   backGroundColor: {r: 0.13056876, g: 0.29425907, b: 0.77205884, a: 1}
+  orthographicCamera: {fileID: 2001066}
+  topDownCamera: {fileID: 2005050}
   isLive: 1
+  orthographicLive: 0
 --- !u!114 &11454342
 MonoBehaviour:
   m_ObjectHideFlags: 1

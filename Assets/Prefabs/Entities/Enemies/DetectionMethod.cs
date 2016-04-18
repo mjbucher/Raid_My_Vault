@@ -52,6 +52,8 @@ public class DetectionMethod : MonoBehaviour
 	public SphereCollider sphereTrigger;
 
 	Enemy enemy;
+    GameMaster GM;
+    AttackManager attackManager;
 
 	// constructor that takes a DetectionMode
 	public DetectionMethod (DetectionMode _mode, float _range, float _angle)
@@ -70,40 +72,45 @@ public class DetectionMethod : MonoBehaviour
 		player = GameObject.FindGameObjectWithTag("Player"); 
 		primaryTarget = player.GetComponent<Player>() != null ? player.GetComponent<Player>(): null;
 		playerPos = player.transform.position; // player position
+        GM = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
+        attackManager = GetComponent<AttackManager>();
 	}
 
 	void Start ()
 	{
-		// start coroutines
-		StartCoroutine ("CheckForTarget"); 
+        // start coroutines
+        //CheckForTarget();
 	}
 
 	void Update ()
 	{
+        //CheckForTarget();
 	}
 	/// <summary>
 	/// Checks for player, first by the distance between them, then by the angle between us, then by a raycast to see if something is blocking line of sight.
 	/// </summary>
-	public IEnumerator CheckForTarget ()
+	public bool CheckForTarget ()
 	{
         // while the enemy has not detected anything
-		while (enemy.detectionState != DetectionState.None)
-		{
+		//while (enemy.detectionState != DetectionState.None)
+		//{
             // get target
-            if (targetIsPlayer)
-                targetTag = "Player";
-            mainTarget = GameObject.FindGameObjectWithTag(targetTag);
+            //if (targetIsPlayer)
+            //targetTag = "Player";
+            //mainTarget = GameObject.FindGameObjectWithTag(targetTag);
             // find other enemies here
-            if (targetIsEntity)
-                targetTag = "Enemy";
+            // if (targetIsEntity)
+            //targetTag = "Enemy";
             // get relative data from target
+            mainTarget = player;
             mainTargetPos = mainTarget.transform.position; // get the target's position
 			distanceBetween = Vector3.Distance(transform.position, mainTargetPos); // get distance between target and self
 			// check if not in range & break
 			if (distanceBetween > range)
 			{
 				Debug.Log("Too far away: " + gameObject.name);
-				yield return null;
+                return false;
+            
 			}
             // get direction
 			targetDirection = playerPos - transform.position;
@@ -114,7 +121,7 @@ public class DetectionMethod : MonoBehaviour
 			// check if angle is outside the range of my forward direction
 			if (Mathf.Abs(angleBetween) > angle / 2.0f)
 			{
-				yield return null;
+                return false;
 			}
 			// check if there is a wall or cover inbetween player and me
 			RaycastHit hit;
@@ -128,49 +135,85 @@ public class DetectionMethod : MonoBehaviour
 			// what occurs when the AI finds the player
 			if (foundMainTarget)
 			{
-				yield return StartCoroutine("Discovering");
+            //Discovering();
+
+            
+            return true;
 			}
-		}
-		Debug.Log("detection state changed");
-        yield return null;
+            return false;
+		//}
+        
 	}
 
+    public void LookForPlayer ()
+    {
+        if (mainTarget == null) return;
+        transform.LookAt(mainTarget.transform);
+        float distance = Vector3.Distance(transform.position, mainTarget.transform.position);
+        // bool tooClose = distance < minRange;
+        Vector3 direction = Vector3.forward; // tooClose ? Vector3.back : Vector3.forward;
+        //transform.Translate(direction * Time.deltaTime);
+        enemy.agent.Stop();
+    }
 
-	IEnumerator Discovering ()
+	void Discovering ()
 	{
-		// wait for designated time
-		yield return new WaitForSeconds(discoverTime);
+        // wait for designated time
+        //yield return new WaitForSeconds(discoverTime);
+        new WaitForSeconds(discoverTime);
 		// check if player was found again
 		lockOnPlayer = foundPlayer ? true : false;
 		// if true make found player
 		enemy.detectionState = lockOnPlayer ? DetectionState.FoundPlayer : enemy.detectionState;
+       
 		if (lockOnPlayer)
 		{
-			yield return StartCoroutine(enemy.FoundTarget(player));
+            enemy.FoundTarget(player);
 		}
-		StopCoroutine("Discovering");
+		
 	}
+
+    void Run()
+    {
+        Vector3 _temp = transform.position;
+        while (true)
+        {
+            transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.up * 10, 1.5f);
+            new WaitForSeconds(5);
+            transform.position = Vector3.Lerp(transform.position, _temp, 1.0f); // may be bugs here
+        }
+       
+    }
 
 	void OnTriggerEnter (Collider _other)
 	{
-		// if the player entered range sphere
-		if (_other.gameObject.tag == "Enemy" || _other.gameObject.tag == "Player")
-		{
-			//playerPos = _other.gameObject.transform.position;
-		}
-		// if enemy is confused
-		if (enemy.condition == StatusEffect.Confused &&  _other.gameObject.tag == "Enemy")
-		{
-			
-		}
+        Debug.Log("Something Entered");
+        if(_other.tag == "Player") mainTarget = _other.gameObject;
 
-	}
-
-    public void OnTriggerEnter(Collision _other)
-    {
- 
     }
 
+    void OnTriggerExit (Collider _other)
+    {
+        Debug.Log("Something left");
+        if (_other.tag == "Player") mainTarget = null;
+       
+    }
+
+    void OnTriggerStay (Collider _other)
+    {
+        if (_other.tag == "Player")
+        {
+            if (mode == DetectionMode.Alert)
+            {
+                GM.AddDetection(1);
+                // Run();
+            }
+            else if (mode == DetectionMode.Attack)
+            {
+                attackManager.Attack();
+            }
+        }
+    }
 }
 
 

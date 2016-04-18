@@ -64,6 +64,20 @@ public class WallManager : MonoBehaviour
     int otherWallLength;
     #endregion
 
+    void Awake ()
+    {
+        perpetualGeneration = false;
+        generate = false;
+        
+    }
+
+    void Start ()
+    {
+        GenerateEverything();
+    }
+
+    
+
     void Update()
     {
         CheckControls();
@@ -82,7 +96,7 @@ public class WallManager : MonoBehaviour
             //reset to false
             generate = false;
         }
-        else if (!wallEnabled)
+        else if (!wallEnabled && perpetualGeneration)
         {
             GenerateEverything();
         }
@@ -98,14 +112,13 @@ public class WallManager : MonoBehaviour
         // grab and set variables from input
         GrabReferences();
         SetWallVariables();
+      
         // update spawners
         PlaceSpawners(wallLength);
         //spawn objects
+        
+      
         SpawnAllWalls(wallLength, otherWallLength);
-        if (enteranceEnabled)
-        {
-            SpawnEnterance();
-        }
         // update colliders
         UpdateActiveColliders();
         ResizeColliders();
@@ -153,12 +166,19 @@ public class WallManager : MonoBehaviour
     /// Places the spawners. For North and South walls use the room depth. For East and West wall use room width
     /// </summary>
     /// <param name="_length">Length.</param>
-    void PlaceSpawners(int _length)
+    void PlaceSpawners(int _length) // ** still needs work
     {
         leftSpawnerStart.transform.localPosition = Vector3.zero;
         rightSpawnerStart.transform.localPosition = new Vector3(_length - 1, 0, 0) + leftSpawnerStart.transform.localPosition;
         enteranceSpawnPoint.localPosition = ((rightSpawnerStart.transform.localPosition - leftSpawnerStart.transform.localPosition) / 2.0f) + new Vector3(enteranceOffset, 0, 0);
         // determine how to use end points
+        //if (enteranceEnabled)
+        //{
+        //    if (CheckEntrance() == true)
+        //        SpawnEnterance();
+        //    else
+        //        enteranceEnabled = false;
+        //}
         if (enteranceEnabled)
         {
             // set position end points
@@ -277,6 +297,26 @@ public class WallManager : MonoBehaviour
         _col.size = new Vector3(totalDistance + 1, 2, 1);
     }
     #endregion
+
+
+    bool CheckEntrance()
+    {
+        Ray ray = new Ray(transform.position, Vector3.forward);
+        RaycastHit hit;
+        float distance = 2.0f;
+        Debug.DrawRay(ray.origin, ray.direction);
+        Physics.Raycast(ray, out hit, distance);
+       
+            if (hit.collider.gameObject.tag.ToLower() != "entrance" || hit.collider.gameObject.tag.ToLower() == "null")
+            {
+                return false;
+            } else
+            {
+                return true;
+            }
+           
+    
+    }
 
     #region Utility
     //void DestroyAllChildren (GameObject _parent)

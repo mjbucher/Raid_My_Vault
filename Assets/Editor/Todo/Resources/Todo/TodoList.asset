@@ -126,7 +126,7 @@ MonoBehaviour:
       index: 0
     task: Generalize the Proccedural floor tool, make a manage sub class that handels
       its own stuff, can be used to instantiate / reset managers fully then
-    isComplete: 0
+    isComplete: 1
   - owner:
       name: Normal
       color: {r: 0, g: 0, b: 0, a: 1}
@@ -190,4 +190,10 @@ MonoBehaviour:
       color: {r: 1, g: 0, b: 0, a: 1}
       index: 1
     task: fix characters ~after import
+    isComplete: 0
+  - owner:
+      name: Normal
+      color: {r: 0, g: 0, b: 0, a: 1}
+      index: 0
+    task: Update vault room prefab from Scott's branch merge
     isComplete: 0

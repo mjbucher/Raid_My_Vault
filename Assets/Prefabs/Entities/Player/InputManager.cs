@@ -6,8 +6,10 @@ using System.Collections.Generic;
 public class InputManager : MonoBehaviour 
 {
 	public bool onMobile;
+    public bool liveDebug;
 	public Input singleTap;
-	public Camera playerCamera;
+    [SerializeField]
+    private Camera playerCamera;
 	public Vector3 worldTarget;
     public LayerMask raycastLayerExclusion;
     public GameObject playerModel;
@@ -21,7 +23,7 @@ public class InputManager : MonoBehaviour
 
     PathfindingUnit pathUnit;
 
-    GameObject ds;
+    GameObject debugSphere;
 
     public void Awake ()
 	{
@@ -29,19 +31,25 @@ public class InputManager : MonoBehaviour
 		pathUnit = GetComponent<PathfindingUnit>();
         player = GetComponent<Player>();
         agent = GetComponent<NavMeshAgent>();
-        agent.autoBraking = false;
+        //agent.autoBraking = false;
 	}
+
+    public void Start ()
+    {
+        agent.autoBraking = false;
+        agent.speed = player.speed;
+        playerCamera = GameObject.FindGameObjectWithTag("Isometric Camera").GetComponent<Camera>();
+    }
 
     void Update ()
 	{
         if (onMobile)
-        {
             CheckMobileControls();   
-        }
         else
-        {
             CheckPCControls();
-        }
+        
+        //CheckMobileControls();
+        //CheckPCControls();
 	}
 
     void CheckMobileControls ()
@@ -49,7 +57,7 @@ public class InputManager : MonoBehaviour
         if (Input.GetTouch(0).phase == TouchPhase.Began)
         {
             Debug.Log("Touch Pressed");
-            Ray_Check(Input.GetTouch(0).position);
+            RayCheck(Input.GetTouch(0).position);
         }
     }
 
@@ -59,7 +67,7 @@ public class InputManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("mouse clicked");
-            Ray_Check(Input.mousePosition);
+            RayCheck(Input.mousePosition);
         }
         if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
         {
@@ -68,13 +76,14 @@ public class InputManager : MonoBehaviour
             //Debug.Log("Stop pathing");
             //pathUnit.StopMoving();
             //Debug.Log("Create new path");
-            Transform tempT = gameObject.transform;
-            float hor = Input.GetAxisRaw("Horizontal");
-            float ver = Input.GetAxisRaw("Vertical");
-            tempT.LookAt(tempT.position + (hor * Vector3.right) + (ver * Vector3.forward));
-            tempT.position += ((Vector3.forward * ver) + (Vector3.right * hor)) * Time.deltaTime * player.speed;
+            Vector3 tempPos = gameObject.transform.position;
+            tempPos.x += Input.GetAxisRaw("Horizontal");
+            tempPos.z += Input.GetAxisRaw("Vertical");
+            //tempT.LookAt(tempT.position + (hor * Vector3.right) + (ver * Vector3.forward));
+            //tempT.position += ((Vector3.forward * ver) + (Vector3.right * hor)) * Time.deltaTime * player.speed;
             //play walking
             isWalking = true;
+            RayCheck(tempPos);
             //transform.rotation = tempT.rotation;
             //pathUnit.Update_Path(tempT);
         }
@@ -84,7 +93,7 @@ public class InputManager : MonoBehaviour
         }
     }
 
-	public void Ray_Check(Vector3 _target)
+	public void RayCheck(Vector3 _target)
 	{
 		Ray ray = playerCamera.ScreenPointToRay(_target);
 		//Debug.Log (ray);
@@ -95,26 +104,34 @@ public class InputManager : MonoBehaviour
         if (Physics.Raycast(ray.origin, ray.direction, out hit))
 		{
             Debug.Log("ray hit something!");
-            //Debug.Log("Hit something");
-            // here maybe add a check for if the target is on layer walkable, if not do nothing?
-            //Debug.DrawRay(ray.origin, hit.point, Color.cyan);
             Debug.DrawLine(ray.origin, hit.point, Color.cyan, 1.2f, false);
-			//Debug.Log("Stop pathing");
-			//pathUnit.StopMoving();
 			Debug.Log("Create new path");
             // float nX = hit.point.x % 0.5f;
             // float nZ = hit.point.x % 0.5f == 0 ? hit.point.x : (int)hit.point.x;
             //worldTarget = RoundToGrid(hit.point);//new Vector3(nX, hit.point.y, nZ);
             worldTarget = hit.point;  //hit.collider.gameObject.transform.position + RoundToGrid(hit.point) + new Vector3( -1, 0, -1); // this is an offset
-            //pathUnit.Update_Path(worldTarget);
-            // debug sight
-            agent.destination = worldTarget;
-            
             // debug sphere for checking raycast
-            if (ds != null)
-                Destroy(ds);
-            ds = Instantiate(GameObject.FindWithTag("Debug Locator")) as GameObject;
-            ds.transform.position = worldTarget;// + Vector3.up * 0.5f; // hit.point;
+            if (liveDebug == true)
+            {
+                if (debugSphere != null)
+                    Destroy(debugSphere);
+                debugSphere = Instantiate(GameObject.FindWithTag("Debug Locator")) as GameObject;
+                debugSphere.transform.position = worldTarget;
+            }
+
+            // check what I hit
+            string targetTag = hit.collider.gameObject.tag.ToLower();
+            Debug.Log(targetTag);
+            if (targetTag == "walkable" || targetTag == "untagged")
+            {
+                //agent.destination = transform.position; // stop moving
+                //transform.LookAt(worldTarget); // look towards next destination
+                agent.destination = worldTarget; // move towards destination
+            }
+            else if (targetTag == "enemy") { }
+            //hit.collider.gameObject.GetComponent<Enemy>()
+            else if (targetTag == "door") { }
+            //player.checkInventory("key");
 		}
 		else
 		{
@@ -129,22 +146,6 @@ public class InputManager : MonoBehaviour
         roundedPoint.x = Mathf.RoundToInt(roundedPoint.x);
         roundedPoint.y = Mathf.RoundToInt(roundedPoint.y);
         roundedPoint.z = Mathf.RoundToInt(roundedPoint.z);
-
-        // round x
-        //int n = Mathf.RoundToInt(_hitPoint.x);
-        //if (_hitPoint.x - n < 0.5f)
-        //{
-        //    roundedPoint.x = (float) n;
-        //}
-        //else
-        //{
-        //    roundedPoint.x = (float)(n + 0.5f);
-        //}
-        // round y
-
-
-        // round z
-
 
         return roundedPoint;  
     }

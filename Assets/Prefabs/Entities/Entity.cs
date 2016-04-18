@@ -37,19 +37,22 @@ public class Entity : MonoBehaviour
 	public StatusEffect condition = StatusEffect.None;
 
 
+    public bool isSelected;
+
 	// Proporties for subclasses
 	[HideInInspector] public HealthManager healthManager;
 	[HideInInspector] public DeathSequence deathSequence; // needs a check for death couroutine
 
 	[HideInInspector] public Direction direction = Direction.None; 
 	[HideInInspector] public Vector3 gridSnapVector = new Vector3(0.5f, 0.5f, 0.5f);
+    public NavMeshAgent agent;
 
 	void Awake()
 	{
 		GM = GameMaster.GM;
 		deathSequence = GetComponent<DeathSequence>();
 		healthManager = GetComponent<HealthManager>();
-
+        agent = GetComponent<NavMeshAgent>();
 
 	}
 
@@ -104,16 +107,16 @@ public class Entity : MonoBehaviour
 		
 	public IEnumerator Check_LifeState ()
 	{
-		yield return null;
 		// check if dead
 		if (lifeState == LifeState.Dead || lifeState == LifeState.FullDeath)
 		{
-			// start death sequence
-			StartCoroutine(deathSequence.DeathInit());
-		}
-		// stop checking life
-		StopCoroutine(Check_LifeState());
-	}
+            // start death sequence
+            // stop checking life
+            StartCoroutine(deathSequence.DeathInit());
+            StopCoroutine(Check_LifeState());
+        }
+        yield return null;
+    }
 
 
 
