@@ -10,7 +10,7 @@ public class AttackManager : MonoBehaviour
 	public GameObject weaponPrefab;
 	[HideInInspector]
 	public GameObject weaponObject;
-	public bool reloadWeapon = false;
+	//public bool reloadWeapon = false;
 
 	Weapon weapon;
 

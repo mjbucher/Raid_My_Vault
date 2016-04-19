@@ -96,13 +96,13 @@ public class Entity : MonoBehaviour
 	public void Move_Entity (Vector3 _moveDirection)
 	{
 		// Allows for future slow mo
-		gameObject.transform.Translate(_moveDirection * speed * Time.deltaTime * (1 / Time.timeScale));
+		//gameObject.transform.Translate(_moveDirection * speed * Time.deltaTime * (1 / Time.timeScale));
 	}
 
 	public void Look_Turn (Vector3 _lookDirection)
 	{
 		// Allows for future slow mo
-		gameObject.transform.Rotate(_lookDirection * Time.deltaTime * (1 / Time.timeScale));
+		//gameObject.transform.Rotate(_lookDirection * Time.deltaTime * (1 / Time.timeScale));
 	}
 		
 	public IEnumerator Check_LifeState ()
