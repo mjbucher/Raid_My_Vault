@@ -91,6 +91,32 @@ public class InputManager : MonoBehaviour
         {
             isWalking = false;
         }
+        
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Debug.Log("override key pressed");
+            //rifle
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Debug.Log("override key pressed");
+            //emp
+        }
+        Vector3 tempSpeed = player.agent.velocity;
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            Debug.Log("override key pressed");
+            //speed
+            player.agent.velocity *= 2.0f;
+            new WaitForSeconds(4.0f);
+            player.agent.velocity = tempSpeed;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            Debug.Log("override key pressed");
+            // cloaking
+        }
+
     }
 
 	public void RayCheck(Vector3 _target)

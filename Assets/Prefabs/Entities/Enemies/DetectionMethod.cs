@@ -188,14 +188,26 @@ public class DetectionMethod : MonoBehaviour
 	void OnTriggerEnter (Collider _other)
 	{
         Debug.Log("Something Entered");
-        if(_other.tag == "Player") mainTarget = _other.gameObject;
+        if(_other.tag == "Player")
+        {
+            mainTarget = _other.gameObject;
+            enemy.agent.Stop();
+            transform.LookAt(_other.transform);
+        }
+       
 
     }
 
     void OnTriggerExit (Collider _other)
     {
         Debug.Log("Something left");
-        if (_other.tag == "Player") mainTarget = null;
+        if (_other.tag == "Player")
+        {
+            mainTarget = null;
+            enemy.agent.Resume();
+        }
+            
+
        
     }
 
@@ -205,11 +217,13 @@ public class DetectionMethod : MonoBehaviour
         {
             if (mode == DetectionMode.Alert)
             {
+                transform.LookAt(_other.transform);
                 GM.AddDetection(1);
                 // Run();
             }
             else if (mode == DetectionMode.Attack)
             {
+                transform.LookAt(_other.transform);
                 attackManager.Attack();
             }
         }
